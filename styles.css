@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Oswald&family=Roboto&display=swap');
+
+
+body {
+    font-size: 32px;
+    width: 100%;
+    /* background-image: url(images/poster.png); */
+    background: grey;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+#achtergrondvideo {
+    position: absolute;
+    z-index: -100;
+}
+.parallax {
+    min-height: 500px;
+    background: transparent;
+    z-index: -1;
+}
+
+/* DIT KAN GEBRUIKT WORDEN VOOR EEN LOGO FOTO IPV GROTE NAAM MET TEXT
+
+header, .logo-container, .logo {
+    background: rgb(190, 211, 190);
+    height: 150px;
+    text-align: center;
+}
+
+*/
+header {
+    font-size: 85px;
+    text-align: center;
+}
+
+
+
+/* -----------------NAVBAR------------ */
+
+
+
+#randje-boven-nav {
+    background: grey; /*DEZE KLEUR MOET HETZELFDE ZIJN ALS DE ACHTERGROND VAN DE WEBSITE*/
+    height: 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    
+}
+
+ul.navbar {
+    list-style-type: none;
+    text-align: center;
+    color: black;
+    
+}
+
+
+ 
+nav {
+    position: sticky;
+    top: 5px;
+    z-index: 100;
+
+}
+
+.navbar-item {
+        display: inline-block;
+        margin: 2vw;
+        transition: .7s;
+}
+.navbar-item:hover {
+    cursor: pointer;
+    color: rgb(188, 116, 0);
+    transition: .25s;
+    letter-spacing: .05em;
+}
+
+
+button.contact:hover {
+    cursor: pointer;
+    background: rgb(102, 6, 114);
+    transition: .25s;
+    letter-spacing: .05em;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    background: rgb(159, 52, 171);
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    padding: 0px 8px 3px 8px;
+    color: black;
+    transition: .7s;
+    margin-right: 0.1vw;
+}
+
+/* ----------------------------------- */
+
+#leeg-stuk1 {
+    height: 50px;
+}
+
+/* ----------------OVER MIJ----------- */
+
+ul.navbar, section.over-mij {
+    background: #ADA996;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top,#ADA996, #EAEAEA, #DBDBDB, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ADA996, #EAEAEA, #DBDBDB, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+section.over-mij {
+    margin-bottom: 15vh;
+}
+
+section.overmijtekstenfoto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+h2.overmijtitel {
+    font-size: 30px;
+    padding-top: 7px;
+    margin: 0;
+}
+
+.tekst-over-mij {
+    color: black;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    width: 60vw;
+}
+
+figure.fotovanmij {
+   width: 20vw;
+    margin: 5vw;
+}
+
+#foto-van-mij {
+    width: 20vw;
+}
+
+/* -------------------------------- */
+
+
+
+/* ---------SKILLS--------------- */
+section.skills {
+    background: #ADA996;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,#ADA996, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ADA996, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-bottom: 15vh;
+}
+.skillstitel, section.projecten h2, #contacttitel {
+    font-size: 5vw;
+    padding-top: 1vh;               /* TITELS, SKILLS, PROJECTEN, CONTACT */
+    text-align: center;
+    color: black;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.skill-logos {
+   color: black;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+}
+
+.skill-logos img {
+    width: 10vw;
+    height: 10vw;
+
+}
+
+.skill-logos figure {
+    margin: 1vw;
+}
+
+
+
+figcaption {
+text-align: center;
+font-size: 3vw;
+}
+
+.skill-logos:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* ------------------------------*/
+
+/*----------PROJECTEN-------------*/
+
+#project-platen {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-top: 1.5vh;
+    padding-bottom: 14vh;
+ }
+ 
+ #project-platen figure img, #project-platen figure figcaption:hover {
+     cursor: pointer;
+ }
+ 
+
+ #project-platen figure img {
+     width: 20vw;
+     
+ }
+
+ #project-platen figure {
+    margin: 5px;
+    
+}
+
+
+
+/*---------------------------------*/
+/*--------------CONTACT-----------*/
+
+#contacttitel {
+    font-size: 7vw;
+}       
+
+.social-logos figure {
+    margin: 1vw;
+
+}
+
+.social-logos img {
+    width: 15vw;
+   
+}
+
+.social-logos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0;
+}
+
+
+
+
+.social-logos img:hover {
+cursor: pointer;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+
+    background: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin-top: 5vh;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 576px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
