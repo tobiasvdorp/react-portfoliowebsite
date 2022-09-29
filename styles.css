@@ -2,14 +2,12 @@
 
 
 body {
-    font-size: 32px;
     width: 100%;
     /* background-image: url(images/poster.png); */
     background: grey;
     font-family: 'Oswald', sans-serif;
     margin: 0;
     padding: 0;
-
 }
 
 #achtergrondvideo {
@@ -41,69 +39,99 @@ header {
 /* -----------------NAVBAR------------ */
 
 
-
+/*
 #randje-boven-nav {
-    background: grey; /*DEZE KLEUR MOET HETZELFDE ZIJN ALS DE ACHTERGROND VAN DE WEBSITE*/
+    background: grey; 
     height: 5px;
     position: sticky;
     top: 0px;
-    z-index: 100;
-    
+    z-index: 100;  
 }
-
+*/
 ul.navbar {
     list-style-type: none;
     text-align: center;
     color: black;
-    
+    margin: 0;
+    padding: 0;
 }
 
 
  
 nav {
     position: sticky;
-    top: 5px;
+    top: 0;
     z-index: 100;
 
 }
 
 .navbar-item {
-        display: inline-block;
-        margin: 2vw;
-        transition: .7s;
+    display: inline-block;
+    margin: 1.4vw;
+    transition: .7s;
+    font-size: 4vw;
 }
+/*
 .navbar-item:hover {
     cursor: pointer;
     color: rgb(188, 116, 0);
     transition: .25s;
     letter-spacing: .05em;
+} */
+@media(hover: hover) and (pointer: fine) {
+    .navbar-item:hover {
+        cursor: pointer;
+    color: rgb(188, 116, 0);
+    transition: .25s;
+    letter-spacing: .05em;
+    }
 }
 
-
+@media(hover: hover) and (pointer: fine) {
+    button.contact:hover {
+    cursor: pointer;
+    background: rgb(102, 6, 114);
+    transition: .25s;
+    letter-spacing: .05em;
+    }
+}
 button.contact:hover {
     cursor: pointer;
     background: rgb(102, 6, 114);
     transition: .25s;
     letter-spacing: .05em;
-}
+} 
 
-button{
+
+
+
+button.contact {
     border: none;
     border-radius: 5px;
     background: rgb(159, 52, 171);
     font-family: 'Oswald', sans-serif;
-    font-size: 32px;
+    font-size: 4vw;
     padding: 0px 8px 3px 8px;
     color: black;
     transition: .7s;
-    margin-right: 0.1vw;
+}
+
+
+
+@media screen and (max-width:1400px){
+    .navbar-item, button.contact {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .navbar-item, button.contact {
+        font-size: 3vw;
+    }
 }
 
 /* ----------------------------------- */
 
-#leeg-stuk1 {
-    height: 50px;
-}
 
 /* ----------------OVER MIJ----------- */
 
@@ -115,6 +143,7 @@ ul.navbar, section.over-mij {
 }
 section.over-mij {
     margin-bottom: 15vh;
+    margin-top: 5vh;
 }
 
 section.overmijtekstenfoto {
@@ -156,9 +185,10 @@ section.skills {
     background: -webkit-linear-gradient(to right,#ADA996, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ADA996, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin-bottom: 15vh;
+
 }
 .skillstitel, section.projecten h2, #contacttitel {
-    font-size: 5vw;
+    font-size: 4.5vw;
     padding-top: 1vh;               /* TITELS, SKILLS, PROJECTEN, CONTACT */
     text-align: center;
     color: black;
@@ -174,8 +204,8 @@ section.skills {
 }
 
 .skill-logos img {
-    width: 10vw;
-    height: 10vw;
+    width: 8vw;
+    height: 8vw;
 
 }
 
@@ -220,12 +250,12 @@ font-size: 3vw;
  
 
  #project-platen figure img {
-     width: 20vw;
+     width: 15vw;
      
  }
 
  #project-platen figure {
-    margin: 5px;
+    margin: 4px;
     
 }
 
@@ -292,4 +322,30 @@ footer {
 
 @media only screen and (max-width: 1200px) {
 
+}
+
+a[href="#top"], a[href="#overmij"], a[href="#skills"], a[href="#projecten"], a [href="#contact"] {
+    text-decoration: none;
+    color: black;
+}
+
+#overmij {
+    display: block;
+    position: relative;
+    top: -10vh;
+    visibility: hidden;
+}
+
+#skills, #projecten, #contact {
+    display: block;
+    position: relative;
+    top: -30vh;
+    visibility: hidden;
+}
+
+#top {
+    display: block;
+    position: relative;
+    top: 0px;
+    visibility: hidden;
 }
