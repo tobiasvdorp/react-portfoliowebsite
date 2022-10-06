@@ -1,23 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Oswald&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Oswald&family=Roboto&display=swap");
+@import url(images/layered-steps-haikei.svg);
+@import url(images/layered-steps-haikei-navbar.svg);
+@import url(images/stacked-waves-haikei.svg);
 
+* {
+  text-decoration: none;
+  color: black;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 body {
-    width: 100%;
-    /* background-image: url(images/poster.png); */
-    background: grey;
-    font-family: 'Oswald', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-#achtergrondvideo {
-    position: absolute;
-    z-index: -100;
-}
-.parallax {
-    min-height: 500px;
-    background: transparent;
-    z-index: -1;
+  width: 100%;
+  background-color: black;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(images/layered-steps-haikei.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* DIT KAN GEBRUIKT WORDEN VOOR EEN LOGO FOTO IPV GROTE NAAM MET TEXT
@@ -30,322 +33,330 @@ header, .logo-container, .logo {
 
 */
 header {
-    font-size: 85px;
-    text-align: center;
+  font-size: 50px;
+  text-align: center;
 }
-
-
 
 /* -----------------NAVBAR------------ */
 
-
-/*
-#randje-boven-nav {
-    background: grey; 
-    height: 5px;
-    position: sticky;
-    top: 0px;
-    z-index: 100;  
-}
-*/
 ul.navbar {
-    list-style-type: none;
-    text-align: center;
-    color: black;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 1.5px;
+  border-style: solid;
+  border-color: black;
 }
 
-
- 
 nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
+  position: sticky;
+  top: 0;
+  background: rgb(197, 168, 168);
+  z-index: 100;
 }
 
 .navbar-item {
-    display: inline-block;
-    margin: 1.4vw;
-    transition: .7s;
-    font-size: 4vw;
+  display: inline-block;
+  margin: 1.4vw;
+  transition: 0.7s;
+  font-size: 4vw;
 }
-/*
-.navbar-item:hover {
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar-item:hover {
     cursor: pointer;
     color: rgb(188, 116, 0);
-    transition: .25s;
-    letter-spacing: .05em;
-} */
-@media(hover: hover) and (pointer: fine) {
-    .navbar-item:hover {
-        cursor: pointer;
-    color: rgb(188, 116, 0);
-    transition: .25s;
-    letter-spacing: .05em;
-    }
+    transition: 0.25s;
+    letter-spacing: 0.05em;
+  }
 }
 
-@media(hover: hover) and (pointer: fine) {
-    button.contact:hover {
+@media (hover: hover) and (pointer: fine) {
+  button.contact:hover {
     cursor: pointer;
     background: rgb(102, 6, 114);
-    transition: .25s;
-    letter-spacing: .05em;
-    }
+    transition: 0.25s;
+    letter-spacing: 0.05em;
+  }
 }
-button.contact:hover {
-    cursor: pointer;
-    background: rgb(102, 6, 114);
-    transition: .25s;
-    letter-spacing: .05em;
-} 
-
-
-
 
 button.contact {
-    border: none;
-    border-radius: 5px;
-    background: rgb(159, 52, 171);
-    font-family: 'Oswald', sans-serif;
-    font-size: 4vw;
-    padding: 0px 8px 3px 8px;
-    color: black;
-    transition: .7s;
-}
-
-
-
-@media screen and (max-width:1400px){
-    .navbar-item, button.contact {
-        font-size: 2vw;
-    }
-}
-
-@media screen and (max-width:1000px){
-    .navbar-item, button.contact {
-        font-size: 3vw;
-    }
+  border: none;
+  border-radius: 5px;
+  background: rgb(159, 52, 171);
+  font-family: "Oswald", sans-serif;
+  font-size: 4vw;
+  color: black;
+  transition: 0.7s;
 }
 
 /* ----------------------------------- */
 
-
 /* ----------------OVER MIJ----------- */
 
-ul.navbar, section.over-mij {
-    background: #ADA996;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top,#ADA996, #EAEAEA, #DBDBDB, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #ADA996, #EAEAEA, #DBDBDB, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
 section.over-mij {
-    margin-bottom: 15vh;
-    margin-top: 5vh;
+  margin-bottom: 35vh;
+  margin-top: 5vh;
 }
 
 section.overmijtekstenfoto {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
-h2.overmijtitel {
-    font-size: 30px;
-    padding-top: 7px;
-    margin: 0;
+h2.overmijtitel, .tekstovermij h3 {
+  margin: 0;
+  
 }
 
-.tekst-over-mij {
-    color: black;
-    font-size: 10px;
-    font-family: 'Roboto', sans-serif;
-    width: 60vw;
+.tekstovermij {
+    text-shadow: 1px 0px 0px grey;
 }
 
 figure.fotovanmij {
-   width: 20vw;
-    margin: 5vw;
+  width: 18vw;
+  margin: 3vw;
 }
 
 #foto-van-mij {
-    width: 20vw;
+  width: 18vw;
+  border-radius: 15%;
 }
 
 /* -------------------------------- */
 
-
-
 /* ---------SKILLS--------------- */
 section.skills {
-    background: #ADA996;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#ADA996, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ADA996, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin-bottom: 15vh;
-
+  background: rgb(197, 168, 168);
+  margin-bottom: 10vh;
 }
-.skillstitel, section.projecten h2, #contacttitel {
-    font-size: 4.5vw;
-    padding-top: 1vh;               /* TITELS, SKILLS, PROJECTEN, CONTACT */
-    text-align: center;
-    color: black;
-    margin-block-end: 0;
-    margin-block-start: 0;
+
+.skillstitel,
+section.projecten h2,
+#contacttitel {
+  font-size: 4.5vw;
+  padding-top: 1vh; /* TITELS, SKILLS, PROJECTEN, CONTACT */
+  text-align: center;
+  color: black;
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 
 .skill-logos {
-   color: black;
-   display: flex;
-   flex-flow: row wrap;
-   justify-content: space-around;
+  color: black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .skill-logos img {
-    width: 8vw;
-    height: 8vw;
-
+  width: 8vw;
+  height: 8vw;
 }
 
 .skill-logos figure {
-    margin: 1vw;
+  margin: 1vw;
 }
 
-
-
 figcaption {
-text-align: center;
-font-size: 3vw;
+  text-align: center;
+  font-size: 2vw;
 }
 
 .skill-logos:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
-
-
-
-
 
 /* ------------------------------*/
 
 /*----------PROJECTEN-------------*/
-
-#project-platen {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    text-align: center;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding-top: 1.5vh;
-    padding-bottom: 14vh;
- }
- 
- #project-platen figure img, #project-platen figure figcaption:hover {
-     cursor: pointer;
- }
- 
-
- #project-platen figure img {
-     width: 15vw;
-     
- }
-
- #project-platen figure {
-    margin: 4px;
-    
+section.projecten {
+  margin-top: -30vh;
 }
 
+#project-platen {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-top: 1.5vh;
+  padding-bottom: 14vh;
+}
 
+#project-platen figure img,
+#project-platen figure figcaption:hover {
+  cursor: pointer;
+}
+
+#project-platen figure img {
+  width: 15vw;
+}
+
+#project-platen figure {
+  margin: 4px;
+}
 
 /*---------------------------------*/
 /*--------------CONTACT-----------*/
 
 #contacttitel {
-    font-size: 7vw;
-}       
+  font-size: 7vw;
+}
 
 .social-logos figure {
-    margin: 1vw;
-
+  margin: 1vw;
 }
 
 .social-logos img {
-    width: 15vw;
-   
+  width: 10vw;
 }
 
 .social-logos {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0;
 }
-
-
-
 
 .social-logos img:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 
-
-
-/*FOOTER*/
+/*-----------FOOTER-----------*/
 
 footer {
-
-    background: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px;
-    margin-top: 5vh;
-    font-size: 15px;
-    text-align: center;
-
+  background: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  margin-top: 5vh;
+  font-size: 15px;
+  text-align: center;
 }
-
-@media only screen and (max-width: 576px) {
-    
-}
-
-@media only screen and (max-width: 768px) {
-
-}
-
-@media only screen and (max-width: 992px) {
-
-}
-
-@media only screen and (max-width: 1200px) {
-
-}
-
-a[href="#top"], a[href="#overmij"], a[href="#skills"], a[href="#projecten"], a [href="#contact"] {
-    text-decoration: none;
-    color: black;
-}
-
+/*---------------------------*/
+/*-------NAVBAR CLICKS------*/
 #overmij {
-    display: block;
-    position: relative;
-    top: -10vh;
-    visibility: hidden;
+  display: block;
+  position: relative;
+  top: -10vh;
 }
 
-#skills, #projecten, #contact {
-    display: block;
-    position: relative;
-    top: -30vh;
-    visibility: hidden;
+#skills,
+#projecten,
+#contact {
+  display: block;
+  position: relative;
+  top: -30vh;
 }
 
 #top {
-    display: block;
-    position: relative;
-    top: 0px;
-    visibility: hidden;
+  display: block;
+  position: relative;
+  top: 0px;
+}
+
+/*----MEDIA QUERIES/RESPONSIVENESS----*/
+@media (hover: hover) and (pointer: fine) {
+  button.contact:hover {
+    cursor: pointer;
+    background: rgb(102, 6, 114);
+    text-decoration: underline;
+    transition: 0.25s;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar-item:hover {
+    cursor: pointer;
+    color: #dbdbdb;
+    text-decoration: underline;
+    transition: 0.25s;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media only screen and (max-width: 25600px) {
+  .navbar-item,
+  button.contact {
+    font-size: 1.1vw;
+    margin: 0.4vw;
+    padding: 0 1vw;
+  }
+  .tekstovermij h3 {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .navbar-item,
+  button.contact {
+    font-size: 1.8vw;
+    margin: 0.5vw;
+  }
+  .tekstovermij h3 {
+    font-size: 4vw;
+  }
+  .tekstovermij h2 {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-item,
+  button.contact {
+    font-size: 2vw;
+    margin: 0.5vw;
+  }
+  .tekstovermij h3 {
+    font-size: 4.8vw;
+  }
+  .tekstovermij h2 {
+    font-size: 3.8vw;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-item,
+  button.contact {
+    font-size: 2.7vw;
+    margin: 0.5vw;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-item,
+  button.contact {
+    font-size: 2.9vw;
+  }
+  .tekstovermij h3 {
+    font-size: 6vw;
+    
+  }
+  .tekstovermij h2 {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar-item,
+  button.contact {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .navbar-item,
+  button.contact {
+    font-size: 5vw;
+  }
+  button.contact {
+    padding: 0px 5ttonpx 2px 5px;
+  }
 }
