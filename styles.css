@@ -174,7 +174,6 @@ section.projecten {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding-top: 1.5vh;
   padding-bottom: 14vh;
 }
 
@@ -396,6 +395,8 @@ footer {
     border: 1.2px;
   }
 }
+
+/*----------MOBIEL----------*/
 @media only screen and (max-width: 450px) {
   .navbar-item,
   button.contact {
@@ -409,8 +410,9 @@ footer {
   }
   .tekstovermij h2 {
     font-size: 8vw;
+    line-height: 0.7;
   }
-  
+
   #foto-van-mij,
   figure.fotovanmij {
     width: 29vw;
@@ -420,22 +422,42 @@ footer {
   }
   .skill-logos {
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
   }
   .skill-logos figure {
     margin: 4px;
-
   }
   .skill-logos figure img {
     margin: 5px 5px 0px 5px;
     width: 55px;
   }
-}
-
-@media only screen and (max-width: 360px) {
-  .secovermij {
-    margin-top: -3vw;
+  .skill-logos figcaption {
+    font-size: 15px;
+    line-height: 0.7;
   }
-}
 
+  #project-platen {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #project-platen figcaption {
+    font-size: 18px;
+    line-height: 0.8;
+  }
+  #project-platen figure img {
+    width: 120px;
+  }
+
+  #project-platen figure {
+    margin: 4vw;
+  }
+
+  .skillstitel,
+section.projecten h2,
+#contacttitel {
+  font-size: 22px;
+}
+}
