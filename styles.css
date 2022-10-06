@@ -145,7 +145,6 @@ section.projecten h2,
 
 .skill-logos img {
   width: 8vw;
-  height: 8vw;
 }
 
 .skill-logos figure {
@@ -411,15 +410,26 @@ footer {
   .tekstovermij h2 {
     font-size: 8vw;
   }
-  .secovermij {
-    margin-top: -2vw;
-  }
+  
   #foto-van-mij,
   figure.fotovanmij {
     width: 29vw;
   }
   #meerovermij {
     font-size: 3vw;
+  }
+  .skill-logos {
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+  }
+  .skill-logos figure {
+    margin: 4px;
+
+  }
+  .skill-logos figure img {
+    margin: 5px 5px 0px 5px;
+    width: 55px;
   }
 }
 
@@ -428,3 +438,4 @@ footer {
     margin-top: -3vw;
   }
 }
+
