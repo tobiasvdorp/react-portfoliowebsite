@@ -70,6 +70,7 @@ button.contact {
   font-size: 4vw;
   color: black;
   transition: 0.7s;
+  box-shadow: 0.5px 0.5px 2px 0.5px black;
 }
 
 /* ----------------------------------- */
@@ -93,7 +94,7 @@ h2.overmijtitel,
 }
 
 .tekstovermij {
-  text-shadow: 1px 0px 0px grey;
+  text-shadow: 1px 1px 0px grey;
 }
 
 figure.fotovanmij {
@@ -114,7 +115,7 @@ figure.fotovanmij {
   transition: 0.7s;
   font-size: 2vw;
   font-family: "Oswald", sans-serif;
-  box-shadow: 0.5px 0.5px 1px 0.5px grey;
+  box-shadow: 0.5px 0.5px 2px 0.5px black;
 }
 
 /* -------------------------------- */
@@ -396,7 +397,9 @@ footer {
   }
 }
 
-/*----------MOBIEL----------*/
+/*----------------MOBIEL-------------------*/
+
+/*---NAVBAR---*/
 @media only screen and (max-width: 450px) {
   .navbar-item,
   button.contact {
@@ -405,6 +408,8 @@ footer {
   .navbar {
     border: 1.2px;
   }
+
+/*---OVER MIJ---*/
   .tekstovermij h3 {
     font-size: 11vw;
   }
@@ -420,6 +425,7 @@ footer {
   #meerovermij {
     font-size: 3vw;
   }
+  /*----SKILLS----*/
   .skill-logos {
     flex-wrap: wrap;
     justify-content: center;
@@ -437,7 +443,7 @@ footer {
     font-size: 15px;
     line-height: 0.7;
   }
-
+/*------PROJECTEN-----*/
   #project-platen {
     flex-wrap: wrap;
     justify-content: center;
@@ -456,8 +462,23 @@ footer {
   }
 
   .skillstitel,
-section.projecten h2,
-#contacttitel {
-  font-size: 22px;
-}
+  section.projecten h2 {
+    font-size: 22px;
+  }
+
+/*-----CONTACT-----*/
+  #contacttitel {
+    font-size: 7vw;
+  }
+  
+  .social-logos figure {
+    margin: 3vw;
+  }
+  
+  .social-logos img {
+    width: 30px;
+  }
+  #contacttitel{
+    font-size: 32px;
+  }
 }
