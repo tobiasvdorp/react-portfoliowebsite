@@ -44,7 +44,6 @@ ul.navbar {
   text-align: center;
   margin: 0;
   padding: 0;
-  border: 1.5px;
   border-style: solid;
   border-color: black;
 }
@@ -61,24 +60,6 @@ nav {
   margin: 1.4vw;
   transition: 0.7s;
   font-size: 4vw;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .navbar-item:hover {
-    cursor: pointer;
-    color: rgb(188, 116, 0);
-    transition: 0.25s;
-    letter-spacing: 0.05em;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  button.contact:hover {
-    cursor: pointer;
-    background: rgb(102, 6, 114);
-    transition: 0.25s;
-    letter-spacing: 0.05em;
-  }
 }
 
 button.contact {
@@ -106,13 +87,13 @@ section.overmijtekstenfoto {
   align-items: center;
   justify-content: flex-start;
 }
-h2.overmijtitel, .tekstovermij h3 {
+h2.overmijtitel,
+.tekstovermij h3 {
   margin: 0;
-  
 }
 
 .tekstovermij {
-    text-shadow: 1px 0px 0px grey;
+  text-shadow: 1px 0px 0px grey;
 }
 
 figure.fotovanmij {
@@ -123,6 +104,17 @@ figure.fotovanmij {
 #foto-van-mij {
   width: 18vw;
   border-radius: 15%;
+}
+
+#meerovermij {
+  border: none;
+  border-radius: 0.4vw;
+  background: rgb(159, 52, 171);
+  color: black;
+  transition: 0.7s;
+  font-size: 2vw;
+  font-family: "Oswald", sans-serif;
+  box-shadow: 0.5px 0.5px 1px 0.5px grey;
 }
 
 /* -------------------------------- */
@@ -261,15 +253,19 @@ footer {
 
 /*----MEDIA QUERIES/RESPONSIVENESS----*/
 @media (hover: hover) and (pointer: fine) {
-  button.contact:hover {
+  button.contact:hover,
+  #meerovermij:hover {
     cursor: pointer;
     background: rgb(102, 6, 114);
     text-decoration: underline;
     transition: 0.25s;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  button.contact:hover {
     letter-spacing: 0.05em;
   }
 }
-
 @media (hover: hover) and (pointer: fine) {
   .navbar-item:hover {
     cursor: pointer;
@@ -279,8 +275,7 @@ footer {
     letter-spacing: 0.05em;
   }
 }
-
-@media only screen and (max-width: 25600px) {
+@media only screen and (max-width: 99999px) {
   .navbar-item,
   button.contact {
     font-size: 1.1vw;
@@ -290,6 +285,30 @@ footer {
   .tekstovermij h3 {
     margin: 0px;
     padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 2560px) {
+  .navbar-item,
+  button.contact {
+    font-size: 1.1vw;
+    margin: 0.4vw;
+    padding: 0 1vw;
+  }
+  .tekstovermij h3 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 3vw;
+  }
+  .tekstovermij h2 {
+    font-size: 2vw;
+  }
+  #foto-van-mij,
+  figure.fotovanmij {
+    width: 13vw;
+  }
+  .navbar {
+    border: 1.6px;
   }
 }
 
@@ -305,6 +324,10 @@ footer {
   .tekstovermij h2 {
     font-size: 3vw;
   }
+  #foto-van-mij,
+  figure.fotovanmij {
+    width: 15vw;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -319,6 +342,10 @@ footer {
   .tekstovermij h2 {
     font-size: 3.8vw;
   }
+  #foto-van-mij,
+  figure.fotovanmij {
+    width: 16vw;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -327,7 +354,13 @@ footer {
     font-size: 2.7vw;
     margin: 0.5vw;
   }
-  
+  #foto-van-mij,
+  figure.fotovanmij {
+    width: 18vw;
+  }
+  #meerovermij {
+    font-size: 1.6vw;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -336,11 +369,13 @@ footer {
     font-size: 2.9vw;
   }
   .tekstovermij h3 {
-    font-size: 6vw;
-    
+    font-size: 5.4vw;
   }
   .tekstovermij h2 {
-    font-size: 5vw;
+    font-size: 4.5vw;
+  }
+  #meerovermij {
+    font-size: 2vw;
   }
 }
 
@@ -349,14 +384,47 @@ footer {
   button.contact {
     font-size: 4vw;
   }
+  .tekstovermij h3 {
+    font-size: 6vw;
+  }
+  .tekstovermij h2 {
+    font-size: 5vw;
+  }
+  .secovermij {
+    margin-top: -2vw;
+  }
+  .navbar {
+    border: 1.2px;
+  }
 }
-
 @media only screen and (max-width: 450px) {
   .navbar-item,
   button.contact {
     font-size: 5vw;
   }
-  button.contact {
-    padding: 0px 5ttonpx 2px 5px;
+  .navbar {
+    border: 1.2px;
+  }
+  .tekstovermij h3 {
+    font-size: 11vw;
+  }
+  .tekstovermij h2 {
+    font-size: 8vw;
+  }
+  .secovermij {
+    margin-top: -2vw;
+  }
+  #foto-van-mij,
+  figure.fotovanmij {
+    width: 29vw;
+  }
+  #meerovermij {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .secovermij {
+    margin-top: -3vw;
   }
 }
