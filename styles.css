@@ -6,11 +6,10 @@
 * {
   text-decoration: none;
   color: black;
-}
-
-html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 body {
   width: 100%;
   background-color: black;
@@ -21,7 +20,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
 }
 
 /* DIT KAN GEBRUIKT WORDEN VOOR EEN LOGO FOTO IPV GROTE NAAM MET TEXT
@@ -79,17 +77,15 @@ button.contact {
 /* ----------------OVER MIJ----------- */
 
 .overmij {
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40vw;
 }
 
 h2.overmijtitel,
 .overmij h3 {
   margin: 0;
-
-
 }
 .overmijtitel {
   padding-top: 5vw;
@@ -103,7 +99,6 @@ figure.fotovanmij {
 #foto-van-mij {
   width: 18vw;
   border-radius: 15%;
-
 }
 
 #meerovermij {
@@ -117,7 +112,6 @@ figure.fotovanmij {
   box-shadow: 0.5px 0.5px 2px 0.5px black;
   display: none;
 }
-
 
 input[type="checkbox"] {
   display: none;
@@ -160,7 +154,7 @@ input[type="checkbox"] {
 }
 
 .lbl-toggle::before {
-  content: ' ';
+  content: " ";
   display: inline-block;
 
   border-top: 5px solid transparent;
@@ -168,11 +162,11 @@ input[type="checkbox"] {
   border-left: 5px solid currentColor;
 
   vertical-align: middle;
-  margin-right: .5rem;
-  margin-left: .2rem;
+  margin-right: 0.5rem;
+  margin-left: 0.2rem;
   transform: translateY(-2px);
 
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
 }
 .toggle:checked + .lbl-toggle::before {
   transform: rotate(90deg) translateX(-3px);
@@ -188,14 +182,14 @@ input[type="checkbox"] {
 /* ---------SKILLS--------------- */
 section.skills {
   background: rgb(197, 168, 168);
-  margin-bottom: 10vh;
+  margin-top: 35vh;
 }
 
 .skillstitel,
 section.projecten h2,
 #contacttitel {
   font-size: 4.5vw;
-  padding-top: 1vh; /* TITELS, SKILLS, PROJECTEN, CONTACT */
+  padding-top: 1vh; /* TITELS SKILLS, PROJECTEN, CONTACT */
   text-align: center;
   color: black;
   margin-block-end: 0;
@@ -230,7 +224,7 @@ figcaption {
 
 /*----------PROJECTEN-------------*/
 section.projecten {
-  margin-top: -30vh;
+  margin-top: -15vh;
 }
 
 #project-platen {
@@ -427,38 +421,65 @@ footer {
   }
 }
 
+/*------------TABLET----------------*/
 @media only screen and (max-width: 768px) {
-  .navbar-item,
-  button.contact {
-    font-size: 2.9vw;
-  }
-  .overmij h3 {
-    font-size: 5.4vw;
-  }
-  .overmij h2 {
-    font-size: 4.5vw;
-  }
-  #meerovermij {
-    font-size: 2vw;
-  }
-}
-
-@media only screen and (max-width: 576px) {
+  /*----NAVBAR-----*/
   .navbar-item,
   button.contact {
     font-size: 4vw;
   }
+  .navbar {
+    border: 1.2px;
+  }
+  /*----OVER MIJ----*/
   .overmij h3 {
-    font-size: 6vw;
+    font-size: 10vw;
   }
   .overmij h2 {
-    font-size: 5vw;
+    font-size: 7vw;
+    line-height: 0.7;
   }
   .secovermij {
     margin-top: -2vw;
   }
-  .navbar {
-    border: 1.2px;
+  .overmij {
+    margin-bottom: 40vw;
+  }
+  #foto-van-mij,
+  figure.fotovanmij {
+    width: 27vw;
+  }
+  #meerovermij {
+    font-size: 3vw;
+  }
+
+  /*----SKILLS----*/
+  .skill-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  .skill-logos figure {
+    margin: 4px;
+  }
+  .skill-logos figure img {
+    margin: 1vw 5px 1vw 1vw;
+    width: 15vw;
+  }
+  .skill-logos figcaption {
+    font-size: 15px;
+    line-height: 0.7;
+  }
+  .skillstitel,
+  section.projecten h2 {
+    font-size: 24px;
+  }
+  /*----PROJECTEN---*/
+  #project-platen {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -475,45 +496,17 @@ footer {
   }
 
   /*---OVER MIJ---*/
-  .overmij h3 {
-    font-size: 11vw;
-  }
-  .overmij h2 {
-    font-size: 8vw;
-    line-height: 0.7;
-  }
 
-  #foto-van-mij,
-  figure.fotovanmij {
-    width: 29vw;
-  }
-  #meerovermij {
-    font-size: 3vw;
-  }
   /*----SKILLS----*/
-  .skill-logos {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-  }
   .skill-logos figure {
     margin: 4px;
   }
   .skill-logos figure img {
     margin: 5px 5px 0px 5px;
-    width: 55px;
-  }
-  .skill-logos figcaption {
-    font-size: 15px;
-    line-height: 0.7;
+    width: 15vw;
   }
   /*------PROJECTEN-----*/
-  #project-platen {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
+
   #project-platen figcaption {
     font-size: 18px;
     line-height: 0.8;
