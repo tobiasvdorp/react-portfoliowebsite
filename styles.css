@@ -389,13 +389,30 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
+  /*---NAVBAR----*/
+  .overmij {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40vw;
+  }
+
   .navbar-item,
   button.contact {
     font-size: 2vw;
     margin: 0.5vw;
   }
+  /*---OVER MIJ ---*/
+  .overmij {
+    margin-bottom: 0;
+  }
+  .overmijtitel {
+    padding-top: 1vh;
+  }
   .overmij h3 {
-    font-size: 4.8vw;
+    font-size: 7vw;
+    line-height: 1;
+    padding-bottom: 1vh;
   }
   .overmij h2 {
     font-size: 3.8vw;
@@ -404,21 +421,50 @@ footer {
   figure.fotovanmij {
     width: 16vw;
   }
-}
-
-@media only screen and (max-width: 992px) {
-  .navbar-item,
-  button.contact {
-    font-size: 2.7vw;
-    margin: 0.5vw;
-  }
-  #foto-van-mij,
-  figure.fotovanmij {
-    width: 18vw;
-  }
   #meerovermij {
-    font-size: 1.6vw;
+    font-size: 10vw;
   }
+  .lbl-toggle {
+    font-size: 2vw;
+    padding: 0.5vw 2vw 0.5vw 1vw;
+  }
+  .lbl-toggle::before {
+    border-top: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    border-left: .5rem solid currentColor;
+  }
+  .content-inner {
+    font-size: 2vw;
+  }
+  /*----SKILLS----*/
+
+.skill-logos {
+  justify-content: center;
+}
+.skill-logos figure {
+    margin: 4px;
+  }
+  .skill-logos figure img {
+    margin: 1.5vw;
+    width: 5vw;
+  }
+  /*-----PROJECTEN----*/
+  #project-platen {
+    justify-content: center;
+  }
+  #project-platen figure img {
+    width: 25vw;
+  }
+
+  #project-platen figure {
+    margin: 1vw;
+  }
+
+  #project-platen figure figcaption {
+    font-size: 4vw;
+  }
+
+  /*---CONTACT----*/
 }
 
 /*------------TABLET----------------*/
@@ -432,12 +478,16 @@ footer {
     border: 1.2px;
   }
   /*----OVER MIJ----*/
+  .overmij2 {
+    visibility: hidden;
+  }
   .overmij h3 {
-    font-size: 10vw;
+    font-size: 8vw;
   }
   .overmij h2 {
-    font-size: 7vw;
+    font-size: 5vw;
     line-height: 0.7;
+    padding-top: 3vh;
   }
   .secovermij {
     margin-top: -2vw;
@@ -447,12 +497,19 @@ footer {
   }
   #foto-van-mij,
   figure.fotovanmij {
-    width: 27vw;
+    width: 32vw;
   }
-  #meerovermij {
+  .lbl-toggle {
     font-size: 3vw;
   }
-
+  .lbl-toggle::before {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid currentColor;
+  }
+  .content-inner {
+    font-size: 3vw;
+  }
   /*----SKILLS----*/
   .skill-logos {
     flex-wrap: wrap;
@@ -468,18 +525,29 @@ footer {
     width: 15vw;
   }
   .skill-logos figcaption {
-    font-size: 15px;
+    font-size: 3vw;
     line-height: 0.7;
   }
   .skillstitel,
   section.projecten h2 {
-    font-size: 24px;
+    font-size: 35px;
   }
   /*----PROJECTEN---*/
   #project-platen {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+  #project-platen figure img {
+    width: 35vw;
+  }
+
+  #project-platen figure {
+    margin: 2vw;
+  }
+
+  #project-platen figure figcaption {
+    font-size: 4vw;
   }
 }
 
@@ -534,7 +602,7 @@ footer {
   }
 
   .social-logos img {
-    width: 30px;
+    width: 50px;
   }
   #contacttitel {
     font-size: 32px;
