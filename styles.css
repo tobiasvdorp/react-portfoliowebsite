@@ -21,6 +21,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
 }
 
 /* DIT KAN GEBRUIKT WORDEN VOOR EEN LOGO FOTO IPV GROTE NAAM MET TEXT
@@ -52,7 +53,7 @@ nav {
   position: sticky;
   top: 0;
   background: rgb(197, 168, 168);
-  z-index: 100;
+  z-index: 999;
 }
 
 .navbar-item {
@@ -77,34 +78,32 @@ button.contact {
 
 /* ----------------OVER MIJ----------- */
 
-section.over-mij {
-  margin-bottom: 35vh;
-  margin-top: 5vh;
+.overmij {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 40vw;
 }
 
-section.overmijtekstenfoto {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
 h2.overmijtitel,
-.tekstovermij h3 {
+.overmij h3 {
   margin: 0;
-}
 
-.tekstovermij {
-  text-shadow: 1px 1px 0px grey;
+
+}
+.overmijtitel {
+  padding-top: 5vw;
 }
 
 figure.fotovanmij {
   width: 18vw;
-  margin: 3vw;
+  margin: 1vw;
 }
 
 #foto-van-mij {
   width: 18vw;
   border-radius: 15%;
+
 }
 
 #meerovermij {
@@ -116,6 +115,72 @@ figure.fotovanmij {
   font-size: 2vw;
   font-family: "Oswald", sans-serif;
   box-shadow: 0.5px 0.5px 2px 0.5px black;
+  display: none;
+}
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.lbl-toggle {
+  font-size: 4vw;
+  text-align: center;
+  color: black;
+  background: rgb(159, 52, 171);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.25s ease-out;
+  box-shadow: 0.5px 0.5px 2px 0.5px black;
+  padding: 0.5vw 2vw 0.5vw 1vw;
+  margin-bottom: 1.5vw;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: rgba(250, 224, 66, 0.2);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 0.5rem 1rem;
+  display: flex;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+
+  vertical-align: middle;
+  margin-right: .5rem;
+  margin-left: .2rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 /* -------------------------------- */
@@ -281,7 +346,7 @@ footer {
     margin: 0.4vw;
     padding: 0 1vw;
   }
-  .tekstovermij h3 {
+  .overmij h3 {
     margin: 0px;
     padding: 0px;
   }
@@ -294,12 +359,12 @@ footer {
     margin: 0.4vw;
     padding: 0 1vw;
   }
-  .tekstovermij h3 {
+  .overmij h3 {
     margin: 0px;
     padding: 0px;
     font-size: 3vw;
   }
-  .tekstovermij h2 {
+  .overmij h2 {
     font-size: 2vw;
   }
   #foto-van-mij,
@@ -317,10 +382,10 @@ footer {
     font-size: 1.8vw;
     margin: 0.5vw;
   }
-  .tekstovermij h3 {
+  .overmij h3 {
     font-size: 4vw;
   }
-  .tekstovermij h2 {
+  .overmij h2 {
     font-size: 3vw;
   }
   #foto-van-mij,
@@ -335,10 +400,10 @@ footer {
     font-size: 2vw;
     margin: 0.5vw;
   }
-  .tekstovermij h3 {
+  .overmij h3 {
     font-size: 4.8vw;
   }
-  .tekstovermij h2 {
+  .overmij h2 {
     font-size: 3.8vw;
   }
   #foto-van-mij,
@@ -367,10 +432,10 @@ footer {
   button.contact {
     font-size: 2.9vw;
   }
-  .tekstovermij h3 {
+  .overmij h3 {
     font-size: 5.4vw;
   }
-  .tekstovermij h2 {
+  .overmij h2 {
     font-size: 4.5vw;
   }
   #meerovermij {
@@ -383,10 +448,10 @@ footer {
   button.contact {
     font-size: 4vw;
   }
-  .tekstovermij h3 {
+  .overmij h3 {
     font-size: 6vw;
   }
-  .tekstovermij h2 {
+  .overmij h2 {
     font-size: 5vw;
   }
   .secovermij {
@@ -409,11 +474,11 @@ footer {
     border: 1.2px;
   }
 
-/*---OVER MIJ---*/
-  .tekstovermij h3 {
+  /*---OVER MIJ---*/
+  .overmij h3 {
     font-size: 11vw;
   }
-  .tekstovermij h2 {
+  .overmij h2 {
     font-size: 8vw;
     line-height: 0.7;
   }
@@ -443,7 +508,7 @@ footer {
     font-size: 15px;
     line-height: 0.7;
   }
-/*------PROJECTEN-----*/
+  /*------PROJECTEN-----*/
   #project-platen {
     flex-wrap: wrap;
     justify-content: center;
@@ -466,19 +531,19 @@ footer {
     font-size: 22px;
   }
 
-/*-----CONTACT-----*/
+  /*-----CONTACT-----*/
   #contacttitel {
     font-size: 7vw;
   }
-  
+
   .social-logos figure {
     margin: 3vw;
   }
-  
+
   .social-logos img {
     width: 30px;
   }
-  #contacttitel{
+  #contacttitel {
     font-size: 32px;
   }
 }
