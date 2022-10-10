@@ -80,7 +80,7 @@ button.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 40vw;
+  margin-bottom: 5vh;
 }
 
 h2.overmijtitel,
@@ -156,16 +156,15 @@ input[type="checkbox"] {
 .lbl-toggle::before {
   content: " ";
   display: inline-block;
-
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid currentColor;
-
+  border-top: 0.8vw solid transparent;
+  border-bottom: 0.8vw solid transparent;
+  border-left: 0.8vw solid currentColor;
+  margin-right: 1vw;
+  margin-left: 0.3vw;
   vertical-align: middle;
   margin-right: 0.5rem;
   margin-left: 0.2rem;
   transform: translateY(-2px);
-
   transition: transform 0.2s ease-out;
 }
 .toggle:checked + .lbl-toggle::before {
@@ -182,7 +181,6 @@ input[type="checkbox"] {
 /* ---------SKILLS--------------- */
 section.skills {
   background: rgb(197, 168, 168);
-  margin-top: 35vh;
 }
 
 .skillstitel,
@@ -200,7 +198,10 @@ section.projecten h2,
   color: black;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 .skill-logos img {
@@ -224,7 +225,7 @@ figcaption {
 
 /*----------PROJECTEN-------------*/
 section.projecten {
-  margin-top: -15vh;
+  margin-top: 3vh;
 }
 
 #project-platen {
@@ -232,8 +233,9 @@ section.projecten {
   font-size: 20px;
   text-align: center;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 14vh;
 }
 
@@ -300,7 +302,7 @@ footer {
 #contact {
   display: block;
   position: relative;
-  top: -30vh;
+  top: -20vh;
 }
 
 #top {
@@ -371,103 +373,79 @@ footer {
 }
 
 @media only screen and (max-width: 1440px) {
+  /*----NAVBAR-----*/
   .navbar-item,
   button.contact {
-    font-size: 1.8vw;
+    font-size: 2.2vw;
     margin: 0.5vw;
   }
+  /*----OVER MIJ----*/
   .overmij h3 {
-    font-size: 4vw;
+    font-size: 6vw;
   }
   .overmij h2 {
     font-size: 3vw;
+    padding-top: 3vh;
+    line-height: 0.6;
+  }
+
+  .overmij {
+    margin-top: 2vh;
   }
   #foto-van-mij,
   figure.fotovanmij {
-    width: 15vw;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  /*---NAVBAR----*/
-  .overmij {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40vw;
-  }
-
-  .navbar-item,
-  button.contact {
-    font-size: 2vw;
-    margin: 0.5vw;
-  }
-  /*---OVER MIJ ---*/
-  .overmij {
-    margin-bottom: 0;
-  }
-  .overmijtitel {
-    padding-top: 1vh;
-  }
-  .overmij h3 {
-    font-size: 7vw;
-    line-height: 1;
-    padding-bottom: 1vh;
-  }
-  .overmij h2 {
-    font-size: 3.8vw;
-  }
-  #foto-van-mij,
-  figure.fotovanmij {
-    width: 16vw;
-  }
-  #meerovermij {
-    font-size: 10vw;
+    width: 18vw;
   }
   .lbl-toggle {
     font-size: 2vw;
-    padding: 0.5vw 2vw 0.5vw 1vw;
   }
-  .lbl-toggle::before {
-    border-top: .5rem solid transparent;
-    border-bottom: .5rem solid transparent;
-    border-left: .5rem solid currentColor;
-  }
+
   .content-inner {
     font-size: 2vw;
   }
   /*----SKILLS----*/
-
-.skill-logos {
-  justify-content: center;
-}
-.skill-logos figure {
-    margin: 4px;
-  }
   .skill-logos figure img {
-    margin: 1.5vw;
-    width: 5vw;
+    width: calc(40px + 3vw);
+    margin: 0.5vw;
   }
-  /*-----PROJECTEN----*/
-  #project-platen {
-    justify-content: center;
+  .skill-logos figcaption {
+    font-size: calc(8px + 0.8vw);
+    line-height: 0.7;
+  }
+  .skillstitel {
+    font-size: calc(20px + 1vw);
+  }
+
+  /*----PROJECTEN---*/
+  section.projecten {
+    padding: 0 18vw;
   }
   #project-platen figure img {
-    width: 25vw;
+    width: calc(70px + 10vw);
   }
 
   #project-platen figure {
-    margin: 1vw;
+    margin: 1.5vw;
   }
 
   #project-platen figure figcaption {
-    font-size: 4vw;
+    font-size: calc(20px + 0.8vw);
   }
 
+  section.projecten h2 {
+    font-size: calc(15px + 3vw);
+    margin-bottom: 1.5vw;
+  }
   /*---CONTACT----*/
+  .social-logos figure {
+    margin: 1vw;
+  }
+  .social-logos img {
+    width: calc(40px + 3vw);
+  }
 }
-
 /*------------TABLET----------------*/
+
 @media only screen and (max-width: 768px) {
   /*----NAVBAR-----*/
   .navbar-item,
@@ -478,23 +456,15 @@ footer {
     border: 1.2px;
   }
   /*----OVER MIJ----*/
-  .overmij2 {
-    visibility: hidden;
-  }
+
   .overmij h3 {
     font-size: 8vw;
   }
   .overmij h2 {
     font-size: 5vw;
-    line-height: 0.7;
     padding-top: 3vh;
   }
-  .secovermij {
-    margin-top: -2vw;
-  }
-  .overmij {
-    margin-bottom: 40vw;
-  }
+
   #foto-van-mij,
   figure.fotovanmij {
     width: 32vw;
@@ -502,44 +472,29 @@ footer {
   .lbl-toggle {
     font-size: 3vw;
   }
-  .lbl-toggle::before {
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid currentColor;
-  }
+
   .content-inner {
     font-size: 3vw;
   }
   /*----SKILLS----*/
-  .skill-logos {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-  }
-  .skill-logos figure {
-    margin: 4px;
-  }
+
   .skill-logos figure img {
-    margin: 1vw 5px 1vw 1vw;
-    width: 15vw;
+    width: calc(40px + 6vw);
+    margin: 0.5vw;
   }
   .skill-logos figcaption {
-    font-size: 3vw;
-    line-height: 0.7;
+    font-size: calc(11px + 0.8vw);
   }
-  .skillstitel,
-  section.projecten h2 {
-    font-size: 35px;
+  .skillstitel {
+    font-size: calc(10px + 3vw);
   }
   /*----PROJECTEN---*/
-  #project-platen {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  section.projecten {
+    padding: 0 2vw;
   }
+
   #project-platen figure img {
-    width: 35vw;
+    width: calc(120px + 15vw);
   }
 
   #project-platen figure {
@@ -548,6 +503,13 @@ footer {
 
   #project-platen figure figcaption {
     font-size: 4vw;
+  }
+
+  /*---CONTACT----*/
+  section.projecten h2,
+  #contacttitel {
+    font-size: 8vw;
+    margin-bottom: 1.5vw;
   }
 }
 
@@ -570,41 +532,40 @@ footer {
     margin: 4px;
   }
   .skill-logos figure img {
-    margin: 5px 5px 0px 5px;
-    width: 15vw;
+    width: calc(20px + 6vw);
+    margin: 0.5vw;
+  }
+.skill-logos figure figcaption {
+  font-size: calc(8px + 1vw);
+}
+  .skillstitel {
+    font-size: 6vw;
   }
   /*------PROJECTEN-----*/
-
+  
   #project-platen figcaption {
     font-size: 18px;
     line-height: 0.8;
   }
   #project-platen figure img {
-    width: 120px;
+    width: calc(80px + 9vw);
   }
 
   #project-platen figure {
-    margin: 4vw;
+    margin: 2vw;
   }
 
-  .skillstitel,
-  section.projecten h2 {
-    font-size: 22px;
+  section.projecten h2,
+  #contacttitel {
+    font-size: 9vw;
+    margin-bottom: 1.5vw;
   }
 
   /*-----CONTACT-----*/
-  #contacttitel {
-    font-size: 7vw;
-  }
-
   .social-logos figure {
     margin: 3vw;
   }
-
   .social-logos img {
-    width: 50px;
-  }
-  #contacttitel {
-    font-size: 32px;
+    width: calc(30px + 3vw);
   }
 }
