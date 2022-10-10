@@ -161,9 +161,6 @@ input[type="checkbox"] {
   border-left: 0.8vw solid currentColor;
   margin-right: 1vw;
   margin-left: 0.3vw;
-  vertical-align: middle;
-  margin-right: 0.5rem;
-  margin-left: 0.2rem;
   transform: translateY(-2px);
   transition: transform 0.2s ease-out;
 }
@@ -335,62 +332,31 @@ footer {
     letter-spacing: 0.05em;
   }
 }
-@media only screen and (max-width: 99999px) {
-  .navbar-item,
-  button.contact {
-    font-size: 1.1vw;
-    margin: 0.4vw;
-    padding: 0 1vw;
-  }
-  .overmij h3 {
-    margin: 0px;
-    padding: 0px;
-  }
-}
 
 @media only screen and (max-width: 2560px) {
-  .navbar-item,
-  button.contact {
-    font-size: 1.1vw;
-    margin: 0.4vw;
-    padding: 0 1vw;
-  }
-  .overmij h3 {
-    margin: 0px;
-    padding: 0px;
-    font-size: 3vw;
-  }
-  .overmij h2 {
-    font-size: 2vw;
-  }
-  #foto-van-mij,
-  figure.fotovanmij {
-    width: 13vw;
-  }
-  .navbar {
-    border: 1.6px;
-  }
-}
-
-@media only screen and (max-width: 1440px) {
-  /*----NAVBAR-----*/
+  /*----NAVBAR----*/
   .navbar-item,
   button.contact {
     font-size: 2.2vw;
     margin: 0.5vw;
+    padding: 0 1vw;
   }
-  /*----OVER MIJ----*/
+  .navbar {
+    border: 2px;
+  }
+  /*---OVER MIJ---*/
+  .overmij {
+    margin-bottom: 3vh;
+  }
   .overmij h3 {
-    font-size: 6vw;
+    margin: 0px;
+    padding: 0px;
+    font-size: 5vw;
   }
   .overmij h2 {
-    font-size: 3vw;
+    font-size: 4vw;
     padding-top: 3vh;
-    line-height: 0.6;
-  }
-
-  .overmij {
-    margin-top: 2vh;
+    line-height: 1;
   }
   #foto-van-mij,
   figure.fotovanmij {
@@ -399,9 +365,50 @@ footer {
   .lbl-toggle {
     font-size: 2vw;
   }
-
   .content-inner {
     font-size: 2vw;
+  }
+  
+  /*----SKILLS----*/
+  .skill-logos figcaption {
+    font-size: calc(16px + 0.8vw);
+  }
+  .skillstitel {
+    font-size: calc(20px + 2vw);
+  }
+  /*---PROJECTEN----*/
+  section.projecten {
+    padding: 0 18vw;
+  }
+  #project-platen figure img {
+    width: calc(150px + 12vw);
+  }
+  #project-platen figure {
+    margin: 1.5vw;
+  }
+  /*---CONTACT----*/
+  .social-logos figure {
+    margin: 1vw;
+  }
+  .social-logos img {
+    width: calc(60px + 4vw);
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  /*----NAVBAR-----*/
+
+  /*----OVER MIJ----*/
+  .overmij h3 {
+    font-size: 6vw;
+  }
+  .overmij h2 {
+    font-size: 3vw;
+    line-height: 0.6;
+  }
+
+  .overmij {
+    margin-top: 2vh;
   }
   /*----SKILLS----*/
   .skill-logos figure img {
@@ -417,15 +424,9 @@ footer {
   }
 
   /*----PROJECTEN---*/
-  section.projecten {
-    padding: 0 18vw;
-  }
+  
   #project-platen figure img {
     width: calc(70px + 10vw);
-  }
-
-  #project-platen figure {
-    margin: 1.5vw;
   }
 
   #project-platen figure figcaption {
@@ -437,9 +438,7 @@ footer {
     margin-bottom: 1.5vw;
   }
   /*---CONTACT----*/
-  .social-logos figure {
-    margin: 1vw;
-  }
+
   .social-logos img {
     width: calc(40px + 3vw);
   }
@@ -535,14 +534,14 @@ footer {
     width: calc(20px + 6vw);
     margin: 0.5vw;
   }
-.skill-logos figure figcaption {
-  font-size: calc(8px + 1vw);
-}
+  .skill-logos figure figcaption {
+    font-size: calc(8px + 1vw);
+  }
   .skillstitel {
     font-size: 6vw;
   }
   /*------PROJECTEN-----*/
-  
+
   #project-platen figcaption {
     font-size: 18px;
     line-height: 0.8;
