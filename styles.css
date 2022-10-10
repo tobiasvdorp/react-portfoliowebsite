@@ -215,6 +215,14 @@ figcaption {
   cursor: pointer;
 }
 
+.skill-logos figure:hover {
+    transform: scale(1.1);
+transition: .2s;
+    z-index: 3;
+    border-color: #007bff !important;
+
+}
+
 /* ------------------------------*/
 
 /*----------PROJECTEN-------------*/
@@ -388,7 +396,7 @@ footer {
     padding: 0 20vw;
   }
   #project-platen figure img {
-    width: calc(70px + 9vw);
+    width: calc(60px + 10vw);
   }
   #project-platen figure {
     margin: 1.5vw;
@@ -429,14 +437,13 @@ footer {
 
   /*----PROJECTEN---*/
 
-  #project-platen figure figcaption {
-    font-size: calc(20px + 0.8vw);
-  }
+
 
   section.projecten h2 {
     font-size: calc(15px + 3vw);
     margin-bottom: 1.5vw;
   }
+ 
   /*---CONTACT----*/
 
   .social-logos img {
@@ -449,7 +456,7 @@ footer {
   /*----NAVBAR-----*/
   .navbar-item,
   button.contact {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   .navbar {
     border: 1.2px;
@@ -484,6 +491,7 @@ footer {
   }
   /*----SKILLS----*/
 
+
   .skill-logos figure img {
     width: calc(40px + 3vw);
     margin: 0.5vw;
@@ -499,11 +507,11 @@ footer {
  }
   /*----PROJECTEN---*/
   section.projecten {
-    padding: 0 2vw;
+    padding: 0 9vw;
   }
 
   #project-platen figure img {
-    width: calc(100px + 15vw);
+    width: calc(80px + 15vw);
   }
 
   #project-platen figure {
@@ -515,13 +523,14 @@ footer {
   }
 
   /*---CONTACT----*/
-  section.projecten h2,
   #contacttitel {
     font-size: 8vw;
     margin-bottom: 1.5vw;
   }
+section.projecten h2 {
+  font-size: 6vw;
 }
-
+}
 /*----------------MOBIEL-------------------*/
 
 /*---NAVBAR---*/
@@ -541,7 +550,7 @@ footer {
     margin: 4px;
   }
   .skill-logos figure img {
-    font-size: calc(15px + 1.8vw);
+    font-size: calc(1px + .3vw);
     margin: 0.5vw;
   }
   .skill-logos figure figcaption {
@@ -551,7 +560,7 @@ footer {
     font-size: 6vw;
   }
   /*------PROJECTEN-----*/
-
+  
   #project-platen figcaption {
     font-size: 18px;
     line-height: 0.8;
