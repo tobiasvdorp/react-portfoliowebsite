@@ -156,11 +156,6 @@ input[type="checkbox"] {
 .lbl-toggle::before {
   content: " ";
   display: inline-block;
-  border-top: 0.8vw solid transparent;
-  border-bottom: 0.8vw solid transparent;
-  border-left: 0.8vw solid currentColor;
-  margin-right: 1vw;
-  margin-left: 0.3vw;
   transform: translateY(-2px);
   transition: transform 0.2s ease-out;
 }
@@ -178,19 +173,22 @@ input[type="checkbox"] {
 /* ---------SKILLS--------------- */
 section.skills {
   background: rgb(197, 168, 168);
+  
 }
 
 .skillstitel,
 section.projecten h2,
 #contacttitel {
-  font-size: 4.5vw;
-  padding-top: 1vh; /* TITELS SKILLS, PROJECTEN, CONTACT */
+  font-size: 3.5vw;
   text-align: center;
   color: black;
   margin-block-end: 0;
   margin-block-start: 0;
+  margin-top: 3vh;
 }
-
+section.projecten h2 {
+  margin-top: 5vh;
+}
 .skill-logos {
   color: black;
   display: flex;
@@ -198,7 +196,6 @@ section.projecten h2,
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
 }
 
 .skill-logos img {
@@ -206,7 +203,7 @@ section.projecten h2,
 }
 
 .skill-logos figure {
-  margin: 1vw;
+  margin: 0.1vw 1vw 1vh 1vw;
 }
 
 figcaption {
@@ -253,7 +250,7 @@ section.projecten {
 /*--------------CONTACT-----------*/
 
 #contacttitel {
-  font-size: 7vw;
+  font-size: 4.5vw;
 }
 
 .social-logos figure {
@@ -337,7 +334,7 @@ footer {
   /*----NAVBAR----*/
   .navbar-item,
   button.contact {
-    font-size: 2.2vw;
+    font-size: calc(15px + 1.8vh);
     margin: 0.5vw;
     padding: 0 1vw;
   }
@@ -354,7 +351,7 @@ footer {
     font-size: 5vw;
   }
   .overmij h2 {
-    font-size: 4vw;
+    font-size: 3vw;
     padding-top: 3vh;
     line-height: 1;
   }
@@ -363,25 +360,35 @@ footer {
     width: 18vw;
   }
   .lbl-toggle {
-    font-size: 2vw;
+    font-size: 1.5vw;
+  }
+  .lbl-toggle::before {
+    border-top: 0.6vw solid transparent;
+    border-bottom: 0.6vw solid transparent;
+    border-left: 0.6vw solid currentColor;
+    margin-right: 1vw;
+    margin-left: 0.3vw;
   }
   .content-inner {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
-  
+
   /*----SKILLS----*/
+  .skill-logos figure img {
+    width: calc(30px + 3vw);
+  }
   .skill-logos figcaption {
-    font-size: calc(16px + 0.8vw);
+    font-size: calc(8px + 1vw);
   }
   .skillstitel {
-    font-size: calc(20px + 2vw);
+    font-size: calc(20px + 1vw);
   }
   /*---PROJECTEN----*/
   section.projecten {
-    padding: 0 18vw;
+    padding: 0 20vw;
   }
   #project-platen figure img {
-    width: calc(150px + 12vw);
+    width: calc(70px + 9vw);
   }
   #project-platen figure {
     margin: 1.5vw;
@@ -411,23 +418,16 @@ footer {
     margin-top: 2vh;
   }
   /*----SKILLS----*/
-  .skill-logos figure img {
-    width: calc(40px + 3vw);
-    margin: 0.5vw;
-  }
+
   .skill-logos figcaption {
     font-size: calc(8px + 0.8vw);
     line-height: 0.7;
   }
-  .skillstitel {
-    font-size: calc(20px + 1vw);
+  section.skills {
+    padding-bottom: 1vh;
   }
 
   /*----PROJECTEN---*/
-  
-  #project-platen figure img {
-    width: calc(70px + 10vw);
-  }
 
   #project-platen figure figcaption {
     font-size: calc(20px + 0.8vw);
@@ -471,6 +471,13 @@ footer {
   .lbl-toggle {
     font-size: 3vw;
   }
+  .lbl-toggle::before {
+    border-top: 0.8vw solid transparent;
+    border-bottom: 0.8vw solid transparent;
+    border-left: 0.8vw solid currentColor;
+    margin-right: 1vw;
+    margin-left: 0.3vw;
+  }
 
   .content-inner {
     font-size: 3vw;
@@ -478,7 +485,7 @@ footer {
   /*----SKILLS----*/
 
   .skill-logos figure img {
-    width: calc(40px + 6vw);
+    width: calc(40px + 3vw);
     margin: 0.5vw;
   }
   .skill-logos figcaption {
@@ -487,13 +494,16 @@ footer {
   .skillstitel {
     font-size: calc(10px + 3vw);
   }
+ .section.skills {
+  padding-bottom: 1vh;
+ }
   /*----PROJECTEN---*/
   section.projecten {
     padding: 0 2vw;
   }
 
   #project-platen figure img {
-    width: calc(120px + 15vw);
+    width: calc(100px + 15vw);
   }
 
   #project-platen figure {
@@ -531,7 +541,7 @@ footer {
     margin: 4px;
   }
   .skill-logos figure img {
-    width: calc(20px + 6vw);
+    font-size: calc(15px + 1.8vw);
     margin: 0.5vw;
   }
   .skill-logos figure figcaption {
