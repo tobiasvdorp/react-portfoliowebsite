@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <link rel="sc" href="" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
@@ -15,10 +16,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <script
-      src="https://kit.fontawesome.com/bfbf5f508f.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="javascript.js"></script>
     <title>Portfolio Tobias</title>
   </head>
 
@@ -50,15 +48,16 @@
 
     <!-----------------OVER MIJ--------------->
 
-    <!--<h2 class="overmijtitel">OVER MIJ</h2> -->
-    
-
     <section class="overmij">
-        <a id="overmij"></a>
+      <a id="overmij"></a>
       <h2 class="overmijtitel">Hoi.</h2>
       <h3>Ik ben Tobias.</h3>
       <figure class="fotovanmij">
-        <img id="foto-van-mij" src="images/oie_nshSZrCmGLK4.jpg" alt="Profielfoto" />
+        <img
+          id="foto-van-mij"
+          src="images/oie_nshSZrCmGLK4.jpg"
+          alt="Profielfoto"
+        />
       </figure>
 
       <input id="collapsible" class="toggle" type="checkbox" />
@@ -76,19 +75,41 @@
       </div>
     </section>
 
-    
-    <!---------------------------------------->
+    <!---------------POPUP----------->
+
+    <div id="popup">
+      <h2>HTML</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam in dolore facilis harum blanditiis culpa iure, fuga quae, libero enim repellat sint dolor deserunt incidunt facere perferendis! Repellendus, voluptatibus magni!
+      </p>
+      <a onclick="toggle()"><button id="buttonsluiten">Sluiten</button></a>
+    </div>
+    <script>
+      function toggle() {
+        var blur = document.getElementById("blur");
+        var popup = document.getElementById("popup");
+        popup.classList.toggle("active");
+      }
+    </script>
     <!-----------------SKILLS----------------->
 
     <section class="skills">
       <a id="skills"></a>
+
       <h2 class="skillstitel">SKILLS</h2>
 
       <section class="skill-logos">
-        <figure>
-          <img src="images/lege-foto.jpeg" alt="Skill" />
-          <figcaption>Skill</figcaption>
+        
+        <figure onclick="toggle()">
+          <div class="container" id="blur">
+            <div class="content">
+              <img src="images/lege-foto.jpeg" alt="Skill" />
+              <figcaption>HTML</figcaption>
+            </div>
+          </div>
         </figure>
+    
+
         <figure>
           <img src="images/lege-foto.jpeg" alt="Skill" />
           <figcaption>Skill</figcaption>
@@ -178,6 +199,6 @@
       </figure>
     </section>
 
-    <footer>(C) Copyrighty</footer>
+    <footer>(c) Copyright</footer>
   </body>
 </html>

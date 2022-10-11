@@ -8,12 +8,12 @@
   color: black;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Oswald", sans-serif;
 }
 
 body {
   width: 100%;
   background-color: black;
-  font-family: "Oswald", sans-serif;
   margin: 0;
   padding: 0;
   background-image: url(images/layered-steps-haikei.svg);
@@ -65,7 +65,6 @@ button.contact {
   border: none;
   border-radius: 5px;
   background: rgb(159, 52, 171);
-  font-family: "Oswald", sans-serif;
   font-size: 4vw;
   color: black;
   transition: 0.7s;
@@ -108,7 +107,6 @@ figure.fotovanmij {
   color: black;
   transition: 0.7s;
   font-size: 2vw;
-  font-family: "Oswald", sans-serif;
   box-shadow: 0.5px 0.5px 2px 0.5px black;
   display: none;
 }
@@ -168,12 +166,51 @@ input[type="checkbox"] {
   border-bottom-left-radius: 0;
 }
 
-/* -------------------------------- */
+/* -----------POPUP-------------- */
 
+.container#blur.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+
+#popup h2 {
+  margin-bottom: 10px;
+  color: black;
+}
+
+#popup, #popup2 {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  padding: 30px;
+  box-shadow: 0 5px 30px black;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+#popup.active {
+  top: 50%;
+  position: fixed;
+  visibility: visible;
+  opacity: 1;
+  transform: 0.5s;
+}
+
+#buttonsluiten {
+  background: rgb(159, 52, 171);
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
 /* ---------SKILLS--------------- */
 section.skills {
   background: rgb(197, 168, 168);
-  
 }
 
 .skillstitel,
@@ -215,14 +252,6 @@ figcaption {
   cursor: pointer;
 }
 
-.skill-logos figure:hover {
-    transform: scale(1.1);
-transition: .2s;
-    z-index: 3;
-    border-color: #007bff !important;
-
-}
-
 /* ------------------------------*/
 
 /*----------PROJECTEN-------------*/
@@ -254,6 +283,9 @@ section.projecten {
   margin: 4px;
 }
 
+h2.projec {
+  box-shadow: 10px;
+}
 /*---------------------------------*/
 /*--------------CONTACT-----------*/
 
@@ -335,6 +367,39 @@ footer {
     text-decoration: underline;
     transition: 0.25s;
     letter-spacing: 0.05em;
+  }
+}
+
+.skill-logos figure,
+#project-platen figure,
+.social-logos img {
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+@media (hover: hover) and (pointer: fine) {
+  .skill-logos figure:hover,
+  #project-platen figure:hover,
+  .social-logos img:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    z-index: 3;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .skill-logos figure:hover,
+  #project-platen figure:hover {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+    background: rgb(197, 168, 168);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .skill-logos figure:hover {
+    padding-bottom: 0.5vh;
+    background: rgb(222, 189, 189);
   }
 }
 
@@ -437,13 +502,11 @@ footer {
 
   /*----PROJECTEN---*/
 
-
-
   section.projecten h2 {
     font-size: calc(15px + 3vw);
     margin-bottom: 1.5vw;
   }
- 
+
   /*---CONTACT----*/
 
   .social-logos img {
@@ -491,7 +554,6 @@ footer {
   }
   /*----SKILLS----*/
 
-
   .skill-logos figure img {
     width: calc(40px + 3vw);
     margin: 0.5vw;
@@ -502,9 +564,9 @@ footer {
   .skillstitel {
     font-size: calc(10px + 3vw);
   }
- .section.skills {
-  padding-bottom: 1vh;
- }
+  .section.skills {
+    padding-bottom: 1vh;
+  }
   /*----PROJECTEN---*/
   section.projecten {
     padding: 0 9vw;
@@ -527,9 +589,9 @@ footer {
     font-size: 8vw;
     margin-bottom: 1.5vw;
   }
-section.projecten h2 {
-  font-size: 6vw;
-}
+  section.projecten h2 {
+    font-size: 6vw;
+  }
 }
 /*----------------MOBIEL-------------------*/
 
@@ -550,7 +612,7 @@ section.projecten h2 {
     margin: 4px;
   }
   .skill-logos figure img {
-    font-size: calc(1px + .3vw);
+    font-size: calc(1px + 0.3vw);
     margin: 0.5vw;
   }
   .skill-logos figure figcaption {
@@ -560,7 +622,7 @@ section.projecten h2 {
     font-size: 6vw;
   }
   /*------PROJECTEN-----*/
-  
+
   #project-platen figcaption {
     font-size: 18px;
     line-height: 0.8;
