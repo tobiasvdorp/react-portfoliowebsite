@@ -5,7 +5,7 @@
 
 * {
   text-decoration: none;
-  color: black;
+  color: white;
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Oswald", sans-serif;
@@ -16,7 +16,7 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
-  background-image: url(images/layered-steps-haikei.svg);
+  background-image: url(images/achtergrond3.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -31,11 +31,127 @@ header, .logo-container, .logo {
 }
 
 */
-header {
-  font-size: 50px;
-  text-align: center;
+.overmij h3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
+:root {
+  --background: #060608;
+  --color: #fafafa;
+}
+.container {
+  padding: 1vw;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 700ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
+      calc(var(--index) * 200ms),
+    glitch 1s ease infinite 1s alternate-reverse;
+}
+
+.stack span:nth-child(odd) {
+  --glitch-translate: 8px;
+}
+.stack span:nth-child(even) {
+  --glitch-translate: -8px;
+}
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%,
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
+}
+/*
+:root {
+  --scale: 0.5;
+  --space: 8vmin;
+}
+
+
+
+.section {
+  transform: scaleY(calc(1 - var(--scale)));
+}
+
+.section > * {
+  transform: scaleY(calc(1 / (1 - var(--scale))));
+}
+
+
+.image-container {
+  position: sticky;
+  top: 0;
+  z-index: -20;
+  margin: 0;
+}
+
+.image-container img {
+  display: block;
+  position: absolute;
+  top: -20vh;
+  left: 0;
+  width: 100vw;
+
+
+}
+
+.image-container::after {
+  content: '';
+
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*/
 /* -----------------NAVBAR------------ */
 
 ul.navbar {
@@ -50,7 +166,7 @@ ul.navbar {
 nav {
   position: sticky;
   top: 0;
-  background: rgb(197, 168, 168);
+  background: #14342b;
   z-index: 999;
 }
 
@@ -64,9 +180,9 @@ nav {
 button.contact {
   border: none;
   border-radius: 5px;
-  background: rgb(159, 52, 171);
+  background: #9d4edd;
   font-size: 4vw;
-  color: black;
+  color: rgb(255, 255, 255);
   transition: 0.7s;
   box-shadow: 0.5px 0.5px 2px 0.5px black;
 }
@@ -103,8 +219,6 @@ figure.fotovanmij {
 #meerovermij {
   border: none;
   border-radius: 0.4vw;
-  background: rgb(159, 52, 171);
-  color: black;
   transition: 0.7s;
   font-size: 2vw;
   box-shadow: 0.5px 0.5px 2px 0.5px black;
@@ -118,8 +232,8 @@ input[type="checkbox"] {
 .lbl-toggle {
   font-size: 4vw;
   text-align: center;
-  color: black;
-  background: rgb(159, 52, 171);
+  color: white;
+  background: #9d4edd;
   cursor: pointer;
   border-radius: 2px;
   transition: all 0.25s ease-out;
@@ -144,7 +258,7 @@ input[type="checkbox"] {
 }
 
 .collapsible-content .content-inner {
-  background: rgba(250, 224, 66, 0.2);
+  background: linear-gradient(#1b463a50, #235C4C70, #235C4C70, #36af8c70, #37d1a570);
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   padding: 0.5rem 1rem;
@@ -168,18 +282,12 @@ input[type="checkbox"] {
 
 /* -----------POPUP-------------- */
 
-.container#blur.active {
-  filter: blur(20px);
-  pointer-events: none;
-  user-select: none;
-}
-
-#popup h2 {
+.popups h2, .popups p{
   margin-bottom: 10px;
   color: black;
 }
 
-#popup, #popup2 {
+.popups {
   position: fixed;
   top: 40%;
   left: 50%;
@@ -190,27 +298,36 @@ input[type="checkbox"] {
   background: white;
   opacity: 0;
   visibility: hidden;
-  transition: 0.5s;
+  transition: 0.8s;
   z-index: 10;
+  
 }
 
-#popup.active {
+.popups.active {
   top: 50%;
   position: fixed;
   visibility: visible;
   opacity: 1;
   transform: 0.5s;
+  
 }
 
-#buttonsluiten {
-  background: rgb(159, 52, 171);
-  border-radius: 2px;
+.close-button {
+  background: #9d4edd;
+  border-radius: 10%;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
 }
+
 /* ---------SKILLS--------------- */
 section.skills {
-  background: rgb(197, 168, 168);
+  background: #37d1a550;
+
+}
+.skillstitel,
+.skill-logos {
+  opacity: 1;
 }
 
 .skillstitel,
@@ -218,7 +335,7 @@ section.projecten h2,
 #contacttitel {
   font-size: 3.5vw;
   text-align: center;
-  color: black;
+  color: rgb(255, 255, 255);
   margin-block-end: 0;
   margin-block-start: 0;
   margin-top: 3vh;
@@ -237,6 +354,9 @@ section.projecten h2 {
 
 .skill-logos img {
   width: 8vw;
+  box-shadow: 10px;
+  max-width: 8vw;
+  max-height: 8vw;
 }
 
 .skill-logos figure {
@@ -336,7 +456,7 @@ footer {
 #contact {
   display: block;
   position: relative;
-  top: -20vh;
+  top: 0;
 }
 
 #top {
@@ -363,7 +483,6 @@ footer {
 @media (hover: hover) and (pointer: fine) {
   .navbar-item:hover {
     cursor: pointer;
-    color: #dbdbdb;
     text-decoration: underline;
     transition: 0.25s;
     letter-spacing: 0.05em;
@@ -380,7 +499,7 @@ footer {
   transition: all 0.1s ease-out;
 }
 @media (hover: hover) and (pointer: fine) {
-  .skill-logos figure:hover,
+  /* .skill-logos figure:hover, */
   #project-platen figure:hover,
   .social-logos img:hover {
     transform: scale(1.1);
@@ -391,15 +510,14 @@ footer {
 @media (hover: hover) and (pointer: fine) {
   .skill-logos figure:hover,
   #project-platen figure:hover {
-    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
-    background: rgb(197, 168, 168);
+    background: rgb(35, 92, 76);
   }
 }
 
 @media (hover: hover) and (pointer: fine) {
   .skill-logos figure:hover {
     padding-bottom: 0.5vh;
-    background: rgb(222, 189, 189);
+    background: rgb(35, 92, 76, 0.5);
   }
 }
 

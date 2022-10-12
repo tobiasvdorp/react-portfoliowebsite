@@ -17,10 +17,18 @@
       content="width=device-width, initial-scale=1.0"
     />
     <script src="javascript.js"></script>
+    <script
+      src="https://kit.fontawesome.com/bfbf5f508f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Portfolio Tobias</title>
   </head>
 
   <body>
+    <!-- <section class="section">
+      <figure class="image-container"><img src="images/layered-steps-haikei.svg" alt=""></figure>
+      <article class="content"> -->
+     
     <a id="top"></a>
     <header>
       <!-- VOOR LOGO IPV GROTE NAAM
@@ -28,7 +36,7 @@
         <img class="logo" src="images/logo.png" alt="logo">
         </section>
     -->
-      TOBIAS
+   
     </header>
 
     <!-------------NAVIGATIEBAR-------------->
@@ -51,7 +59,14 @@
     <section class="overmij">
       <a id="overmij"></a>
       <h2 class="overmijtitel">Hoi.</h2>
-      <h3>Ik ben Tobias.</h3>
+      <h3>Ik ben  <div class="container">
+  
+        <div class="stack" style="--stacks: 3;">
+          <span style="--index: 0;"> Tobias.</span>
+          <span style="--index: 1;"> Tobias.</span>
+          <span style="--index: 2;"> Tobias.</span>
+        </div>
+      </div></h3>
       <figure class="fotovanmij">
         <img
           id="foto-van-mij"
@@ -69,84 +84,54 @@
             facilis dicta sint voluptas ipsum? Obcaecati expedita delectus eos
             commodi est.Lorem ipsum dolor sit, amet consectetur adipisicing
             elit. Aperiam ut obcaecati molestiae unde accusamus quam eos velit
-            alias officiis incidunt.
+            alias officiis incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ut sequi. Voluptates, commodi architecto! Neque incidunt maiores consectetur, minima, reiciendis harum hic ullam necessitatibus dignissimos enim, praesentium ipsam ratione modi aliquid nobis debitis vitae eum accusamus recusandae possimus! Praesentium esse sequi voluptate voluptatum accusantium sed alias quidem magnam reiciendis a.
           </p>
         </div>
       </div>
     </section>
 
-    <!---------------POPUP----------->
-
-    <div id="popup">
-      <h2>HTML</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam in dolore facilis harum blanditiis culpa iure, fuga quae, libero enim repellat sint dolor deserunt incidunt facere perferendis! Repellendus, voluptatibus magni!
-      </p>
-      <a onclick="toggle()"><button id="buttonsluiten">Sluiten</button></a>
-    </div>
-    <script>
-      function toggle() {
-        var blur = document.getElementById("blur");
-        var popup = document.getElementById("popup");
-        popup.classList.toggle("active");
-      }
-    </script>
     <!-----------------SKILLS----------------->
 
-    <section class="skills">
-      <a id="skills"></a>
-
+    <section class="skills" id="skills">
       <h2 class="skillstitel">SKILLS</h2>
 
       <section class="skill-logos">
-        
-        <figure onclick="toggle()">
-          <div class="container" id="blur">
-            <div class="content">
-              <img src="images/lege-foto.jpeg" alt="Skill" />
-              <figcaption>HTML</figcaption>
-            </div>
+        <figure class="skill">
+          <div class="content">
+            <img src="images/HTMLlogo.png" alt="Skill" />
+            <figcaption>HTML</figcaption>
+          </div>
+          <div class="popups">
+            <h2>HTML web development</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+              enim?
+            </p>
+            <button class="close-button">Sluiten</button>
           </div>
         </figure>
-    
 
-        <figure>
-          <img src="images/lege-foto.jpeg" alt="Skill" />
-          <figcaption>Skill</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lege-foto.jpeg" alt="Skill" />
-          <figcaption>Skill</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lege-foto.jpeg" alt="Skill" />
-          <figcaption>Skill</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lege-foto.jpeg" alt="Skill" />
-          <figcaption>Skill</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lege-foto.jpeg" alt="Skill" />
-          <figcaption>Skill</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lege-foto.jpeg" alt="Skill" />
-          <figcaption>Skill</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lege-foto.jpeg" alt="Skill" />
-          <figcaption>Skill</figcaption>
+        <figure class="skill">
+          <div class="content">
+            <img src="images/CSSlogo.webp" alt="Skill" />
+            <figcaption>CSS</figcaption>
+          </div>
+          <div class="popups">
+            <h2>CSS-styling</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+              enim?
+            </p>
+            <button class="close-button">Sluiten</button>
+          </div>
         </figure>
       </section>
     </section>
-    <!-- <section id="skill-randje"></section> -->
 
     <!--------------------------------->
 
     <!--------------PROJECTEN----------->
-    <section class="projecten">
-      <a id="projecten"></a>
+    <section class="projecten" id="projecten">
       <h2 class="projec">PROJECTEN</h2>
 
       <section id="project-platen">
@@ -200,5 +185,7 @@
     </section>
 
     <footer>(c) Copyright</footer>
+        
+
   </body>
 </html>
