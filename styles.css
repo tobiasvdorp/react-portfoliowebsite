@@ -31,82 +31,9 @@ header, .logo-container, .logo {
 }
 
 */
-.overmij h3 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
-:root {
-  --background: #060608;
-  --color: #fafafa;
-}
-.container {
-  padding: 1vw;
-}
 
-.stack {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.stack span {
-  font-weight: bold;
-  grid-row-start: 1;
-  grid-column-start: 1;
-
-  --stack-height: calc(100% / var(--stacks) - 1px);
-  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
-  --clip-top: calc(var(--stack-height) * var(--index));
-  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
-  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-  animation: stack 700ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
-      calc(var(--index) * 200ms),
-    glitch 1s ease infinite 1s alternate-reverse;
-}
-
-.stack span:nth-child(odd) {
-  --glitch-translate: 8px;
-}
-.stack span:nth-child(even) {
-  --glitch-translate: -8px;
-}
-
-@keyframes stack {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%);
-    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
-  }
-  60% {
-    opacity: 0.5;
-    transform: translateX(50%);
-  }
-  80% {
-    transform: none;
-    opacity: 1;
-    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
-  }
-  100% {
-    text-shadow: none;
-  }
-}
-
-@keyframes glitch {
-  0% {
-    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
-    transform: translate(var(--glitch-translate));
-  }
-  2% {
-    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
-  }
-  4%,
-  100% {
-    text-shadow: none;
-    transform: none;
-  }
-}
-/*
+/* ------ PARALLAX ------
 :root {
   --scale: 0.5;
   --space: 8vmin;
@@ -151,7 +78,7 @@ header, .logo-container, .logo {
     transform: translateY(0);
   }
 }
-*/
+
 /* -----------------NAVBAR------------ */
 
 ul.navbar {
@@ -187,10 +114,143 @@ button.contact {
   box-shadow: 0.5px 0.5px 2px 0.5px black;
 }
 
+
+/*----SCHADUWEN TITELS EN NAVBAR----*/
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.navbar-item.main,
+.maintit,
+figcaption {
+  transition: all 0.3s;
+  color: transparent;
+  cursor: pointer;
+}
+.navbar-item.main {
+  font-family: "Meta", sans-serif;
+  font-variation-settings: "wght" 900, "ital" 1;
+  text-shadow: 
+  0.1rem 0.1rem grey, 
+  0.2rem 0.2rem #482896;
+}
+
+.maintit {
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-family: "Meta", sans-serif;
+  text-shadow: 0.1rem 0.1rem 0 #07bccc, 0.2rem 0.2rem 0 #e601c0,
+    0px 0px 0.9rem #482896;
+}
+figcaption {
+  font-variation-settings: "wght" 900;
+  font-family: "Meta", sans-serif;
+  text-shadow: 0.2rem 0.1rem 0 #ffffff, 0.3rem 0.2rem 0 grey;
+  padding-right: 0.3rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar-item.main:hover,
+  .maintit:hover {
+    font-variation-settings: "wght" 600, "ital" 0;
+    text-shadow: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar-item:hover,
+  button.contact:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.25s;
+    letter-spacing: 0.05em;
+  }
+}
 /* ----------------------------------- */
 
 /* ----------------OVER MIJ----------- */
 
+/*-------HOI IK BEN TOBIAS------*/
+.overmij h3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+:root {
+  --background: #060608;
+  --color: #fafafa;
+}
+.container {
+  padding: 1vw;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 6vw;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 800ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
+      calc(var(--index) * 200ms),
+    glitch 10s ease infinite 1s alternate-reverse;
+}
+
+.stack span:nth-child(odd) {
+  --glitch-translate: 8px;
+}
+.stack span:nth-child(even) {
+  --glitch-translate: -8px;
+}
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%,
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
+}
+
+/*------REST OVER MIJ----*/
 .overmij {
   display: flex;
   flex-direction: column;
@@ -241,7 +301,12 @@ input[type="checkbox"] {
   padding: 0.5vw 2vw 0.5vw 1vw;
   margin-bottom: 1.5vw;
 }
+@media (hover: hover) and (pointer: fine) {
+.lbl-toggle:hover, button.contact:hover {
+  background: #5a1f8b;
+}
 
+}
 .collapsible-content {
   max-height: 0px;
   overflow: hidden;
@@ -258,7 +323,13 @@ input[type="checkbox"] {
 }
 
 .collapsible-content .content-inner {
-  background: linear-gradient(#1b463a50, #235C4C70, #235C4C70, #36af8c70, #37d1a570);
+  background: linear-gradient(
+    #1b463a50,
+    #235c4c70,
+    #235c4c70,
+    #36af8c70,
+    #37d1a570
+  );
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   padding: 0.5rem 1rem;
@@ -280,50 +351,9 @@ input[type="checkbox"] {
   border-bottom-left-radius: 0;
 }
 
-/* -----------POPUP-------------- */
-
-.popups h2, .popups p{
-  margin-bottom: 10px;
-  color: black;
-}
-
-.popups {
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60vw;
-  padding: 30px;
-  box-shadow: 0 5px 30px black;
-  background: white;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.8s;
-  z-index: 10;
-  
-}
-
-.popups.active {
-  top: 50%;
-  position: fixed;
-  visibility: visible;
-  opacity: 1;
-  transform: 0.5s;
-  
-}
-
-.close-button {
-  background: #9d4edd;
-  border-radius: 10%;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
 /* ---------SKILLS--------------- */
 section.skills {
   background: #37d1a550;
-
 }
 .skillstitel,
 .skill-logos {
@@ -371,7 +401,44 @@ figcaption {
 .skill-logos:hover {
   cursor: pointer;
 }
+/* -----------POPUP-------------- */
 
+.popups h2,
+.popups p {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.popups {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  padding: 30px;
+  box-shadow: 0 5px 30px black;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+  z-index: 10;
+}
+
+.popups.active {
+  top: 50%;
+  position: fixed;
+  visibility: visible;
+  opacity: 1;
+  transform: 0.5s;
+}
+
+.close-button {
+  background: #9d4edd;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
 /* ------------------------------*/
 
 /*----------PROJECTEN-------------*/
@@ -465,7 +532,7 @@ footer {
   top: 0px;
 }
 
-/*----MEDIA QUERIES/RESPONSIVENESS----*/
+/*----MEDIA QUERIES/RESPONSIVENESS----
 @media (hover: hover) and (pointer: fine) {
   button.contact:hover,
   #meerovermij:hover {
@@ -474,20 +541,12 @@ footer {
     text-decoration: underline;
     transition: 0.25s;
   }
-}
+} 
 @media (hover: hover) and (pointer: fine) {
   button.contact:hover {
     letter-spacing: 0.05em;
   }
-}
-@media (hover: hover) and (pointer: fine) {
-  .navbar-item:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    transition: 0.25s;
-    letter-spacing: 0.05em;
-  }
-}
+}*/
 
 .skill-logos figure,
 #project-platen figure,
@@ -517,7 +576,7 @@ footer {
 @media (hover: hover) and (pointer: fine) {
   .skill-logos figure:hover {
     padding-bottom: 0.5vh;
-    background: rgb(35, 92, 76, 0.5);
+    background: rgba(55, 144, 119, 0.5);
   }
 }
 
