@@ -32,7 +32,6 @@ header, .logo-container, .logo {
 
 */
 
-
 /* ------ PARALLAX ------
 :root {
   --scale: 0.5;
@@ -114,7 +113,6 @@ button.contact {
   box-shadow: 0.5px 0.5px 2px 0.5px black;
 }
 
-
 /*----SCHADUWEN TITELS EN NAVBAR----*/
 @font-face {
   src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
@@ -131,12 +129,10 @@ figcaption {
   color: transparent;
   cursor: pointer;
 }
-.navbar-item.main {
-  font-family: "Meta", sans-serif;
+.navbar-item.main,
+button.contact.main {
   font-variation-settings: "wght" 900, "ital" 1;
-  text-shadow: 
-  0.1rem 0.1rem grey, 
-  0.2rem 0.2rem #482896;
+  text-shadow: 0.1rem 0.1rem grey, 0.2rem 0.2rem #482896;
 }
 
 .maintit {
@@ -154,7 +150,8 @@ figcaption {
 
 @media (hover: hover) and (pointer: fine) {
   .navbar-item.main:hover,
-  .maintit:hover {
+  .maintit:hover,
+  .button.contact.main:hover {
     font-variation-settings: "wght" 600, "ital" 0;
     text-shadow: none;
   }
@@ -164,12 +161,38 @@ figcaption {
   .navbar-item:hover,
   button.contact:hover {
     cursor: pointer;
-    text-decoration: underline;
     transition: 0.25s;
     letter-spacing: 0.05em;
   }
+
+  .navbar-item:before,
+  button.contact:before {
+    content: "";
+    background: #54d670;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar-item:hover::before,
+  .button.contact:hover::before {
+    width: 100%;
+    text-shadow: none;
+
+  }
 }
-/* ----------------------------------- */
+
+.navbar-item,
+.button.contact {
+  position: relative;
+  -webkit-background-clip: text;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ---------------------------------- */
 
 /* ----------------OVER MIJ----------- */
 
@@ -203,7 +226,7 @@ figcaption {
   --clip-top: calc(var(--stack-height) * var(--index));
   --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
   clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-  animation: stack 800ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
+  animation: stack 1000ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
       calc(var(--index) * 200ms),
     glitch 10s ease infinite 1s alternate-reverse;
 }
@@ -302,10 +325,10 @@ input[type="checkbox"] {
   margin-bottom: 1.5vw;
 }
 @media (hover: hover) and (pointer: fine) {
-.lbl-toggle:hover, button.contact:hover {
-  background: #5a1f8b;
-}
-
+  .lbl-toggle:hover,
+  button.contact:hover {
+    background: #5a1f8b;
+  }
 }
 .collapsible-content {
   max-height: 0px;
@@ -324,10 +347,10 @@ input[type="checkbox"] {
 
 .collapsible-content .content-inner {
   background: linear-gradient(
-    #1b463a50,
-    #235c4c70,
-    #235c4c70,
-    #36af8c70,
+    #1b463a00,
+    #37d1a560,
+    #37d1a570,
+    #37d1a570,
     #37d1a570
   );
   border-bottom-left-radius: 7px;
@@ -468,6 +491,8 @@ section.projecten {
 
 #project-platen figure {
   margin: 4px;
+  background: #37d1a570;
+  padding-bottom: 0.5rem;
 }
 
 h2.projec {
@@ -477,22 +502,21 @@ h2.projec {
 /*--------------CONTACT-----------*/
 
 #contacttitel {
-  font-size: 4.5vw;
-}
-
-.social-logos figure {
-  margin: 1vw;
-}
-
-.social-logos img {
-  width: 10vw;
+  font-size: 5vw;
+  padding-bottom: 1vh;
 }
 
 .social-logos {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  margin: 0;
+  align-items: center;
+  gap: 1vw;
+  padding-bottom: 10vh;
+}
+.social-logos figure {
+  width: 10vw;
+  margin: 1vw;
 }
 
 .social-logos img:hover {
@@ -509,6 +533,21 @@ footer {
   margin-top: 5vh;
   font-size: 15px;
   text-align: center;
+}
+
+#footer ul li {
+list-style-type: none;
+display: inline-block;
+margin: 0 5vw ;
+}
+
+#footer ul {
+  margin: 1vh;
+}
+
+#copyright {
+  padding-top: 1.5vh;
+  font-family: 'Courier New', Courier, monospace;
 }
 /*---------------------------*/
 /*-------NAVBAR CLICKS------*/
