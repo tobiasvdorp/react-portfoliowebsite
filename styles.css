@@ -189,6 +189,7 @@ figcaption {
 .button.contact {
   position: relative;
   -webkit-background-clip: text;
+  background-clip: text;
   transition: all 0.3s ease-in-out;
 }
 
@@ -471,7 +472,7 @@ section.projecten {
 
 #project-platen {
   color: rgb(255, 255, 255);
-  font-size: 20px;
+
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -515,9 +516,9 @@ h2.projec {
   padding-bottom: 10vh;
 }
 .social-logos figure {
-  width: 10vw;
   margin: 1vw;
 }
+
 
 .social-logos img:hover {
   cursor: pointer;
@@ -551,41 +552,13 @@ margin: 0 5vw ;
 }
 /*---------------------------*/
 /*-------NAVBAR CLICKS------*/
-#overmij {
+
+a#overmij {
   display: block;
   position: relative;
-  top: -10vh;
+  top: -5vh;
 }
 
-#skills,
-#projecten,
-#contact {
-  display: block;
-  position: relative;
-  top: 0;
-}
-
-#top {
-  display: block;
-  position: relative;
-  top: 0px;
-}
-
-/*----MEDIA QUERIES/RESPONSIVENESS----
-@media (hover: hover) and (pointer: fine) {
-  button.contact:hover,
-  #meerovermij:hover {
-    cursor: pointer;
-    background: rgb(102, 6, 114);
-    text-decoration: underline;
-    transition: 0.25s;
-  }
-} 
-@media (hover: hover) and (pointer: fine) {
-  button.contact:hover {
-    letter-spacing: 0.05em;
-  }
-}*/
 
 .skill-logos figure,
 #project-platen figure,
@@ -687,7 +660,7 @@ margin: 0 5vw ;
     margin: 1vw;
   }
   .social-logos img {
-    width: calc(60px + 4vw);
+    width: calc(30px + 3vw);
   }
 }
 
@@ -726,8 +699,10 @@ margin: 0 5vw ;
   /*---CONTACT----*/
 
   .social-logos img {
-    width: calc(40px + 3vw);
+    width: calc(20px + 3vw);
   }
+
+
 }
 /*------------TABLET----------------*/
 
@@ -839,8 +814,8 @@ margin: 0 5vw ;
   }
   /*------PROJECTEN-----*/
 
-  #project-platen figcaption {
-    font-size: 18px;
+  #project-platen figure figcaption {
+    font-size: 3vw;
     line-height: 0.8;
   }
   #project-platen figure img {
@@ -856,12 +831,11 @@ margin: 0 5vw ;
     font-size: 9vw;
     margin-bottom: 1.5vw;
   }
-
   /*-----CONTACT-----*/
   .social-logos figure {
     margin: 3vw;
   }
   .social-logos img {
-    width: calc(30px + 3vw);
+    width: calc(25px + 2vw);
   }
 }

@@ -65,11 +65,7 @@
       </div>
 
       <figure class="fotovanmij">
-        <img
-          id="foto-van-mij"
-          src="images/avatar.png"
-          alt="Profielfoto"
-        />
+        <img id="foto-van-mij" src="images/avatar.png" alt="Profielfoto" />
       </figure>
 
       <input id="collapsible" class="toggle" type="checkbox" />
@@ -95,7 +91,8 @@
 
     <!-----------------SKILLS----------------->
 
-    <section class="skills" id="skills">
+    <section class="skills">
+      <a id="skills"></a>
       <h2 class="skillstitel maintit">SKILLS</h2>
 
       <section class="skill-logos">
@@ -150,8 +147,6 @@
           <img src="images/lege-foto.jpeg" alt="Project" />
           <figcaption>Voorbeeld 3</figcaption>
         </figure>
-        
-        </figure>
       </section>
     </section>
     <!--------------------------------->
@@ -164,32 +159,59 @@
 
     <section class="social-logos">
       <figure>
-        <img src="images/envelope.png" alt="mail icon">
+        <a href="mailto:tobiasvandorp@student.hu.nl" target="_blank">
+          <img src="images/envelope.png" alt="mail icon" />
+        </a>
+      </figure>
+
+      <figure>
+        <a href="https://www.linkedin.com/" target="_blank">
+          <img src="images/linkedin.png" alt="linkedin icon"
+        /></a>
       </figure>
       <figure>
-        <img src="images/linkedin.png" alt="linkedin icon">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="images/facebook.png" alt="facebook icon"
+        /></a>
       </figure>
       <figure>
-        <img src="images/facebook.png" alt="facebook icon">
-      </figure>
-      <figure>
-        <img src="images/discord.png" alt="discord-icon">
+        <img src="images/discord.png" alt="discord-icon" />
       </figure>
     </section>
 
     <footer>
       <div id="footer">
         <ul id="footerlist">
-          <li><i class="fa-sharp fa-solid fa-house"></i> | Home</li>
-          <li><i class="fa-solid fa-user"></i> | Over mij</li>
-          <li><i class="fa-solid fa-screwdriver-wrench"></i> | Skills</li>
-          <li><i class="fa-solid fa-diagram-project"></i> | Projecten</li>
-          <li><i class="fa-solid fa-message"></i> | Contact</li>
+          <li>
+            <a href="#top"
+              ><i class="fa-sharp fa-solid fa-house"></i> | Home
+            </a>
+          </li>
+          <li>
+            <a href="#overmij"><i class="fa-solid fa-user"></i> | Over mij </a>
+          </li>
+          <li>
+            <a href="#skills"
+              ><i class="fa-solid fa-screwdriver-wrench"></i> | Skills
+            </a>
+          </li>
+          <li>
+            <a href="#projecten"
+              ><i class="fa-solid fa-diagram-project"></i> | Projecten
+            </a>
+          </li>
+          <li>
+            <a href="#contact"
+              ><i class="fa-solid fa-message"></i> | Contact
+            </a>
+          </li>
         </ul>
-
       </div>
-      <p id="copyright">  <i class="fa-regular fa-copyright"></i><i class="fa-regular fa-registered"></i> Copyright 2022 Tobias van Dorp "Portfoliowebsite"</p> 
-      
+      <p id="copyright">
+        <i class="fa-regular fa-copyright"></i
+        ><i class="fa-regular fa-registered"></i> Copyright 2022 Tobias van Dorp
+        "Portfoliowebsite"
+      </p>
     </footer>
   </body>
 </html>
