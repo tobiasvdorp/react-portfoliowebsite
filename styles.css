@@ -181,7 +181,6 @@ figcaption {
   .button.contact:hover::before {
     width: 100%;
     text-shadow: none;
-
   }
 }
 
@@ -419,7 +418,6 @@ section.projecten h2 {
 
 figcaption {
   text-align: center;
-  font-size: 2vw;
 }
 
 .skill-logos:hover {
@@ -519,7 +517,6 @@ h2.projec {
   margin: 1vw;
 }
 
-
 .social-logos img:hover {
   cursor: pointer;
 }
@@ -537,9 +534,9 @@ footer {
 }
 
 #footer ul li {
-list-style-type: none;
-display: inline-block;
-margin: 0 5vw ;
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 5vw;
 }
 
 #footer ul {
@@ -548,7 +545,7 @@ margin: 0 5vw ;
 
 #copyright {
   padding-top: 1.5vh;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 /*---------------------------*/
 /*-------NAVBAR CLICKS------*/
@@ -558,7 +555,6 @@ a#overmij {
   position: relative;
   top: -5vh;
 }
-
 
 .skill-logos figure,
 #project-platen figure,
@@ -701,8 +697,6 @@ a#overmij {
   .social-logos img {
     width: calc(20px + 3vw);
   }
-
-
 }
 /*------------TABLET----------------*/
 
@@ -772,7 +766,7 @@ a#overmij {
   }
 
   #project-platen figure figcaption {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
   /*---CONTACT----*/
