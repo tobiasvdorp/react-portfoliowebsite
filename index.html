@@ -1,50 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="sc" href="" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      class="dit"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="javascript.js"></script>
-    <script
-      src="https://kit.fontawesome.com/bfbf5f508f.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Portfolio Tobias</title>
-  </head>
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    
 
-  <body>
-    <!-- <section class="section">
-      <figure class="image-container"><img src="images/layered-steps-haikei.svg" alt=""></figure>
-      <article class="content"> -->
+    <canvas id="bg"></canvas>
 
     <a id="top"></a>
-    <header>
-      <!-- VOOR LOGO IPV GROTE NAAM
-       <section class="logo-container">
-        <img class="logo" src="images/logo.png" alt="logo">
-        </section>
-    --></header>
 
     <!-------------NAVIGATIEBAR-------------->
-    <section id="randje-boven-nav"></section>
     <nav>
       <ul class="navbar">
         <li class="navbar-item main"><a href="#top">Home</a></li>
-        <li class="navbar-item main"><a href="#overmij">Over mij</a></li>
+        <li class="navbar-item main"><a href="#overmij">About me</a></li>
         <li class="navbar-item main"><a href="#skills">Skills</a></li>
-        <li class="navbar-item main"><a href="#projecten">Projecten</a></li>
+        <li class="navbar-item main"><a href="#projecten">Projects</a></li>
         <li class="navbar-item main">
           <a href="#contact"><button class="contact main">Contact</button></a>
         </li>
@@ -56,12 +34,12 @@
 
     <section class="overmij">
       <a id="overmij"></a>
-      <h2 class="overmijtitel">Hoi.</h2>
+      <h2 class="overmijtitel">Hi,</h2>
 
-      <div class="stack" style="--stacks: 3">
-        <span style="--index: 0">Ik ben Tobias.</span>
-        <span style="--index: 1">Ik ben Tobias.</span>
-        <span style="--index: 2">Ik ben Tobias.</span>
+      <div class="stack" style="--stacks: 3; text-shadow: 5px 5px red">
+        <span style="--index: 0">I'm Tobias.</span>
+        <span style="--index: 1">I'm Tobias.</span>
+        <span style="--index: 2">I'm Tobias.</span>
       </div>
 
       <figure class="fotovanmij">
@@ -69,7 +47,7 @@
       </figure>
 
       <input id="collapsible" class="toggle" type="checkbox" />
-      <label for="collapsible" class="lbl-toggle">Meer over mij </label>
+      <label for="collapsible" class="lbl-toggle">More about me </label>
       <div class="collapsible-content">
         <div class="content-inner">
           <p>
@@ -132,7 +110,7 @@
 
     <!--------------PROJECTEN----------->
     <section class="projecten" id="projecten">
-      <h2 class="projec maintit">PROJECTEN</h2>
+      <h2 class="projec maintit">PROJECT</h2>
 
       <section id="project-platen">
         <figure>
@@ -213,5 +191,7 @@
         "Portfoliowebsite"
       </p>
     </footer>
+
+    
   </body>
 </html>

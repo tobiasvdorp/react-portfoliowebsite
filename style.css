@@ -1,0 +1,837 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Oswald&family=Roboto&display=swap");
+
+* {
+  text-decoration: none;
+  color: white;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.left {
+  grid-column: 6 / 12;
+}
+
+/* ------ PARALLAX ------
+  :root {
+    --scale: 0.5;
+    --space: 8vmin;
+  }
+  
+  
+  
+  .section {
+    transform: scaleY(calc(1 - var(--scale)));
+  }
+  
+  .section > * {
+    transform: scaleY(calc(1 / (1 - var(--scale))));
+  }
+  
+  
+  .image-container {
+    position: sticky;
+    top: 0;
+    z-index: -20;
+    margin: 0;
+  }
+  
+  .image-container img {
+    display: block;
+    position: absolute;
+    top: -20vh;
+    left: 0;
+    width: 100vw;
+  
+  
+  }
+  
+  .image-container::after {
+    content: '';
+  
+  }
+  
+  @keyframes fadein {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* -----------------NAVBAR------------ */
+
+ul.navbar {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border-style: solid;
+  border-color: black;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: #14342b;
+  z-index: 999;
+}
+
+.navbar-item {
+  display: inline-block;
+  margin: 1.4vw;
+  transition: 0.7s;
+  font-size: 4vw;
+}
+
+button.contact {
+  border: none;
+  border-radius: 5px;
+  background: #9d4edd;
+  font-size: 4vw;
+  color: rgb(255, 255, 255);
+  transition: 0.7s;
+  box-shadow: 0.5px 0.5px 2px 0.5px black;
+}
+
+/*----SCHADUWEN TITELS EN NAVBAR----*/
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.navbar-item.main,
+.maintit,
+figcaption {
+  transition: all 0.3s;
+  color: transparent;
+  cursor: pointer;
+}
+.navbar-item.main,
+button.contact.main {
+  font-variation-settings: "wght" 900, "ital" 1;
+  text-shadow: 0.1rem 0.1rem grey, 0.2rem 0.2rem #482896;
+}
+
+.maintit {
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-family: "Meta", sans-serif;
+  text-shadow: 0.1rem 0.1rem 0 #07bccc, 0.2rem 0.2rem 0 #492c44,
+    0px 0px 0.9rem #482896;
+}
+figcaption {
+  font-variation-settings: "wght" 900;
+  font-family: "Meta", sans-serif;
+  text-shadow: 0.2rem 0.1rem 0 #ffffff, 0.3rem 0.2rem 0 grey;
+  padding-right: 0.3rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar-item.main:hover,
+  .maintit:hover,
+  .button.contact.main:hover {
+    font-variation-settings: "wght" 600, "ital" 0;
+    text-shadow: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar-item:hover,
+  button.contact:hover {
+    cursor: pointer;
+    transition: 0.25s;
+    letter-spacing: 0.05em;
+  }
+
+  .navbar-item:before,
+  button.contact:before {
+    content: "";
+    background: #54d670;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar-item:hover::before,
+  .button.contact:hover::before {
+    width: 100%;
+    text-shadow: none;
+  }
+}
+
+.navbar-item,
+.button.contact {
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ---------------------------------- */
+
+/* ----------------OVER MIJ----------- */
+
+/*-------HOI IK BEN TOBIAS------*/
+.overmij h3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+:root {
+  --background: #060608;
+  --color: #fafafa;
+}
+.container {
+  padding: 1vw;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stack span {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 8vw;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 1000ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
+      calc(var(--index) * 200ms),
+    glitch 10s ease infinite 1s alternate-reverse;
+}
+
+
+.stack span:nth-child(odd) {
+  --glitch-translate: 8px;
+}
+.stack span:nth-child(even) {
+  --glitch-translate: -8px;
+}
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%,
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
+}
+
+/*------REST OVER MIJ----*/
+.overmij {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+h2.overmijtitel,
+.overmij h3 {
+  margin: 0;
+}
+.overmijtitel {
+  padding-top: 5vw;
+}
+
+figure.fotovanmij {
+  width: 18vw;
+  margin: 1vw;
+}
+
+#foto-van-mij {
+  width: 18vw;
+  border-radius: 15%;
+}
+
+#meerovermij {
+  border: none;
+  border-radius: 0.4vw;
+  transition: 0.7s;
+  font-size: 2vw;
+  box-shadow: 0.5px 0.5px 2px 0.5px black;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.lbl-toggle {
+  font-size: 4vw;
+  text-align: center;
+  color: white;
+  background: #9d4edd;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.25s ease-out;
+  box-shadow: 0.5px 0.5px 2px 0.5px black;
+  padding: 0.5vw 2vw 0.5vw 1vw;
+  margin-bottom: 1.5vw;
+}
+@media (hover: hover) and (pointer: fine) {
+  .lbl-toggle:hover,
+  button.contact:hover {
+    background: #5a1f8b;
+  }
+}
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: linear-gradient(
+    #1b463a00,
+    #37d1a560,
+    #37d1a570,
+    #37d1a570,
+    #37d1a570
+  );
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 0.5rem 1rem;
+  display: flex;
+}
+
+.lbl-toggle::before {
+  content: " ";
+  display: inline-block;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-out;
+}
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* ---------SKILLS--------------- */
+section.skills {
+  background: #37d1a550;
+}
+.skillstitel,
+.skill-logos {
+  opacity: 1;
+}
+
+.skillstitel,
+section.projecten h2,
+#contacttitel {
+  font-size: 3.5vw;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-top: 3vh;
+}
+section.projecten h2 {
+  margin-top: 5vh;
+}
+.skill-logos {
+  color: black;
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-logos img {
+  width: 8vw;
+  box-shadow: 10px;
+  max-width: 8vw;
+  max-height: 8vw;
+}
+
+.skill-logos figure {
+  margin: 0.1vw 1vw 1vh 1vw;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.skill-logos:hover {
+  cursor: pointer;
+}
+/* -----------POPUP-------------- */
+
+.popups h2,
+.popups p {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.popups {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  padding: 30px;
+  box-shadow: 0 5px 30px black;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+  z-index: 10;
+}
+
+.popups.active {
+  top: 50%;
+  position: fixed;
+  visibility: visible;
+  opacity: 1;
+  transform: 0.5s;
+}
+
+.close-button {
+  background: #9d4edd;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+/* ------------------------------*/
+
+/*----------PROJECTEN-------------*/
+section.projecten {
+  margin-top: 3vh;
+}
+
+#project-platen {
+  color: rgb(255, 255, 255);
+
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 14vh;
+}
+
+#project-platen figure img,
+#project-platen figure figcaption:hover {
+  cursor: pointer;
+}
+
+#project-platen figure img {
+  width: 15vw;
+}
+
+#project-platen figure {
+  margin: 4px;
+  background: #37d1a570;
+  padding-bottom: 0.5rem;
+}
+
+h2.projec {
+  box-shadow: 10px;
+}
+/*---------------------------------*/
+/*--------------CONTACT-----------*/
+
+#contacttitel {
+  font-size: 5vw;
+  padding-bottom: 1vh;
+}
+
+.social-logos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  padding-bottom: 10vh;
+}
+.social-logos figure {
+  margin: 1vw;
+}
+
+.social-logos img:hover {
+  cursor: pointer;
+}
+
+/*-----------FOOTER-----------*/
+
+footer {
+  background: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  margin-top: 5vh;
+  font-size: 15px;
+  text-align: center;
+}
+
+#footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 5vw;
+}
+
+#footer ul {
+  margin: 1vh;
+}
+
+#copyright {
+  padding-top: 1.5vh;
+  font-family: "Courier New", Courier, monospace;
+}
+/*---------------------------*/
+/*-------NAVBAR CLICKS------*/
+
+a#overmij {
+  display: block;
+  position: relative;
+  top: -5vh;
+}
+
+.skill-logos figure,
+#project-platen figure,
+.social-logos img {
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+@media (hover: hover) and (pointer: fine) {
+  /* .skill-logos figure:hover, */
+  #project-platen figure:hover,
+  .social-logos img:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    z-index: 3;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .skill-logos figure:hover,
+  #project-platen figure:hover {
+    background: rgb(35, 92, 76);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .skill-logos figure:hover {
+    padding-bottom: 0.5vh;
+    background: rgba(55, 144, 119, 0.5);
+  }
+}
+
+@media only screen and (max-width: 2560px) {
+  /*----NAVBAR----*/
+  .navbar-item,
+  button.contact {
+    font-size: calc(15px + 1.8vh);
+    margin: 0.5vw;
+    padding: 0 1vw;
+  }
+  .navbar {
+    border: 2px;
+  }
+  /*---OVER MIJ---*/
+  .overmij {
+    margin-bottom: 3vh;
+  }
+  .overmij h3 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 5vw;
+  }
+  .overmij h2 {
+    font-size: 3vw;
+    padding-top: 3vh;
+    line-height: 1;
+  }
+  #foto-van-mij,
+  figure.fotovanmij {
+    width: 18vw;
+  }
+  .lbl-toggle {
+    font-size: 1.5vw;
+  }
+  .lbl-toggle::before {
+    border-top: 0.6vw solid transparent;
+    border-bottom: 0.6vw solid transparent;
+    border-left: 0.6vw solid currentColor;
+    margin-right: 1vw;
+    margin-left: 0.3vw;
+  }
+  .content-inner {
+    font-size: 1.5vw;
+  }
+
+  /*----SKILLS----*/
+  .skill-logos figure img {
+    width: calc(30px + 3vw);
+  }
+  .skill-logos figcaption {
+    font-size: calc(8px + 1vw);
+  }
+  .skillstitel {
+    font-size: calc(20px + 1vw);
+  }
+  /*---PROJECTEN----*/
+  section.projecten {
+    padding: 0 20vw;
+  }
+  #project-platen figure img {
+    width: calc(60px + 10vw);
+  }
+  #project-platen figure {
+    margin: 1.5vw;
+  }
+  /*---CONTACT----*/
+  .social-logos figure {
+    margin: 1vw;
+  }
+  .social-logos img {
+    width: calc(30px + 3vw);
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  /*----NAVBAR-----*/
+
+  /*----OVER MIJ----*/
+  .overmij h3 {
+    font-size: 6vw;
+  }
+  .overmij h2 {
+    font-size: 3vw;
+    line-height: 0.6;
+  }
+
+  .overmij {
+    margin-top: 2vh;
+  }
+  /*----SKILLS----*/
+
+  .skill-logos figcaption {
+    font-size: calc(8px + 0.8vw);
+    line-height: 0.7;
+  }
+  section.skills {
+    padding-bottom: 1vh;
+  }
+
+  /*----PROJECTEN---*/
+
+  section.projecten h2 {
+    font-size: calc(15px + 3vw);
+    margin-bottom: 1.5vw;
+  }
+
+  /*---CONTACT----*/
+
+  .social-logos img {
+    width: calc(20px + 3vw);
+  }
+}
+/*------------TABLET----------------*/
+
+@media only screen and (max-width: 768px) {
+  /*----NAVBAR-----*/
+  .navbar-item,
+  button.contact {
+    font-size: 3.5vw;
+  }
+  .navbar {
+    border: 1.2px;
+  }
+  /*----OVER MIJ----*/
+
+  .stack span {
+    font-size: 15vw;
+  }
+  .overmij h2 {
+    font-size: 9vw;
+    padding-top: 3vh;
+  }
+
+  #foto-van-mij,
+  figure.fotovanmij {
+    width: 32vw;
+  }
+  .lbl-toggle {
+    font-size: 3vw;
+  }
+  .lbl-toggle::before {
+    border-top: 0.8vw solid transparent;
+    border-bottom: 0.8vw solid transparent;
+    border-left: 0.8vw solid currentColor;
+    margin-right: 1vw;
+    margin-left: 0.3vw;
+  }
+
+  .content-inner {
+    font-size: 3vw;
+  }
+  /*----SKILLS----*/
+
+  .skill-logos figure img {
+    width: calc(40px + 3vw);
+    margin: 0.5vw;
+  }
+  .skill-logos figcaption {
+    font-size: calc(11px + 0.8vw);
+  }
+  .skillstitel {
+    font-size: calc(10px + 3vw);
+  }
+  .section.skills {
+    padding-bottom: 1vh;
+  }
+  /*----PROJECTEN---*/
+  section.projecten {
+    padding: 0 9vw;
+  }
+
+  #project-platen figure img {
+    width: calc(80px + 15vw);
+  }
+
+  #project-platen figure {
+    margin: 2vw;
+  }
+
+  #project-platen figure figcaption {
+    font-size: 3vw;
+  }
+
+  /*---CONTACT----*/
+  #contacttitel {
+    font-size: 8vw;
+    margin-bottom: 1.5vw;
+  }
+  section.projecten h2 {
+    font-size: 6vw;
+  }
+}
+/*----------------MOBIEL-------------------*/
+
+/*---NAVBAR---*/
+@media only screen and (max-width: 450px) {
+  body {
+    background-image: url(images/backgroundmob.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .navbar-item,
+  button.contact {
+    font-size: 5vw;
+  }
+  .navbar {
+    border: 1.2px;
+  }
+
+  /*---OVER MIJ---*/
+
+  /*----SKILLS----*/
+  .skill-logos figure {
+    margin: 4px;
+  }
+  .skill-logos figure img {
+    font-size: calc(1px + 0.3vw);
+    margin: 0.5vw;
+  }
+  .skill-logos figure figcaption {
+    font-size: calc(8px + 1vw);
+  }
+  .skillstitel {
+    font-size: 6vw;
+  }
+  /*------PROJECTEN-----*/
+
+  #project-platen figure figcaption {
+    font-size: 3vw;
+    line-height: 0.8;
+  }
+  #project-platen figure img {
+    width: calc(80px + 9vw);
+  }
+
+  #project-platen figure {
+    margin: 2vw;
+  }
+
+  section.projecten h2,
+  #contacttitel {
+    font-size: 9vw;
+    margin-bottom: 1.5vw;
+  }
+  /*-----CONTACT-----*/
+  .social-logos figure {
+    margin: 3vw;
+  }
+  .social-logos img {
+    width: calc(25px + 2vw);
+  }
+}
