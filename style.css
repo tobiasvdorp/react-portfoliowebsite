@@ -13,7 +13,6 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
- 
 }
 
 canvas {
@@ -21,7 +20,16 @@ canvas {
   top: 0;
   left: 0;
   z-index: -100;
+  -webkit-backface-visibility: hidden;
+-webkit-perspective: 1000;
+-webkit-transform: translate3d(0,0,0);
+-webkit-transform: translateZ(0);
+backface-visibility: hidden;
+perspective: 1000;
+transform: translate3d(0,0,0);
+transform: translateZ(0);
 }
+
 
 .left {
   grid-column: 6 / 12;
@@ -568,6 +576,7 @@ a#overmij {
     transform: scale(1.1);
     transition: 0.2s;
     z-index: 3;
+    box-shadow: 3px 2px 5px #9d4edd;
   }
 }
 @media (hover: hover) and (pointer: fine) {
@@ -634,8 +643,8 @@ a#overmij {
   .skill-logos figcaption {
     font-size: calc(8px + 1vw);
   }
-  .skillstitel {
-    font-size: calc(20px + 1vw);
+  .skillstitel, section.projecten h2 {
+    font-size: calc(40px + 2vw);
   }
   /*---PROJECTEN----*/
   section.projecten {
@@ -683,7 +692,7 @@ a#overmij {
 
   /*----PROJECTEN---*/
 
-  section.projecten h2 {
+  section.projecten h2, .skillstitel {
     font-size: calc(15px + 3vw);
     margin-bottom: 1.5vw;
   }
@@ -742,8 +751,8 @@ a#overmij {
   .skill-logos figcaption {
     font-size: calc(11px + 0.8vw);
   }
-  .skillstitel {
-    font-size: calc(10px + 3vw);
+  .skillstitel, section.projecten h2 {
+    font-size: calc(15px + 4vw);
   }
   .section.skills {
     padding-bottom: 1vh;
@@ -770,9 +779,7 @@ a#overmij {
     font-size: 8vw;
     margin-bottom: 1.5vw;
   }
-  section.projecten h2 {
-    font-size: 6vw;
-  }
+
 }
 /*----------------MOBIEL-------------------*/
 
@@ -805,8 +812,8 @@ a#overmij {
   .skill-logos figure figcaption {
     font-size: calc(8px + 1vw);
   }
-  .skillstitel {
-    font-size: 6vw;
+  .skillstitel, section.projecten h2 {
+    font-size: 7.5vw;
   }
   /*------PROJECTEN-----*/
 
@@ -824,14 +831,18 @@ a#overmij {
 
   section.projecten h2,
   #contacttitel {
-    font-size: 9vw;
     margin-bottom: 1.5vw;
   }
+
+
   /*-----CONTACT-----*/
   .social-logos figure {
     margin: 3vw;
   }
   .social-logos img {
     width: calc(25px + 2vw);
+  }
+  #contacttitel {
+    font-size: 9vw;
   }
 }

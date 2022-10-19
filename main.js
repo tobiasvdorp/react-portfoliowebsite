@@ -19,7 +19,7 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setZ(35);
+camera.position.setZ(30);
 camera.position.setX(-3);
 
 renderer.render(scene, camera);
@@ -27,7 +27,7 @@ renderer.render(scene, camera);
 // Lights
 
 const pointLight = new THREE.PointLight(0x14342b);
-pointLight.position.set(5, 5, 5);
+pointLight.position.set(15, 15, 15);
 
 const ambientLight = new THREE.AmbientLight(0x14342b);
 scene.add(pointLight, ambientLight);
@@ -41,7 +41,7 @@ scene.add(pointLight, ambientLight);
 // const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
-  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const geometry = new THREE.SphereGeometry(0.20, 24, 24);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry, material);
 
@@ -53,7 +53,7 @@ function addStar() {
   scene.add(star);
 }
 
-Array(400).fill().forEach(addStar);
+Array(300).fill().forEach(addStar);
 
 // Background
 
@@ -79,8 +79,8 @@ function moveCamera() {
   // jeff.rotation.y += 0.01;
   // jeff.rotation.z += 0.01;
 
-  camera.position.z = t * -0.02;
-  camera.position.x = t * -0.0002;
+  camera.position.z = t * -0.01;
+  camera.position.x = t * -0.0001;
   camera.rotation.y = t * -0.0002;
 }
 
