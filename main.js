@@ -79,9 +79,9 @@ function moveCamera() {
   // jeff.rotation.y += 0.01;
   // jeff.rotation.z += 0.01;
 
-  camera.position.z = t * -0.01;
-  camera.position.x = t * -0.0001;
-  camera.rotation.y = t * -0.0002;
+  camera.position.z = t * +0.01;
+  camera.position.x = t * +0.0001;
+  camera.rotation.y = t * +0.0002;
 }
 
 document.body.onscroll = moveCamera;

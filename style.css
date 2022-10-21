@@ -10,9 +10,9 @@
 
 body {
   width: 100%;
-  background-color: black;
   margin: 0;
   padding: 0;
+  background-image: url(images/achtergrond3.svg);
 }
 
 canvas {
@@ -560,7 +560,7 @@ a#overmij {
   top: -5vh;
 }
 
-.skill-logos figure,
+/* .skill-logos figure,
 #project-platen figure,
 .social-logos img {
   -webkit-transition: all 0.1s ease-out;
@@ -568,7 +568,7 @@ a#overmij {
   -o-transition: all 0.1s ease-out;
   -ms-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-}
+} */
 @media (hover: hover) and (pointer: fine) {
   /* .skill-logos figure:hover, */
   #project-platen figure:hover,
@@ -576,7 +576,6 @@ a#overmij {
     transform: scale(1.1);
     transition: 0.2s;
     z-index: 3;
-    box-shadow: 3px 2px 5px #9d4edd;
   }
 }
 @media (hover: hover) and (pointer: fine) {
@@ -592,6 +591,7 @@ a#overmij {
     background: rgba(55, 144, 119, 0.5);
   }
 }
+
 
 @media only screen and (max-width: 2560px) {
   /*----NAVBAR----*/
@@ -844,5 +844,58 @@ a#overmij {
   }
   #contacttitel {
     font-size: 9vw;
+  }
+}
+
+
+/*----ANIMATIES----*/
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+
+.hiddentitel {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-10%);
+  transition:all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/*----LOADER---*/
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  background-image: url(images/achtergrond3.svg);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+.loader img {
+  width: 10vw;
+}
+.dissapear {
+  animation: vanish .2s forwards;
+}
+
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
