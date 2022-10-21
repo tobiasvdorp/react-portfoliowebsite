@@ -10,10 +10,9 @@
 
 body {
   width: 100%;
-  background-color: black;
   margin: 0;
   padding: 0;
- 
+  background-image: url(images/achtergrond3.svg);
 }
 
 canvas {
@@ -21,7 +20,16 @@ canvas {
   top: 0;
   left: 0;
   z-index: -100;
+  -webkit-backface-visibility: hidden;
+-webkit-perspective: 1000;
+-webkit-transform: translate3d(0,0,0);
+-webkit-transform: translateZ(0);
+backface-visibility: hidden;
+perspective: 1000;
+transform: translate3d(0,0,0);
+transform: translateZ(0);
 }
+
 
 .left {
   grid-column: 6 / 12;
@@ -552,7 +560,7 @@ a#overmij {
   top: -5vh;
 }
 
-.skill-logos figure,
+/* .skill-logos figure,
 #project-platen figure,
 .social-logos img {
   -webkit-transition: all 0.1s ease-out;
@@ -560,7 +568,7 @@ a#overmij {
   -o-transition: all 0.1s ease-out;
   -ms-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-}
+} */
 @media (hover: hover) and (pointer: fine) {
   /* .skill-logos figure:hover, */
   #project-platen figure:hover,
@@ -583,6 +591,7 @@ a#overmij {
     background: rgba(55, 144, 119, 0.5);
   }
 }
+
 
 @media only screen and (max-width: 2560px) {
   /*----NAVBAR----*/
@@ -634,8 +643,8 @@ a#overmij {
   .skill-logos figcaption {
     font-size: calc(8px + 1vw);
   }
-  .skillstitel {
-    font-size: calc(20px + 1vw);
+  .skillstitel, section.projecten h2 {
+    font-size: calc(40px + 2vw);
   }
   /*---PROJECTEN----*/
   section.projecten {
@@ -683,7 +692,7 @@ a#overmij {
 
   /*----PROJECTEN---*/
 
-  section.projecten h2 {
+  section.projecten h2, .skillstitel {
     font-size: calc(15px + 3vw);
     margin-bottom: 1.5vw;
   }
@@ -742,8 +751,8 @@ a#overmij {
   .skill-logos figcaption {
     font-size: calc(11px + 0.8vw);
   }
-  .skillstitel {
-    font-size: calc(10px + 3vw);
+  .skillstitel, section.projecten h2 {
+    font-size: calc(15px + 4vw);
   }
   .section.skills {
     padding-bottom: 1vh;
@@ -770,9 +779,7 @@ a#overmij {
     font-size: 8vw;
     margin-bottom: 1.5vw;
   }
-  section.projecten h2 {
-    font-size: 6vw;
-  }
+
 }
 /*----------------MOBIEL-------------------*/
 
@@ -805,8 +812,8 @@ a#overmij {
   .skill-logos figure figcaption {
     font-size: calc(8px + 1vw);
   }
-  .skillstitel {
-    font-size: 6vw;
+  .skillstitel, section.projecten h2 {
+    font-size: 7.5vw;
   }
   /*------PROJECTEN-----*/
 
@@ -824,14 +831,71 @@ a#overmij {
 
   section.projecten h2,
   #contacttitel {
-    font-size: 9vw;
     margin-bottom: 1.5vw;
   }
+
+
   /*-----CONTACT-----*/
   .social-logos figure {
     margin: 3vw;
   }
   .social-logos img {
     width: calc(25px + 2vw);
+  }
+  #contacttitel {
+    font-size: 9vw;
+  }
+}
+
+
+/*----ANIMATIES----*/
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+
+.hiddentitel {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-10%);
+  transition:all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/*----LOADER---*/
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  background-image: url(images/achtergrond3.svg);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+.loader img {
+  width: 10vw;
+}
+.dissapear {
+  animation: vanish .2s forwards;
+}
+
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }

@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tobias</title>
     <link rel="stylesheet" href="style.css">
     <script src="javascript.js"></script>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="Three.js"></script>
+    <script defer src="app.js"></script>
+    
 </head>
 <body>
     
 
     <canvas id="bg"></canvas>
 
+
     <a id="top"></a>
 
+    <div class="loader">
+      <img src="https://www.drukwerkmax.nl/public/frontend/printselect/images/priceloader.gif">
+    </div>
     <!-------------NAVIGATIEBAR-------------->
     <nav>
       <ul class="navbar">
@@ -71,11 +77,11 @@
 
     <section class="skills">
       <a id="skills"></a>
-      <h2 class="skillstitel maintit">SKILLS</h2>
+      <h2 class="skillstitel maintit hiddentitel">SKILLS</h2>
 
       <section class="skill-logos">
         <figure class="skill">
-          <div class="content">
+          <div class="content hidden">
             <img src="images/HTMLlogo.png" alt="Skill" />
             <figcaption class="naamskill">HTML</figcaption>
           </div>
@@ -90,7 +96,7 @@
         </figure>
 
         <figure class="skill">
-          <div class="content">
+          <div class="content hidden">
             <img src="images/CSSlogo.webp" alt="Skill" />
             <figcaption class="naamskill">CSS</figcaption>
           </div>
@@ -110,18 +116,18 @@
 
     <!--------------PROJECTEN----------->
     <section class="projecten" id="projecten">
-      <h2 class="projec maintit">PROJECT</h2>
+      <h2 class="projec maintit hiddentitel">PROJECTS</h2>
 
       <section id="project-platen">
-        <figure>
+        <figure class="hidden">
           <img src="images/hoiikbentobias.png" alt="Project" />
           <figcaption>Portfoliowebsite</figcaption>
         </figure>
-        <figure>
+        <figure class="hidden">
           <img src="images/lege-foto.jpeg" alt="Project" />
           <figcaption>Voorbeeld 2</figcaption>
         </figure>
-        <figure>
+        <figure class="hidden">
           <img src="images/lege-foto.jpeg" alt="Project" />
           <figcaption>Voorbeeld 3</figcaption>
         </figure>
@@ -132,27 +138,27 @@
     <!--------------CONTACT----------->
     <section class="contact">
       <a id="contact"></a>
-      <h2 id="contacttitel" class="maintit">CONTACT</h2>
+      <h2 id="contacttitel" class="maintit hiddentitel">CONTACT</h2>
     </section>
 
     <section class="social-logos">
-      <figure>
+      <figure class="hidden">
         <a href="mailto:tobiasvandorp@student.hu.nl" target="_blank">
           <img src="images/envelope.png" alt="mail icon" />
         </a>
       </figure>
 
-      <figure>
+      <figure class="hidden">
         <a href="https://www.linkedin.com/" target="_blank">
           <img src="images/linkedin.png" alt="linkedin icon"
         /></a>
       </figure>
-      <figure>
+      <figure class="hidden">
         <a href="https://www.facebook.com/" target="_blank">
           <img src="images/facebook.png" alt="facebook icon"
         /></a>
       </figure>
-      <figure>
+      <figure class="hidden">
         <img src="images/discord.png" alt="discord-icon" />
       </figure>
     </section>
@@ -192,6 +198,6 @@
       </p>
     </footer>
 
-    
+    <script src="loader.js"></script>
   </body>
 </html>
