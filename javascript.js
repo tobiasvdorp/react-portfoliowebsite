@@ -1,6 +1,6 @@
 window.addEventListener('load', event => {
-    const figures = [...document.querySelectorAll(".skill-logos > figure")];
-    const popups = [...document.querySelectorAll(".skill-logos > figure .popups")];
+    const figures = [...document.querySelectorAll(".skill-logos > figure, #project-platen > div")];
+    const popups = [...document.querySelectorAll(".skill-logos > figure .popups, #project-platen > figure")];
     figures.forEach(figure => {
         const popup = figure.querySelector(".popups");
         const closeButton = figure.querySelector(".close-button");
