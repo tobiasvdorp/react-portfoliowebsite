@@ -24,15 +24,14 @@ canvas {
   left: 0;
   z-index: -100;
   -webkit-backface-visibility: hidden;
--webkit-perspective: 1000;
--webkit-transform: translate3d(0,0,0);
--webkit-transform: translateZ(0);
-backface-visibility: hidden;
-perspective: 1000;
-transform: translate3d(0,0,0);
-transform: translateZ(0);
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
 }
-
 
 .left {
   grid-column: 6 / 12;
@@ -236,7 +235,6 @@ figcaption {
     glitch 10s ease infinite 1s alternate-reverse;
 }
 
-
 .stack span:nth-child(odd) {
   --glitch-translate: 8px;
 }
@@ -389,19 +387,15 @@ section.skills {
   opacity: 1;
 }
 
-.skillstitel,
-section.projecten h2,
-#contacttitel {
+.maintit {
   font-size: 3.5vw;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: white;
   margin-block-end: 0;
   margin-block-start: 0;
   margin-top: 3vh;
 }
-section.projecten h2 {
-  margin-top: 5vh;
-}
+
 .skill-logos {
   color: black;
   display: flex;
@@ -430,21 +424,29 @@ figcaption {
   cursor: pointer;
 }
 /* -----------POPUP-------------- */
-
+.popups {
+  text-align: center;
+}
 .popups h2,
 .popups p {
   margin-bottom: 10px;
   color: black;
 }
 
-.popups, .popups2 {
+.popups h2 {
+  text-decoration: underline;
+  padding-bottom: 1.5vh;
+}
+
+.popups,
+.popups2 {
   position: fixed;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60vw;
   padding: 30px;
   box-shadow: 0 5px 30px black;
+  border-radius: 1rem;
   background: white;
   opacity: 0;
   visibility: hidden;
@@ -452,11 +454,11 @@ figcaption {
   z-index: 10;
 }
 
-.popups.active, .popups2.active {
+.popups.active,
+.popups2.active {
   top: 50%;
-  position: fixed;
   visibility: visible;
-  opacity: 1;
+  opacity: 0.98;
   transform: 0.5s;
 }
 
@@ -476,7 +478,6 @@ section.projecten {
 
 #project-platen {
   color: rgb(255, 255, 255);
-
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -503,6 +504,15 @@ section.projecten {
 h2.projec {
   box-shadow: 10px;
 }
+
+.prj h2 {
+  font-size: 4vw;
+}
+
+.prj {
+  width: 200%;
+}
+
 /*---------------------------------*/
 /*--------------CONTACT-----------*/
 
@@ -511,6 +521,11 @@ h2.projec {
   padding-bottom: 1vh;
 }
 
+#respond {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 0 2vh 0;
+}
 .social-logos {
   display: flex;
   flex-wrap: nowrap;
@@ -526,7 +541,48 @@ h2.projec {
 .social-logos img:hover {
   cursor: pointer;
 }
+.formbold-form-wrapper {
+  margin: 0px auto;
+  max-width: 550px;
+  width: 100%;
+}
+.formbold-form-label {
+  display: block;
+  color: white;
+  opacity: 1;
+}
 
+.formbold-form-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  outline: none;
+  resize: none;
+  background: rgba(128, 128, 128, 0.3);
+  margin: 10px 0;
+}
+
+.formbold-btn {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #9d4edd;
+  cursor: pointer;
+}
+.formbold-btn:hover {
+  background: #5a1f8b;
+  transition: 0.25s;
+}
+
+hr {
+  margin: 5vh 10vw 1vh 10vw;
+}
+#or {
+  text-align: center;
+  font-size: 3vw;
+}
 /*-----------FOOTER-----------*/
 
 footer {
@@ -556,10 +612,27 @@ footer {
 /*---------------------------*/
 /*-------NAVBAR CLICKS------*/
 
-a#overmij {
+a#overmij,
+a#skills,
+a#projects,
+a#contact {
   display: block;
   position: relative;
+}
+a#overmij {
   top: -5vh;
+}
+
+a#skills {
+  top: -45vh;
+}
+
+a#projects {
+  top: -30vh;
+}
+
+a#contact {
+  top: -10vh;
 }
 
 /* .skill-logos figure,
@@ -594,7 +667,6 @@ a#overmij {
     background: rgba(55, 144, 119, 0.5);
   }
 }
-
 
 @media only screen and (max-width: 2560px) {
   /*----NAVBAR----*/
@@ -646,7 +718,7 @@ a#overmij {
   .skill-logos figcaption {
     font-size: calc(8px + 1vw);
   }
-  .skillstitel, section.projecten h2 {
+  .maintit {
     font-size: calc(40px + 2vw);
   }
   /*---PROJECTEN----*/
@@ -664,10 +736,21 @@ a#overmij {
     margin: 1vw;
   }
   .social-logos img {
-    width: calc(30px + 3vw);
+    width: calc(30px + 4vw);
   }
 }
+.popups p {
+  font-size: 1.5vw;
+}
 
+.popups h2 {
+  font-size: 2.5vw;
+}
+
+.close-button {
+  font-size: 1.5vw;
+  margin-top: 10px;
+}
 @media only screen and (max-width: 1440px) {
   /*----NAVBAR-----*/
 
@@ -695,15 +778,25 @@ a#overmij {
 
   /*----PROJECTEN---*/
 
-  section.projecten h2, .skillstitel {
+  .maintit {
     font-size: calc(15px + 3vw);
     margin-bottom: 1.5vw;
+  }
+
+  .popups h2 {
+    font-size: calc(15px + 1vw);
+    margin: 0;
+  }
+
+  .popups p {
+    font-size: calc(10px + 0.5vw);
+    margin: 0;
   }
 
   /*---CONTACT----*/
 
   .social-logos img {
-    width: calc(20px + 3vw);
+    width: calc(20px + 4vw);
   }
 }
 /*------------TABLET----------------*/
@@ -754,7 +847,7 @@ a#overmij {
   .skill-logos figcaption {
     font-size: calc(11px + 0.8vw);
   }
-  .skillstitel, section.projecten h2 {
+  .maintit {
     font-size: calc(15px + 4vw);
   }
   .section.skills {
@@ -776,13 +869,25 @@ a#overmij {
   #project-platen figure figcaption {
     font-size: 3vw;
   }
-
+  .popups {
+    padding: 2vw;
+  }
   /*---CONTACT----*/
   #contacttitel {
     font-size: 8vw;
     margin-bottom: 1.5vw;
   }
+  footer ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .formbold-form-wrapper {
+    width: 70%;
+  }
 
+  footer p {
+    font-size: calc(5px + 1vw);
+  }
 }
 /*----------------MOBIEL-------------------*/
 
@@ -815,8 +920,20 @@ a#overmij {
   .skill-logos figure figcaption {
     font-size: calc(8px + 1vw);
   }
-  .skillstitel, section.projecten h2 {
+  .skillstitel,
+  section.projecten h2 {
     font-size: 7.5vw;
+  }
+
+  .popups {
+    width: 90vw;
+    padding: 5vw;
+  }
+  .popups p {
+    font-size: calc(10px + 1vw);
+  }
+  .close-button {
+    font-size: 3vw;
   }
   /*------PROJECTEN-----*/
 
@@ -837,35 +954,36 @@ a#overmij {
     margin-bottom: 1.5vw;
   }
 
-
   /*-----CONTACT-----*/
   .social-logos figure {
     margin: 3vw;
   }
   .social-logos img {
-    width: calc(25px + 2vw);
+    width: calc(25px + 3.5vw);
   }
   #contacttitel {
     font-size: 9vw;
   }
+  .formbold-form-wrapper {
+    width: 90%;
+  }
 }
 
-
+/* ----------------------------------- */
 /*----ANIMATIES----*/
 
 .hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
-  transition: all .7s;
+  transition: all 0.7s;
 }
-
 
 .hiddentitel {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-10%);
-  transition:all .7s;
+  transition: all 0.7s;
 }
 
 .show {
@@ -893,7 +1011,7 @@ a#overmij {
   width: 10vw;
 }
 .dissapear {
-  animation: vanish .2s forwards;
+  animation: vanish 0.2s forwards;
 }
 
 @keyframes vanish {

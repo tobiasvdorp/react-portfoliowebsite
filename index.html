@@ -9,6 +9,10 @@
     <script src="javascript.js"></script>
     <script type="module" src="Three.js"></script>
     <script defer src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/bfbf5f508f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- <canvas id="bg"></canvas> -->
@@ -26,7 +30,7 @@
         <li class="navbar-item main"><a href="#top">Home</a></li>
         <li class="navbar-item main"><a href="#overmij">About me</a></li>
         <li class="navbar-item main"><a href="#skills">Skills</a></li>
-        <li class="navbar-item main"><a href="#projecten">Projects</a></li>
+        <li class="navbar-item main"><a href="#projects">Projects</a></li>
         <li class="navbar-item main">
           <a href="#contact"><button class="contact main">Contact</button></a>
         </li>
@@ -86,8 +90,10 @@
           <div class="popups">
             <h2>HTML web development</h2>
             <p>
-              I master the basics of HTML. Among other things, I used this as a skeleton for this portfolio website.            </p>
-            <button class="close-button">Sluiten</button>
+              I master the basics of HTML. I used this as a skeleton for this
+              portfolio website.
+            </p>
+            <button class="close-button">Close</button>
           </div>
         </figure>
 
@@ -99,9 +105,10 @@
           <div class="popups">
             <h2>CSS-styling</h2>
             <p>
-              I master the basics of CSS styling. I can also handle media queries for responsiveness and keyframes for animations.
+              I master the basics of CSS styling. I can also handle media
+              queries for responsiveness and keyframes for animations.
             </p>
-            <button class="close-button">Sluiten</button>
+            <button class="close-button">Close</button>
           </div>
         </figure>
       </section>
@@ -110,27 +117,28 @@
     <!--------------------------------->
 
     <!--------------PROJECTEN----------->
-    <section class="projecten" id="projecten">
+    <section class="projecten">
+      <a id="projects"></a>
       <h2 class="projec maintit hiddentitel">PROJECTS</h2>
 
       <section id="project-platen">
-        
-        
         <div class="project">
           <figure class="hidden">
             <img src="images/hoiikbentobias.png" alt="Project" />
             <figcaption>Portfoliowebsite</figcaption>
-            <div class="popups">
-              <h2>Portfolio</h2>
+            <div class="popups prj">
+              <h2>Portfoliowebsite</h2>
               <p>
-                The first project I did was creating this portfolio website. I had never written a line of code before so I had no experience at all. In about 6 weeks put this website together by means of YouTube tutorials and small lessons from classmates.
+                The first project I did was creating this portfolio website. I
+                had never written one line of code before so I had no experience
+                at all. In about 6 weeks put this website together by means of
+                YouTube tutorials and small lessons from classmates.
               </p>
-              
-              <button class="close-button">Sluiten</button>
+
+              <button class="close-button">Close</button>
             </div>
           </figure>
         </div>
-        
       </section>
     </section>
     <!--------------------------------->
@@ -139,10 +147,76 @@
     <section class="contact">
       <a id="contact"></a>
       <h2 id="contacttitel" class="maintit hiddentitel">CONTACT</h2>
+      <h3 id="respond" class="hidden">I will always respond within 24 hours.</h3>
     </section>
 
-    <section class="social-logos">
-      <figure class="hidden">
+    <!-- CONTACTFORMULIER -->
+
+    <div class="formbold-main-wrapper">
+      <!-- Author: FormBold Team -->
+      <!-- Learn More: https://formbold.com -->
+      <div class="formbold-form-wrapper">
+        <form
+          action="https://formsubmit.co/tobiasvandorp@gmail.com"
+          method="POST"
+          onsubmit="return validate()"
+        >
+          <div class="formbold-mb-5 hidden">
+            <label for="name" class="formbold-form-label"> Full Name </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Full Name"
+              class="formbold-form-input"
+            />
+          </div>
+
+          <div class="formbold-mb-5 hidden">
+            <label for="email" class="formbold-form-label">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              class="formbold-form-input"
+            />
+          </div>
+
+          <div class="formbold-mb-5 hidden">
+            <label for="subject" class="formbold-form-label"> Subject </label>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Enter your subject"
+              class="formbold-form-input hoi"
+            />
+          </div>
+
+          <div class="formbold-mb-5 hidden">
+            <label for="message" class="formbold-form-label"> Message </label>
+            <textarea
+              rows="6"
+              name="message"
+              id="message"
+              placeholder="Type your message"
+              class="formbold-form-input"
+            ></textarea>
+          </div>
+
+          <div>
+            <button class="formbold-btn hidden">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- <section class="social-logos"> -->
+      <!-- <figure class="hidden">
         <a href="mailto:tobiasvandorp@student.hu.nl" target="_blank">
           <img src="images/envelope.png" alt="mail icon" />
         </a>
@@ -157,12 +231,11 @@
         <a href="https://www.facebook.com/" target="_blank">
           <img src="images/facebook.png" alt="facebook icon"
         /></a>
-      </figure>
-      <figure class="hidden">
+      </figure> -->
+      <!-- <figure class="hidden">
         <img src="images/discord.png" alt="discord-icon" />
       </figure>
-    </section>
-
+    </section> -->
     <footer>
       <div id="footer">
         <ul id="footerlist">
@@ -180,7 +253,7 @@
             </a>
           </li>
           <li>
-            <a href="#projecten"
+            <a href="#projects"
               ><i class="fa-solid fa-diagram-project"></i> | Projecten
             </a>
           </li>
@@ -191,9 +264,7 @@
           </li>
         </ul>
       </div>
-      <p id="copyright">
-        <i class="fa-regular fa-copyright"></i
-        ><i class="fa-regular fa-registered"></i> Copyright 2022 Tobias van Dorp
+      <p id="copyright">(C)Copyright 2022 Tobias van Dorp
         "Portfoliowebsite"
       </p>
     </footer>
