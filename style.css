@@ -430,7 +430,8 @@ figcaption {
 .popups h2,
 .popups p {
   margin-bottom: 10px;
-  color: black;
+  color: white;
+
 }
 
 .popups h2 {
@@ -447,7 +448,7 @@ figcaption {
   padding: 30px;
   box-shadow: 0 5px 30px black;
   border-radius: 1rem;
-  background: white;
+  background: rgb(29, 27, 27);
   opacity: 0;
   visibility: hidden;
   transition: 0.8s;
@@ -739,18 +740,22 @@ a#contact {
     width: calc(30px + 4vw);
   }
 }
-.popups p {
-  font-size: 1.5vw;
+.popups {
+  padding: 1vw;
 }
+  .popups h2 {
+    font-size: calc(10px + 1vw);
+    margin: 0;
+  }
 
-.popups h2 {
-  font-size: 2.5vw;
-}
-
-.close-button {
-  font-size: 1.5vw;
-  margin-top: 10px;
-}
+  .popups p {
+    font-size: calc(6px + 0.5vw);
+    margin: 0;
+  }
+  .close-button {
+    font-size: calc(5px + 0.5vw);
+    margin-top: 15px;
+  }
 @media only screen and (max-width: 1440px) {
   /*----NAVBAR-----*/
 
@@ -782,17 +787,9 @@ a#contact {
     font-size: calc(15px + 3vw);
     margin-bottom: 1.5vw;
   }
-
-  .popups h2 {
-    font-size: calc(15px + 1vw);
-    margin: 0;
-  }
-
-  .popups p {
-    font-size: calc(10px + 0.5vw);
-    margin: 0;
-  }
-
+.close-button {
+  margin-top: 10px;
+}
   /*---CONTACT----*/
 
   .social-logos img {
@@ -1020,3 +1017,4 @@ a#contact {
     visibility: hidden;
   }
 }
+

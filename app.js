@@ -9,6 +9,6 @@ const observer = new IntersectionObserver((entries) => {
     })
 })
 
-const hiddenElements = document.querySelectorAll('.hidden, .hiddentitel, .hiddenproject')
+const hiddenElements = document.querySelectorAll('.hidden, .hiddentitel, .hiddenproject, .hiddencontact')
 hiddenElements.forEach((el) => observer.observe(el));
 
