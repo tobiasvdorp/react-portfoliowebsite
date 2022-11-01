@@ -6,6 +6,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Oswald", sans-serif;
+
 }
 
 body {
@@ -16,6 +17,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
+  text-rendering: optimizeLegibility;
 }
 
 canvas {
@@ -31,6 +34,7 @@ canvas {
   perspective: 1000;
   transform: translate3d(0, 0, 0);
   transform: translateZ(0);
+
 }
 
 .left {
@@ -168,6 +172,7 @@ figcaption {
     cursor: pointer;
     transition: 0.25s;
     letter-spacing: 0.05em;
+    
   }
 
   .navbar-item:before,
@@ -181,11 +186,13 @@ figcaption {
     width: 0;
     height: 3px;
     transition: all 0.3s ease-in-out;
+
   }
   .navbar-item:hover::before,
   .button.contact:hover::before {
     width: 100%;
     text-shadow: none;
+    
   }
 }
 
@@ -256,6 +263,7 @@ figcaption {
     transform: none;
     opacity: 1;
     text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    
   }
   100% {
     text-shadow: none;
@@ -423,6 +431,126 @@ figcaption {
 .skill-logos:hover {
   cursor: pointer;
 }
+
+div.card-title h2, div.card div.card-description {
+  color: black;
+}
+
+ a.btn {
+	 background: #0096a0;
+	 box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+	 color: #ffffff;
+	 display: inline-block;
+	 transition: all 0.1s 0s ease-out;
+}
+ 
+ .no-touch a.btn:active, a.btn:active {
+	 background: #008a93;
+	 box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
+	 transform: translate3d(0,1px,0);
+	 transition: all 0.025s 0s ease-out;
+}
+ div.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+	max-width: 960px;
+}
+ div.card {
+	 background: transparent;
+	 max-width: 300px;
+	 position: relative;
+	 text-align: left;
+	 transition: all 0.3s 0s ease-in;
+	 z-index: 1;
+}
+ div.card img {
+	 width: 15vw;
+}
+ div.card .card__image-holder {
+	 background: rgba(0,0,0,0.1);
+	 height: 0;
+   width: 15vw;
+	 padding-bottom: 70%;
+}
+ div.card div.card-title {
+	 background: #ffffff;
+	 padding: .5em;
+	 position: relative;
+	 z-index: 0;
+   width: 15vw;
+}
+
+a.toggle-info {
+	 border-radius: 1.2rem;
+	 height: 1.2rem;
+    width: 1.2rem;
+	 padding: 0;
+	 position: absolute;
+	 right: .4em;
+	 top: .7em;
+	
+}
+a.toggle-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.card-title h2 {
+  font-size: 1em;
+	 margin: 0;
+   padding: 0;
+   text-align: left;
+}
+
+div.card-description {
+	 padding: 0 .7rem .8rem;
+	 position: relative;
+	 font-size: .7rem;
+}
+
+div.card-flap {
+	 position: absolute;
+	 width: 100%;
+	 transform-origin: top;
+	 transform: rotateX(-90deg);
+}
+div.flap1 {
+	 transition: all 0.3s 0.3s ease-out;
+	 z-index: -1;
+}
+ div.card {
+	 cursor: pointer;
+	 opacity: 0.8;
+	 transform: scale(0.88);
+}
+ div.card:hover {
+	 opacity: 0.94;
+	 transform: scale(0.92);
+}
+ div.card.show {
+	 opacity: 1 !important;
+	 transform: scale(1) !important;
+}
+ div.card.show div.card-title a.toggle-info {
+	 background: #ff6666 !important;
+}
+
+ div.card.show div.card-title a.toggle-info i {
+  transform: rotate(180deg);
+  transition: all 0.3s 0.3s ease-in-out;
+}
+
+ div.card.show div.card-flap {
+	 background: #ffffff;
+	 transform: rotateX(0deg);
+}
+
+
+ 
 /* -----------POPUP-------------- */
 .popups {
   text-align: center;
@@ -850,6 +978,7 @@ a#contact {
   .section.skills {
     padding-bottom: 1vh;
   }
+  
   /*----PROJECTEN---*/
   section.projecten {
     padding: 0 9vw;
@@ -931,6 +1060,10 @@ a#contact {
   }
   .close-button {
     font-size: 3vw;
+  }
+
+div.card-title {
+padding: .1em !important;
   }
   /*------PROJECTEN-----*/
 
@@ -1017,4 +1150,3 @@ a#contact {
     visibility: hidden;
   }
 }
-

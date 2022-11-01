@@ -2,10 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tobias</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="javascript.js"></script>
     <script type="module" src="Three.js"></script>
     <script defer src="app.js"></script>
@@ -13,6 +15,7 @@
       src="https://kit.fontawesome.com/bfbf5f508f.js"
       crossorigin="anonymous"
     ></script>
+    <script src="card.js"></script>
   </head>
   <body>
     <!-- <canvas id="bg"></canvas> -->
@@ -81,38 +84,49 @@
       <a id="skills"></a>
       <h2 class="skillstitel maintit hiddentitel">SKILLS</h2>
 
-      <section class="skill-logos">
-        <figure class="skill">
-          <div class="content hidden">
-            <img src="images/HTMLlogo.png" alt="Skill" />
-            <figcaption class="naamskill">HTML</figcaption>
+      <div class="cards">
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/HTMLlogo.png" alt="desert" />
           </div>
-          <div class="popups">
-            <h2>HTML web development</h2>
-            <p>
-              I master the basics of HTML. I used this as a skeleton <br> for this
-              portfoliowebsite.
-            </p>
-            <button class="close-button">Close</button>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <!-- <span class="left"></span>
+              <span class="right"></span> -->
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <h2>
+              HTML
+            </h2>
           </div>
-        </figure>
-
-        <figure class="skill">
-          <div class="content hidden">
-            <img src="images/CSSlogo.webp" alt="Skill" />
-            <figcaption class="naamskill">CSS</figcaption>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              I master the basics of HTML. I used this as a skeleton <br />
+              for this portfoliowebsite.
+            </div>
           </div>
-          <div class="popups">
-            <h2>CSS-styling</h2>
-            <p>
-              I master the basics of CSS styling. I can also handle media
-              queries <br> for responsiveness and keyframes for animations.
-            </p>
-            <button class="close-button">Close</button>
+        </div>
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/CSSlogo.webp" alt="desert" />
           </div>
-        </figure>
-        
-      </section>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <!-- <span class="left"></span>
+              <span class="right"></span> -->
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <h2>
+              CSS
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              I master the basics of CSS. I can also handle media queries for responsiveness and keyframes for animations.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--------------------------------->
@@ -143,7 +157,6 @@
       </section>
     </section>
 
-</div>
     <!--------------------------------->
 
     <!--------------CONTACT----------->
@@ -272,6 +285,5 @@
     </footer>
 
     <script src="loader.js"></script>
-    
   </body>
 </html>
