@@ -834,7 +834,9 @@ a#contact {
   .section.skills {
     padding-bottom: 1vh;
   }
-
+.balk {
+padding-top: 1em;
+}
   /*----PROJECTEN---*/
   section.projecten {
     padding: 0 9vw;
@@ -853,6 +855,19 @@ a#contact {
   }
   .popups {
     padding: 2vw;
+  }
+
+  .popups h2 {
+    font-size: calc(20px + 1.3vw);
+  }
+
+  .popups p {
+    font-size: calc(10px + 0.8vw);
+    padding-bottom: 1vh;
+  }
+
+  .close-button {
+    font-size: calc(15px + 0.8vw);
   }
   /*---CONTACT----*/
   #contacttitel {
@@ -891,7 +906,7 @@ a#contact {
 
   /*----SKILLS----*/
   .skill-logos figure {
-    margin: 4px;
+    margin: 0 2vw;
   }
   .skill-logos figure img {
     font-size: calc(1px + 0.3vw);
@@ -914,6 +929,11 @@ a#contact {
   .close-button {
     font-size: 3vw;
   }
+
+.skillsbar {
+  padding-bottom: 0.2em;
+  }
+  
 
   /*------PROJECTEN-----*/
 
