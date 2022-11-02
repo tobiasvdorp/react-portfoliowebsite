@@ -15,7 +15,6 @@
       src="https://kit.fontawesome.com/bfbf5f508f.js"
       crossorigin="anonymous"
     ></script>
-    <script src="card.js"></script>
   </head>
   <body>
     <!-- <canvas id="bg"></canvas> -->
@@ -84,48 +83,25 @@
       <a id="skills"></a>
       <h2 class="skillstitel maintit hiddentitel">SKILLS</h2>
 
-      <div class="cards">
-        <div class="card">
-          <div class="card__image-holder">
-            <img class="card__image" src="images/HTMLlogo.png" alt="desert" />
-          </div>
-          <div class="card-title">
-            <a href="#" class="toggle-info btn">
-              <!-- <span class="left"></span>
-              <span class="right"></span> -->
-              <i class="fa-solid fa-angle-down"></i>
-            </a>
-            <h2>
-              HTML
-            </h2>
-          </div>
-          <div class="card-flap flap1">
-            <div class="card-description">
-              I master the basics of HTML. I used this as a skeleton <br />
-              for this portfoliowebsite.
+      <div class="skill-logos">
+        <figure>
+          <img src="images/HTMLlogo.png" alt="html-logo" />
+          <figcaption>HTML</figcaption>
+          <div class="balk">
+            <div class="balkje">
+              <div class="skillsbar html"></div>
             </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card__image-holder">
-            <img class="card__image" src="images/CSSlogo.webp" alt="desert" />
-          </div>
-          <div class="card-title">
-            <a href="#" class="toggle-info btn">
-              <!-- <span class="left"></span>
-              <span class="right"></span> -->
-              <i class="fa-solid fa-angle-down"></i>
-            </a>
-            <h2>
-              CSS
-            </h2>
-          </div>
-          <div class="card-flap flap1">
-            <div class="card-description">
-              I master the basics of CSS. I can also handle media queries for responsiveness and keyframes for animations.
+        </figure>
+        <figure>
+          <img src="images/CSSlogo.webp" alt="css-logo" />
+          <figcaption>CSS</figcaption>
+          <div class="balk">
+            <div class="balkje">
+              <div class="skillsbar css"></div>
             </div>
           </div>
-        </div>
+        </figure>
       </div>
     </section>
 
@@ -139,18 +115,24 @@
       <section id="project-platen">
         <div class="project">
           <figure class="hidden">
-            <img src="images/hoiikbentobias.png" alt="Project" />
-            <figcaption>Portfoliowebsite</figcaption>
-            <div class="popups prj">
-              <h2>Portfoliowebsite</h2>
-              <p>
-                The first project I did was creating this portfoliowebsite. I
-                had never written one line of code before so I had no experience
-                at all. In about 6 weeks put this website together by means of
-                YouTube tutorials and small lessons from classmates.
-              </p>
+            <div class="a">
+              <img src="images/hoiikbentobias.png" alt="Project" />
+              <figcaption>Portfoliowebsite</figcaption>
+            </div>
 
-              <button class="close-button">Close</button>
+            <div class="b">
+              <div class="popups prj">
+                <h2>Portfoliowebsite</h2>
+                <p>
+                  The first project I did was creating this portfoliowebsite. I
+                  had never written one line of code before so I had no
+                  experience at all. In about 6 weeks put this website together
+                  by means of YouTube tutorials and small lessons from
+                  classmates.
+                </p>
+
+                <button class="close-button">Close</button>
+              </div>
             </div>
           </figure>
         </div>

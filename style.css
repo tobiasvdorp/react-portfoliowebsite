@@ -6,22 +6,23 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Oswald", sans-serif;
-
 }
 
 body {
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: #000;
   background-image: url(images/achtergrond3.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   text-rendering: optimizeLegibility;
+
 }
 
-canvas {
+/* canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -34,68 +35,30 @@ canvas {
   perspective: 1000;
   transform: translate3d(0, 0, 0);
   transform: translateZ(0);
-
-}
+} */
 
 .left {
   grid-column: 6 / 12;
 }
 
-/* ------ PARALLAX ------
-  :root {
-    --scale: 0.5;
-    --space: 8vmin;
-  }
-  
-  
-  
-  .section {
-    transform: scaleY(calc(1 - var(--scale)));
-  }
-  
-  .section > * {
-    transform: scaleY(calc(1 / (1 - var(--scale))));
-  }
-  
-  
-  .image-container {
-    position: sticky;
-    top: 0;
-    z-index: -20;
-    margin: 0;
-  }
-  
-  .image-container img {
-    display: block;
-    position: absolute;
-    top: -20vh;
-    left: 0;
-    width: 100vw;
-  
-  
-  }
-  
-  .image-container::after {
-    content: '';
-  
-  }
-  
-  @keyframes fadein {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* -----------------NAVBAR------------ */
+/* Achtergrond paars */
+
+.close-button,
+button.contact,
+.lbl-toggle,
+.formbold-btn,
+.html,
+.css {
+  background: #9d4edd;
+}
+/* -----------------NAVBAR------------ */
 
 ul.navbar {
   list-style-type: none;
   text-align: center;
   margin: 0;
   padding: 0;
-  border-style: solid;
-  border-color: black;
+  
 }
 
 nav {
@@ -115,7 +78,6 @@ nav {
 button.contact {
   border: none;
   border-radius: 5px;
-  background: #9d4edd;
   font-size: 4vw;
   color: rgb(255, 255, 255);
   transition: 0.7s;
@@ -172,7 +134,6 @@ figcaption {
     cursor: pointer;
     transition: 0.25s;
     letter-spacing: 0.05em;
-    
   }
 
   .navbar-item:before,
@@ -186,13 +147,11 @@ figcaption {
     width: 0;
     height: 3px;
     transition: all 0.3s ease-in-out;
-
   }
   .navbar-item:hover::before,
   .button.contact:hover::before {
     width: 100%;
     text-shadow: none;
-    
   }
 }
 
@@ -263,7 +222,6 @@ figcaption {
     transform: none;
     opacity: 1;
     text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
-    
   }
   100% {
     text-shadow: none;
@@ -328,7 +286,6 @@ input[type="checkbox"] {
   font-size: 4vw;
   text-align: center;
   color: white;
-  background: #9d4edd;
   cursor: pointer;
   border-radius: 2px;
   transition: all 0.25s ease-out;
@@ -421,7 +378,7 @@ section.skills {
 }
 
 .skill-logos figure {
-  margin: 0.1vw 1vw 1vh 1vw;
+  margin: 0.1vw 2vw 1vh 2vw;
 }
 
 figcaption {
@@ -432,134 +389,35 @@ figcaption {
   cursor: pointer;
 }
 
-div.card-title h2, div.card div.card-description {
-  color: black;
+.balk {
+  padding-top: 0.7em;
+}
+.balkje {
+  background-color: #ddd; 
 }
 
- a.btn {
-	 background: #0096a0;
-	 box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-	 color: #ffffff;
-	 display: inline-block;
-	 transition: all 0.1s 0s ease-out;
-}
- 
- .no-touch a.btn:active, a.btn:active {
-	 background: #008a93;
-	 box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
-	 transform: translate3d(0,1px,0);
-	 transition: all 0.025s 0s ease-out;
-}
- div.cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-	max-width: 960px;
-}
- div.card {
-	 background: transparent;
-	 max-width: 300px;
-	 position: relative;
-	 text-align: left;
-	 transition: all 0.3s 0s ease-in;
-	 z-index: 1;
-}
- div.card img {
-	 width: 15vw;
-}
- div.card .card__image-holder {
-	 background: rgba(0,0,0,0.1);
-	 height: 0;
-   width: 15vw;
-	 padding-bottom: 70%;
-}
- div.card div.card-title {
-	 background: #ffffff;
-	 padding: .5em;
-	 position: relative;
-	 z-index: 0;
-   width: 15vw;
+.skillsbar {
+  text-align: right; 
+  padding-bottom: 0.4em; 
+  color: white; 
 }
 
-a.toggle-info {
-	 border-radius: 1.2rem;
-	 height: 1.2rem;
-    width: 1.2rem;
-	 padding: 0;
-	 position: absolute;
-	 right: .4em;
-	 top: .7em;
-	
+.html {
+  width: 60%;
 }
-a.toggle-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div.card-title h2 {
-  font-size: 1em;
-	 margin: 0;
-   padding: 0;
-   text-align: left;
+.css {
+  width: 50%;
+
 }
 
-div.card-description {
-	 padding: 0 .7rem .8rem;
-	 position: relative;
-	 font-size: .7rem;
-}
-
-div.card-flap {
-	 position: absolute;
-	 width: 100%;
-	 transform-origin: top;
-	 transform: rotateX(-90deg);
-}
-div.flap1 {
-	 transition: all 0.3s 0.3s ease-out;
-	 z-index: -1;
-}
- div.card {
-	 cursor: pointer;
-	 opacity: 0.8;
-	 transform: scale(0.88);
-}
- div.card:hover {
-	 opacity: 0.94;
-	 transform: scale(0.92);
-}
- div.card.show {
-	 opacity: 1 !important;
-	 transform: scale(1) !important;
-}
- div.card.show div.card-title a.toggle-info {
-	 background: #ff6666 !important;
-}
-
- div.card.show div.card-title a.toggle-info i {
-  transform: rotate(180deg);
-  transition: all 0.3s 0.3s ease-in-out;
-}
-
- div.card.show div.card-flap {
-	 background: #ffffff;
-	 transform: rotateX(0deg);
-}
-
-
- 
 /* -----------POPUP-------------- */
 .popups {
-  text-align: center;
+  text-align: left;
 }
 .popups h2,
 .popups p {
   margin-bottom: 10px;
   color: white;
-
 }
 
 .popups h2 {
@@ -567,32 +425,32 @@ div.flap1 {
   padding-bottom: 1.5vh;
 }
 
-.popups,
-.popups2 {
-  position: fixed;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px;
-  box-shadow: 0 5px 30px black;
-  border-radius: 1rem;
-  background: rgb(29, 27, 27);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.8s;
-  z-index: 10;
+figure.hidden {
+  display: flex;
+  flex-direction: row;
+  
 }
 
-.popups.active,
-.popups2.active {
-  top: 50%;
-  visibility: visible;
-  opacity: 0.98;
-  transform: 0.5s;
+div.b {
+display: none;
+}
+
+div.b.active {
+display: flex;
+}
+
+
+@keyframes yeah {
+  0% {
+    width: 0%;
+
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .close-button {
-  background: #9d4edd;
   border-radius: 10%;
   border: none;
   cursor: pointer;
@@ -697,7 +555,7 @@ h2.projec {
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   border: none;
-  background-color: #9d4edd;
+
   cursor: pointer;
 }
 .formbold-btn:hover {
@@ -764,38 +622,39 @@ a#contact {
   top: -10vh;
 }
 
-/* .skill-logos figure,
+.skill-logos figure,
 #project-platen figure,
 .social-logos img {
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  -ms-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-} */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+} 
 @media (hover: hover) and (pointer: fine) {
   /* .skill-logos figure:hover, */
   #project-platen figure:hover,
   .social-logos img:hover {
     transform: scale(1.1);
-    transition: 0.2s;
+    transition: 0.4s;
     z-index: 3;
   }
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .skill-logos figure:hover,
-  #project-platen figure:hover {
+  .skill-logos figure div.active:hover{
     background: rgb(35, 92, 76);
+    box-shadow: 10px black;
   }
 }
 
 @media (hover: hover) and (pointer: fine) {
   .skill-logos figure:hover {
-    padding-bottom: 0.5vh;
     background: rgba(55, 144, 119, 0.5);
   }
 }
+
+
 
 @media only screen and (max-width: 2560px) {
   /*----NAVBAR----*/
@@ -805,9 +664,7 @@ a#contact {
     margin: 0.5vw;
     padding: 0 1vw;
   }
-  .navbar {
-    border: 2px;
-  }
+ 
   /*---OVER MIJ---*/
   .overmij {
     margin-bottom: 3vh;
@@ -871,19 +728,19 @@ a#contact {
 .popups {
   padding: 1vw;
 }
-  .popups h2 {
-    font-size: calc(10px + 1vw);
-    margin: 0;
-  }
+.popups h2 {
+  font-size: calc(10px + 1vw);
+  margin: 0;
+}
 
-  .popups p {
-    font-size: calc(6px + 0.5vw);
-    margin: 0;
-  }
-  .close-button {
-    font-size: calc(5px + 0.5vw);
-    margin-top: 15px;
-  }
+.popups p {
+  font-size: calc(6px + 0.5vw);
+  margin: 0;
+}
+.close-button {
+  font-size: calc(5px + 0.5vw);
+  margin-top: 15px;
+}
 @media only screen and (max-width: 1440px) {
   /*----NAVBAR-----*/
 
@@ -915,9 +772,9 @@ a#contact {
     font-size: calc(15px + 3vw);
     margin-bottom: 1.5vw;
   }
-.close-button {
-  margin-top: 10px;
-}
+  .close-button {
+    margin-top: 10px;
+  }
   /*---CONTACT----*/
 
   .social-logos img {
@@ -932,9 +789,7 @@ a#contact {
   button.contact {
     font-size: 3.5vw;
   }
-  .navbar {
-    border: 1.2px;
-  }
+ 
   /*----OVER MIJ----*/
 
   .stack span {
@@ -967,6 +822,7 @@ a#contact {
 
   .skill-logos figure img {
     width: calc(40px + 3vw);
+    height: calc(40px + 3vw);
     margin: 0.5vw;
   }
   .skill-logos figcaption {
@@ -978,7 +834,7 @@ a#contact {
   .section.skills {
     padding-bottom: 1vh;
   }
-  
+
   /*----PROJECTEN---*/
   section.projecten {
     padding: 0 9vw;
@@ -1029,9 +885,7 @@ a#contact {
   button.contact {
     font-size: 5vw;
   }
-  .navbar {
-    border: 1.2px;
-  }
+ 
 
   /*---OVER MIJ---*/
 
@@ -1052,7 +906,6 @@ a#contact {
   }
 
   .popups {
-    width: 90vw;
     padding: 5vw;
   }
   .popups p {
@@ -1062,9 +915,6 @@ a#contact {
     font-size: 3vw;
   }
 
-div.card-title {
-padding: .1em !important;
-  }
   /*------PROJECTEN-----*/
 
   #project-platen figure figcaption {
