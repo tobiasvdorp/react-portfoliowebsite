@@ -19,7 +19,6 @@ body {
   background-attachment: fixed;
   background-position: center;
   text-rendering: optimizeLegibility;
-
 }
 
 /* canvas {
@@ -58,7 +57,6 @@ ul.navbar {
   text-align: center;
   margin: 0;
   padding: 0;
-  
 }
 
 nav {
@@ -393,21 +391,20 @@ figcaption {
   padding-top: 0.7em;
 }
 .balkje {
-  background-color: #ddd; 
+  background-color: #ddd;
 }
 
 .skillsbar {
-  text-align: right; 
-  padding-bottom: 0.4em; 
-  color: white; 
+  text-align: right;
+  padding-bottom: 0.4em;
+  color: white;
 }
 
 .html {
-  width: 60%;
+  width: 50%;
 }
 .css {
-  width: 50%;
-
+  width: 35%;
 }
 
 /* -----------POPUP-------------- */
@@ -428,22 +425,19 @@ figcaption {
 figure.hidden {
   display: flex;
   flex-direction: row;
-  
 }
 
 div.b {
-display: none;
+  display: none;
 }
 
 div.b.active {
-display: flex;
+  display: flex;
 }
-
 
 @keyframes yeah {
   0% {
     width: 0%;
-
   }
   100% {
     width: 100%;
@@ -630,7 +624,7 @@ a#contact {
   -o-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-} 
+}
 @media (hover: hover) and (pointer: fine) {
   /* .skill-logos figure:hover, */
   #project-platen figure:hover,
@@ -642,7 +636,7 @@ a#contact {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .skill-logos figure div.active:hover{
+  .skill-logos figure div.active:hover {
     background: rgb(35, 92, 76);
     box-shadow: 10px black;
   }
@@ -654,8 +648,6 @@ a#contact {
   }
 }
 
-
-
 @media only screen and (max-width: 2560px) {
   /*----NAVBAR----*/
   .navbar-item,
@@ -664,7 +656,7 @@ a#contact {
     margin: 0.5vw;
     padding: 0 1vw;
   }
- 
+
   /*---OVER MIJ---*/
   .overmij {
     margin-bottom: 3vh;
@@ -712,35 +704,35 @@ a#contact {
     padding: 0 20vw;
   }
   #project-platen figure img {
-    width: calc(60px + 10vw);
+    width: calc(90px + 10vw);
   }
   #project-platen figure {
     margin: 1.5vw;
   }
-  /*---CONTACT----*/
-  .social-logos figure {
-    margin: 1vw;
+  #project-platen figcaption {
+    font-size: calc(8px + 1vw);
   }
-  .social-logos img {
-    width: calc(30px + 4vw);
-  }
-}
-.popups {
-  padding: 1vw;
-}
-.popups h2 {
-  font-size: calc(10px + 1vw);
-  margin: 0;
-}
 
-.popups p {
-  font-size: calc(6px + 0.5vw);
-  margin: 0;
+  .popups {
+    padding: 1vw;
+  }
+  .popups h2 {
+    font-size: calc(25px + 1.5vw);
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .popups p {
+    font-size: calc(10px + 1vw);
+    margin-top: 0.5vh;
+  }
+
+  .close-button {
+    font-size: calc(20px + 0.6vw);
+    margin-top: 10px;
+  }
 }
-.close-button {
-  font-size: calc(5px + 0.5vw);
-  margin-top: 15px;
-}
+/*---CONTACT----*/
+
 @media only screen and (max-width: 1440px) {
   /*----NAVBAR-----*/
 
@@ -775,6 +767,21 @@ a#contact {
   .close-button {
     margin-top: 10px;
   }
+  .popups h2 {
+    font-size: calc(20px + 0.8vw);
+    padding-bottom: 3px;
+  }
+  .popups p {
+    font-size: calc(10px + 0.5vw);
+  }
+
+  .close-button {
+    font-size: calc(12px + 0.5vw);
+  }
+
+  .prj {
+    padding-bottom: 0;
+  }
   /*---CONTACT----*/
 
   .social-logos img {
@@ -789,7 +796,7 @@ a#contact {
   button.contact {
     font-size: 3.5vw;
   }
- 
+
   /*----OVER MIJ----*/
 
   .stack span {
@@ -834,9 +841,9 @@ a#contact {
   .section.skills {
     padding-bottom: 1vh;
   }
-.balk {
-padding-top: 1em;
-}
+  .balk {
+    padding-top: 1em;
+  }
   /*----PROJECTEN---*/
   section.projecten {
     padding: 0 9vw;
@@ -900,7 +907,6 @@ padding-top: 1em;
   button.contact {
     font-size: 5vw;
   }
- 
 
   /*---OVER MIJ---*/
 
@@ -930,10 +936,9 @@ padding-top: 1em;
     font-size: 3vw;
   }
 
-.skillsbar {
-  padding-bottom: 0.2em;
+  .skillsbar {
+    padding-bottom: 0.2em;
   }
-  
 
   /*------PROJECTEN-----*/
 
