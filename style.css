@@ -937,7 +937,7 @@ a#contact {
 
   /*---OVER MIJ---*/
 .content-inner {
-  flex-direction: column;
+  flex-direction: column !important;
   width: 80vw;
 }
 .content-inner div h2 {
