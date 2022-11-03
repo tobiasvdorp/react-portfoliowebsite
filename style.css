@@ -342,6 +342,7 @@ margin: 1vw;
   padding: 0 0 0 4vw;
   text-align: left;
   list-style-type: square;
+  margin: 0;
 }
 
 .lbl-toggle::before {
@@ -575,13 +576,6 @@ h2.projec {
   transition: 0.25s;
 }
 
-hr {
-  margin: 5vh 10vw 1vh 10vw;
-}
-#or {
-  text-align: center;
-  font-size: 3vw;
-}
 /*-----------FOOTER-----------*/
 
 footer {
@@ -684,8 +678,8 @@ a#contact {
     padding: 0px;
     font-size: 5vw;
   }
-  .overmij h2 {
-    font-size: 2vw;
+  .overmij h2.overmijtitel {
+    font-size: 4vw;
     line-height: .2;
     padding-bottom: 2vh;
   }
@@ -773,6 +767,8 @@ a#contact {
   .content-inner li {
     font-size: calc(7px + 0.5vw);
   }
+
+  
   /*----SKILLS----*/
 
   .skill-logos figcaption {
@@ -849,6 +845,10 @@ a#contact {
 
   .content-inner {
     font-size: 3vw;
+  }
+
+  .content-inner ul {
+    margin: 0;
   }
   /*----SKILLS----*/
 
@@ -944,12 +944,15 @@ a#contact {
   font-size: 4vw; 
 }
 
+.content-inner div {
+  margin: 1vh;
+}
 .content-inner li {
   font-size: 3vw;
 }
 
 .content-inner div ul {
-  margin: 0;
+  margin: 1vh;
 }
 
   /*----SKILLS----*/
