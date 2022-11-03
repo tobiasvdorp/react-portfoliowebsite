@@ -254,9 +254,6 @@ h2.overmijtitel,
 .overmij h3 {
   margin: 0;
 }
-.overmijtitel {
-  padding-top: 5vw;
-}
 
 figure.fotovanmij {
   width: 18vw;
@@ -688,8 +685,9 @@ a#contact {
     font-size: 5vw;
   }
   .overmij h2 {
-    font-size: 3vw;
-    line-height: 1;
+    font-size: 2vw;
+    line-height: .2;
+    padding-bottom: 2vh;
   }
   #foto-van-mij,
   figure.fotovanmij {
@@ -761,8 +759,8 @@ a#contact {
     font-size: 6vw;
   }
   .overmij h2 {
-    font-size: 3vw;
-    line-height: 0.6;
+    font-size: 2vw;
+    line-height: 0.1;
   }
 
   .overmij {
@@ -830,8 +828,8 @@ a#contact {
     font-size: 15vw;
   }
   .overmij h2 {
-    font-size: 9vw;
-    padding-top: 3vh;
+    font-size: 3.5vw;
+    padding-top: .1vh;
   }
 
   #foto-van-mij,
@@ -928,10 +926,9 @@ a#contact {
 /*---NAVBAR---*/
 @media only screen and (max-width: 450px) {
   body {
-    background-image: url(images/backgroundmob.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: top;
   }
   .navbar-item,
   button.contact {
