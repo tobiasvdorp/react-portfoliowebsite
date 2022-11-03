@@ -21,6 +21,28 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+@media screen and (max-width: 450px) {
+  .content-inner {
+    flex-direction: column !important;
+    width: 80vw;
+  }
+  .content-inner div h2 {
+    font-size: 4vw; 
+  }
+  
+  .content-inner div {
+    margin: 1vh;
+  }
+  .content-inner li {
+    font-size: 3vw;
+  }
+  
+  .content-inner div ul {
+    margin: 1vh;
+  }
+}
+  
+}
 /* canvas {
   position: fixed;
   top: 0;
