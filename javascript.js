@@ -8,6 +8,7 @@ window.addEventListener('load', event => {
             popups.forEach(pop => pop.classList.remove("active"));
         });
         figure.addEventListener('click', event => {
+                
             if (event.path[0].classList.contains("b") ||
              event.path[0].classList.contains("close-button")) return;
             popups.forEach(pop => pop.classList.remove("active"));

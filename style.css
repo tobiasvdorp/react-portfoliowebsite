@@ -242,6 +242,7 @@ figcaption {
 }
 
 /*------REST OVER MIJ----*/
+
 .overmij {
   display: flex;
   flex-direction: column;
@@ -323,7 +324,27 @@ input[type="checkbox"] {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   padding: 0.5rem 1rem;
+}
+
+.content-inner {
   display: flex;
+  width: 100%;
+}
+
+.content-inner div {
+  margin: 0 2vw;
+}
+
+.content-inner div h2 {
+font-size: 2vw;
+margin: 1vw;
+
+}
+
+.content-inner ul {
+  padding: 0 0 0 4vw;
+  text-align: left;
+  list-style-type: square;
 }
 
 .lbl-toggle::before {
@@ -668,7 +689,6 @@ a#contact {
   }
   .overmij h2 {
     font-size: 3vw;
-    padding-top: 3vh;
     line-height: 1;
   }
   #foto-van-mij,
@@ -717,18 +737,18 @@ a#contact {
     padding: 1vw;
   }
   .popups h2 {
-    font-size: calc(25px + 1.5vw);
+    font-size: calc(20px + 1vw);
     margin: 0;
     padding-bottom: 0;
   }
   .popups p {
-    font-size: calc(10px + 1vw);
+    font-size: calc(8px + .7vw);
     margin-top: 0.5vh;
   }
 
   .close-button {
-    font-size: calc(20px + 0.6vw);
-    margin-top: 10px;
+    font-size: calc(17px + 0.4vw);
+    margin-top: 1em;
   }
 }
 /*---CONTACT----*/
@@ -747,6 +767,13 @@ a#contact {
 
   .overmij {
     margin-top: 2vh;
+  }
+
+  .content-inner div h2 {
+    font-size: calc(12px + 0.7vw);
+  }
+  .content-inner li {
+    font-size: calc(7px + 0.5vw);
   }
   /*----SKILLS----*/
 
@@ -768,11 +795,11 @@ a#contact {
     margin-top: 10px;
   }
   .popups h2 {
-    font-size: calc(20px + 0.8vw);
+    font-size: calc(10px + 1.5vw);
     padding-bottom: 3px;
   }
   .popups p {
-    font-size: calc(10px + 0.5vw);
+    font-size: calc(5px + 1vw);
   }
 
   .close-button {
@@ -864,17 +891,20 @@ a#contact {
     padding: 2vw;
   }
 
-  .popups h2 {
-    font-size: calc(20px + 1.3vw);
+  .content-inner div h2 {
+    font-size: calc(5px + 2vw);
   }
 
+  .content-inner div li {
+    font-size: calc(3px + 1.8vw);
+  }
   .popups p {
-    font-size: calc(10px + 0.8vw);
+    font-size: calc(5px + 1.5vw);
     padding-bottom: 1vh;
   }
 
   .close-button {
-    font-size: calc(15px + 0.8vw);
+    font-size: calc(10px + 0.8vw);
   }
   /*---CONTACT----*/
   #contacttitel {
@@ -909,6 +939,21 @@ a#contact {
   }
 
   /*---OVER MIJ---*/
+.content-inner {
+  flex-direction: column;
+  width: 80vw;
+}
+.content-inner div h2 {
+  font-size: 4vw; 
+}
+
+.content-inner li {
+  font-size: 3vw;
+}
+
+.content-inner div ul {
+  margin: 0;
+}
 
   /*----SKILLS----*/
   .skill-logos figure {
@@ -927,13 +972,18 @@ a#contact {
   }
 
   .popups {
-    padding: 5vw;
+    padding: 3vw;
   }
   .popups p {
-    font-size: calc(10px + 1vw);
+    font-size: calc(8px + 1vw);
+    padding-bottom: 0;
+  }
+  section.projecten div h2 {
+    font-size: calc(8px + 3vw);
   }
   .close-button {
     font-size: 3vw;
+    margin: 0;
   }
 
   .skillsbar {
