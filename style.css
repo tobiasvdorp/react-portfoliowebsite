@@ -900,9 +900,6 @@ a#contact {
     width: calc(80px + 15vw);
   }
 
-  #project-platen figure {
-    margin: 2vw;
-  }
 
   #project-platen figure figcaption {
     font-size: 3vw;
@@ -920,7 +917,6 @@ a#contact {
   }
   .popups p {
     font-size: calc(5px + 1.5vw);
-    padding-bottom: 1vh;
   }
 
   .close-button {
@@ -994,14 +990,18 @@ a#contact {
   }
 
   .popups {
-    padding: 3vw;
+    padding: .2vw 2vw;
+    margin: 0;
   }
   .popups p {
     font-size: calc(8px + 1vw);
     padding-bottom: 0;
+    margin: 0;
   }
   section.projecten div h2 {
     font-size: calc(8px + 3vw);
+    margin: 0;
+    padding: 0;
   }
   .close-button {
     font-size: 3vw;
