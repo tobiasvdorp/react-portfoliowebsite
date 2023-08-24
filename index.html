@@ -2,328 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tobias</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="projects.js"></script>
-    <script type="module" src="Three.js"></script>
-    <script defer src="app.js"></script>
-    <script
-      src="https://kit.fontawesome.com/bfbf5f508f.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="navbar.css" />
+    <title>Tobias van Dorp</title>
   </head>
   <body>
-    <!-- <canvas id="bg"></canvas> -->
-
-    <a id="top"></a>
-
-    <div class="loader">
-      <img
-        src="https://www.drukwerkmax.nl/public/frontend/printselect/images/priceloader.gif"
-      />
-    </div>
-    <!-------------NAVIGATIEBAR-------------->
-    <nav>
-      <ul class="navbar">
-        <li class="navbar-item main"><a href="#top">Home</a></li>
-        <li class="navbar-item main"><a href="#overmij">About me</a></li>
-        <li class="navbar-item main"><a href="#skills">Skills</a></li>
-        <li class="navbar-item main"><a href="#projects">Projects</a></li>
-        <li class="navbar-item main">
-          <a href="#contact"><button class="contact main">Contact</button></a>
-        </li>
+    <header class="header">
+      <a href="" class="logo">Tobias</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
-    <!--------------------------------------->
-
-    <!-----------------OVER MIJ--------------->
-
-    <section class="overmij">
-      <a id="overmij"></a>
-
-      <div class="stack hidden" style="--stacks: 3; text-shadow: 5px 5px red">
-        <span style="--index: 0">Tobias.</span>
-        <span style="--index: 1">Tobias.</span>
-        <span style="--index: 2">Tobias.</span>
+    </header>
+    <main>
+      <div class="title">
+        <h1>
+          Hi, <br />
+          I am T<span>o</span>bias
+        </h1>
+        <a class="button">Start exploring</a>
       </div>
-      <h2 class="overmijtitel hidden">Frontend developer</h2>
-      <figure class="fotovanmij">
-        <img
-          class="hidden"
-          id="foto-van-mij"
-          src="images/avatar.png"
-          alt="Profielfoto"
-        />
-      </figure>
-
-      <input id="collapsible" class="toggle" type="checkbox" />
-      <label for="collapsible" class="lbl-toggle hidden">More about me </label>
-      <div class="collapsible-content">
-        <div class="content-inner">
-          <div>
-            <h2><i class="fa-solid fa-briefcase"></i> | Experience</h2>
-            <ul>
-              <li>
-                First year of <br />
-                HBO Open-ICT
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h2><i class="fa-solid fa-road"></i> | Career</h2>
-            <ul>
-              <li>Two years of gymnasium, <br />then dropped to HAVO</li>
-              <li>
-                Gap year to find out what <br />
-                study I want to do
-              </li>
-              <li>HBO Open-ICT</li>
-            </ul>
-          </div>
-          <div>
-            <h2>
-              <i class="fa-solid fa-graduation-cap"></i> | Accomplishments
-            </h2>
-            <ul>
-              <li>Havo-degree</li>
-              <li>
-                Socrates award (<a
-                  href="https://www.socrateshonours.org/home"
-                  target="_blank"
-                  >?</a
-                >)
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="about me">
+        <h2>About me</h2>
       </div>
-    </section>
+    </main>
 
-    <!-----------------SKILLS----------------->
-
-    <section class="skills hidden">
-      <a id="skills"></a>
-      <h2 class="skillstitel maintit hiddentitel">SKILLS</h2>
-
-      <div class="skill-logos">
-        <figure>
-          <img src="images/HTMLlogo.png" alt="html-logo" />
-          <figcaption>HTML</figcaption>
-          <div class="balk">
-            <div class="balkje">
-              <div class="skillsbar html hidden"></div>
-            </div>
-          </div>
-        </figure>
-        <figure>
-          <img src="images/CSSlogo.webp" alt="css-logo" />
-          <figcaption>CSS</figcaption>
-          <div class="balk">
-            <div class="balkje">
-              <div class="skillsbar css hidden"></div>
-            </div>
-          </div>
-        </figure>
-      </div>
-    </section>
-
-    <!--------------------------------->
-
-    <!--------------PROJECTEN----------->
-    <section class="projecten">
-      <a id="projects"></a>
-      <h2 class="projec maintit hiddentitel">PROJECTS</h2>
-
-      <section id="project-platen">
-        <div class="project">
-          <figure class="hidden">
-            <div class="a">
-              <img src="images/hoiikbentobias.png" alt="Project" />
-              <figcaption>Portfoliowebsite</figcaption>
-            </div>
-
-            <div class="b">
-              <div class="popups prj">
-                <h2>Portfoliowebsite</h2>
-                <p>
-                  The first project I did was creating this portfoliowebsite. I
-                  had never written one line of code before so I had no
-                  experience at all. In about 6 weeks put this website together
-                  by means of YouTube tutorials and small lessons from
-                  classmates.
-                </p>
-
-                <button class="close-button">Close</button>
-              </div>
-            </div>
-          </figure>
-        </div>
-        <div class="project">
-          <figure class="hidden">
-            <div class="a">
-              <img src="images/login.png" alt="Project" />
-              <figcaption>Kappersproject</figcaption>
-            </div>
-
-            <div class="b">
-              <div class="popups prj">
-                <h2>Kappersproject "Haarfijn Marjolein"</h2>
-                <p>
-                  The second project I did was creating a website for a
-                  hairdresser. I created this website with a group of 5 people.
-                  I mainly focused on front-end of the website and I had a lot
-                  of fun designing the components for the website. I also
-                  learned a lot about working in a group and how to communicate,
-                  divide tasks and work in one project with Git. I also learned
-                  a lot about the process of turning a clients wishes into a
-                  working product.
-                </p>
-
-                <button class="close-button">Close</button>
-              </div>
-            </div>
-          </figure>
-        </div>
-        <div class="project">
-          <figure class="hidden">
-            <div class="a">
-              <img src="./images/character.png" class="char" alt="Project" />
-              <figcaption>Spark</figcaption>
-            </div>
-
-            <div class="b">
-              <div class="popups prj">
-                <h2>Spark</h2>
-                <p>
-                  My third undertaking was "Spark," an engaging game designed to
-                  teach users the fundamentals of programming in an entertaining
-                  manner. Initially, I was assigned to design the game's user
-                  interface. However, I soon realized that game development was
-                  not my preferred field. Thus, I pivoted and, alongside a team
-                  member, began focusing on the creation of the game's website.
-                  This venture led me to construct a forum and a chatbot, both
-                  implemented using React.
-                </p>
-
-                <button class="close-button">Close</button>
-              </div>
-            </div>
-          </figure>
-        </div>
-      </section>
-    </section>
-
-    <!--------------------------------->
-
-    <!--------------CONTACT----------->
-    <section class="contact">
-      <a id="contact"></a>
-      <h2 id="contacttitel" class="maintit hiddentitel">CONTACT</h2>
-      <h3 id="respond" class="hidden">
-        I will always respond within 24 hours.
-      </h3>
-    </section>
-
-    <!-- CONTACTFORMULIER -->
-
-    <div class="formbold-main-wrapper">
-      <!-- Author: FormBold Team -->
-      <!-- Learn More: https://formbold.com -->
-      <div class="formbold-form-wrapper">
-        <form
-          action="https://formsubmit.co/tobiasvandorp@gmail.com"
-          method="POST"
-          onsubmit="return validate()"
-        >
-          <div class="formbold-mb-5 hidden">
-            <label for="name" class="formbold-form-label"> Full Name </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Full Name"
-              class="formbold-form-input"
-            />
-          </div>
-
-          <div class="formbold-mb-5 hidden">
-            <label for="email" class="formbold-form-label">
-              Email Address
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email"
-              class="formbold-form-input"
-            />
-          </div>
-
-          <div class="formbold-mb-5 hidden">
-            <label for="subject" class="formbold-form-label"> Subject </label>
-            <input
-              type="text"
-              name="subject"
-              id="subject"
-              placeholder="Enter your subject"
-              class="formbold-form-input hoi"
-            />
-          </div>
-
-          <div class="formbold-mb-5 hidden">
-            <label for="message" class="formbold-form-label"> Message </label>
-            <textarea
-              rows="6"
-              name="message"
-              id="message"
-              placeholder="Type your message"
-              class="formbold-form-input"
-            ></textarea>
-          </div>
-
-          <div>
-            <button class="formbold-btn hidden">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <footer>
-      <div id="footer">
-        <ul id="footerlist">
-          <li>
-            <a href="#top"
-              ><i class="fa-sharp fa-solid fa-house"></i> | Home
-            </a>
-          </li>
-          <li>
-            <a href="#overmij"><i class="fa-solid fa-user"></i> | Over mij </a>
-          </li>
-          <li>
-            <a href="#skills"
-              ><i class="fa-solid fa-screwdriver-wrench"></i> | Skills
-            </a>
-          </li>
-          <li>
-            <a href="#projects"
-              ><i class="fa-solid fa-diagram-project"></i> | Projecten
-            </a>
-          </li>
-          <li>
-            <a href="#contact"
-              ><i class="fa-solid fa-message"></i> | Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-      <p id="copyright">(C)Copyright 2022 Tobias van Dorp "Portfoliowebsite"</p>
-    </footer>
-
-    <script src="loader.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
