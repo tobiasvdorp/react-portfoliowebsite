@@ -1,11 +1,21 @@
-window.addEventListener('load', event => {
-    const projects = document.querySelectorAll("#project-platen > .project");
+document.addEventListener("DOMContentLoaded", function () {
+  const projectCards = document.querySelectorAll(".card");
 
-    for (const project of projects) {
-        const preview = project.querySelector(".a");
-        const content = project.querySelector(".b");
-        const closeButton = project.querySelector(".close-button");
-        closeButton.addEventListener('click', () => content.classList.remove("active"));
-        preview.addEventListener('click', () => content.classList.toggle("active"));
-    }
+  projectCards.forEach((card) => {
+    const closeButton = card.querySelector(".close-button");
+    let isExpanded = false;
+
+    card.addEventListener("click", () => {
+      if (!isExpanded) {
+        card.classList.add("expanded");
+        isExpanded = true;
+      }
+    });
+
+    closeButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      card.classList.remove("expanded");
+      isExpanded = false;
+    });
+  });
 });

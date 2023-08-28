@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="navbar.css" />
+    <script src="./open-close.js"></script>
     <title>Tobias van Dorp</title>
   </head>
   <body>
@@ -21,22 +21,50 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
+
     <main>
       <div class="title">
         <h1>
           Hi, <br />
           I am T<span>o</span>bias
         </h1>
-        <a class="button">Start exploring</a>
+        <a class="button">Explore</a>
       </div>
       <div class="projects">
         <h2>Projects</h2>
         <div class="projects-cards">
-          <div class="card">Card</div>
+          <div class="card">
+            <div class="front-card">
+              <img src="./images/avatar.png" alt="Foto" />
+              <h3>Portfoliowebsite 1</h3>
+              <hr />
+              <p>
+                Lorem ipsum dolor sit amet consen ctetur adipisicing elit.
+                Laudantium, vitae.
+              </p>
+              <hr />
+            </div>
+            <div class="project-skills">
+              <img src="./images/HTMLlogo.png" alt="" />
+              <img src="./images/CSSlogo.png" alt="" />
+            </div>
+            <!-- Nieuwe div voor projectinformatie -->
+            <div class="project-details">
+              <div class="close">
+                <button class="close-button button">X</button>
+              </div>
+              <h3>Project Title</h3>
+              <p>Project description goes here...</p>
+              <a class="button" onclick="openProject('Portfolio-1')"
+                >Check it out</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
     <script src="app.js"></script>
+    <script src="./projects.js"></script>
   </body>
 </html>
