@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Nieuwe import
 
 function Card(props) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const navigate = useNavigate(); // Verkrijg de navigatiefunctie
 
   const handleCardClick = () => {
     if (!isExpanded) {
@@ -20,6 +18,12 @@ function Card(props) {
     window.open(`${projectId}.html`, "_blank");
   };
 
+  const projectSkills = [
+    { name: "HTML", image: "../images/HTMLlogo.png" },
+    { name: "CSS", image: "../images/CSSlogo.png" },
+    { name: "TailwindCSS", image: "../images/TailwindCSS.png" },
+    { name: "React", image: "../images/reactIMG.png" },
+  ];
   return (
     <div
       className={`card ${isExpanded ? "expanded" : ""}`}
@@ -32,9 +36,13 @@ function Card(props) {
         <p>{props.description}</p>
         <hr />
       </div>
+
       <div className="project-skills">
         {props.skills.map((skill, index) => (
-          <img key={index} src={skill} alt="" />
+          <div className="skill-tooltip" key={index}>
+            <img src={skill.image} alt="" />
+            <span className="tooltip-text">{skill.name}</span>
+          </div>
         ))}
       </div>
 
@@ -44,14 +52,13 @@ function Card(props) {
             X
           </button>
         </div>
-
         <h3>{props.title}</h3>
         <p>{props.detailDescription}</p>
         <a
           className="button result"
           onClick={() => openProject(props.projectId)}
         >
-          See the result{" "}
+          See the result <i className="fa-solid fa-eye"></i>
         </a>
       </div>
     </div>
