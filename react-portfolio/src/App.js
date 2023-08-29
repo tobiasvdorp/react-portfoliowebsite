@@ -4,6 +4,7 @@ import "./components/css/projects.css";
 import "./components/css/responsive.css";
 import "./components/css/aboutme.css";
 import "./components/css/custom-animations.css";
+import "./index.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";

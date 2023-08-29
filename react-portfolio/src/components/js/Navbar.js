@@ -13,7 +13,7 @@ const menuItems = [
 function Navbar() {
   useWOW();
   useEffect(() => {
-    const offset = 83; // Pas dit aan naar de hoogte van je navbar
+    const offset = 83;
     const anchors = document.querySelectorAll('a[href^="#"]');
 
     const handleClick = (e) => {

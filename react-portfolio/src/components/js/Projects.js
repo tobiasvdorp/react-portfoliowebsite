@@ -7,11 +7,15 @@ import TailwindCSS from "../images/TailwindCSS.png";
 import Login from "../images/login.png";
 import Spark from "../images/spark.png";
 import ReactIMG from "../images/reactIMG.png";
+import useWOW from "./useWOW";
+import "animate.css/animate.min.css";
 
 function Projects() {
+  useWOW();
   return (
-    <div className="projects" id="projects">
-      <h2 className="title2">Projects</h2>
+    <div className="projects " id="projects">
+      <h2 className="title2">Projects.</h2>
+      <h3 className="readmore">Click on a card to read more.</h3>
       <div className="projects-cards">
         <Card
           imageSrc={avatar}
@@ -23,6 +27,7 @@ function Projects() {
           ]}
           detailDescription="The first project I did at OpenICT was creating a portfoliowebsite. I had never written one line of code before so I had no experience at all. In about 6 weeks put this website together by means of YouTube tutorials and small lessons from classmates."
           projectId="portfolio-1"
+          className="animate__animated wow animate__fadeInUp"
         />
         <Card
           imageSrc={Login}
@@ -35,6 +40,7 @@ function Projects() {
           ]}
           detailDescription="The second project I did at OpenICT was creating a website for a hairdresser. I created this website with a group of 5 people. I mainly focused on front-end of the website and I had a lot of fun designing the components for the website. I also learned a lot about working in a group and how to communicate, divide tasks and work in one project with Git. I also learned a lot about the process of turning a clients wishes into a working product."
           projectId="hairdresser-project"
+          className="animate__animated wow animate__fadeInUp"
         />
         <Card
           imageSrc={Spark}
@@ -48,6 +54,7 @@ function Projects() {
           detailDescription="My third undertaking was 'Spark', an engaging game designed to teach users the fundamentals of programming in an entertaining manner. Initially, I was assigned to design the game's user interface. However, I soon realized that game development was not my preferred field. Thus, I pivoted and, alongside a team member, began focusing on the creation of the game's website. This venture led me to construct a forum and a chatbot, both implemented using React."
           projectId="portfolio-2"
           style={{ object_fit: "contain" }}
+          className="animate__animated wow animate__fadeInUp "
         />
       </div>
     </div>

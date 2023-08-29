@@ -2,6 +2,7 @@ import React from "react";
 import "animate.css/animate.min.css";
 import useWOW from "./useWOW";
 import AboutmeCard from "./AboutmeCard";
+import "../../index.css";
 
 function Aboutme() {
   useWOW();
@@ -10,6 +11,7 @@ function Aboutme() {
       <div className="row">
         <div className="sectiontitle animate__animated animate__backInUp">
           <h2 className="title2">About me</h2>
+          <h3 className="readmore">and my carreer.</h3>
         </div>
         <ul className="cbp_tmtimeline animate__animated animate__backInLeft">
           <AboutmeCard

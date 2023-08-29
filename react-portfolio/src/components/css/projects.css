@@ -140,24 +140,38 @@
   cursor: pointer;
 }
 
-.tooltip-text {
+.tooltip-text,
+.tooltip {
   visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
+  width: 200px;
+  text-wrap: wrap;
+  background-color: var(--secondary);
+  color: var(--text);
   text-align: center;
   border-radius: 6px;
-  padding: 5px;
+  padding: 10px;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Positie: boven het icoon */
+  top: 110px;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -60%;
   opacity: 0;
   transition: opacity 0.3s;
+  font-weight: 500;
+}
+
+.tooltip-text {
+  background-color: var(--primary);
+  padding: 10px;
+  width: auto;
 }
 
 .skill-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.skill-card:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }

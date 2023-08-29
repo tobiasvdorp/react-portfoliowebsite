@@ -1,6 +1,15 @@
 import React, { useState } from "react";
-
-function Card(props) {
+import useWOW from "./useWOW";
+function Card({
+  title,
+  imageSrc,
+  description,
+  skills,
+  detailDescription,
+  projectId,
+  className,
+}) {
+  useWOW();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleCardClick = () => {
@@ -26,19 +35,19 @@ function Card(props) {
   ];
   return (
     <div
-      className={`card ${isExpanded ? "expanded" : ""}`}
+      className={`card ${isExpanded ? "expanded" : ""} ${className} `}
       onClick={handleCardClick}
     >
       <div className="front-card">
-        <img src={props.imageSrc} alt="Foto" />
-        <h3>{props.title}</h3>
+        <img src={imageSrc} alt="Foto" />
+        <h3>{title}</h3>
         <hr />
-        <p>{props.description}</p>
+        <p>{description}</p>
         <hr />
       </div>
 
       <div className="project-skills">
-        {props.skills.map((skill, index) => (
+        {skills.map((skill, index) => (
           <div className="skill-tooltip" key={index}>
             <img src={skill.image} alt="" />
             <span className="tooltip-text">{skill.name}</span>
@@ -52,12 +61,9 @@ function Card(props) {
             X
           </button>
         </div>
-        <h3>{props.title}</h3>
-        <p>{props.detailDescription}</p>
-        <a
-          className="button result"
-          onClick={() => openProject(props.projectId)}
-        >
+        <h3>{title}</h3>
+        <p>{detailDescription}</p>
+        <a className="button result" onClick={() => openProject(projectId)}>
           See the result <i className="fa-solid fa-eye"></i>
         </a>
       </div>
