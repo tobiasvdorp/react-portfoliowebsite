@@ -9,7 +9,10 @@ function CallToAction() {
         Hi, <br />I am T
         <span className="animate__fadeIn animate__bounceInDown">o</span>bias
       </h1>
-      <a className="button animate__animated animate__swing animate__delay-1s animate__flipInX">
+      <a
+        className="button animate__animated animate__swing animate__delay-1s animate__flipInX"
+        href="#aboutme"
+      >
         Explore
       </a>
     </div>

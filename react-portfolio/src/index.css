@@ -23,13 +23,26 @@ body {
   cursor: var(--cursor);
   scroll-behavior: smooth;
   color: var(--text);
+  height: 5000px;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 a:hover {
   cursor: pointer;
 }
 
-/* Titel */
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+p {
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 17px;
+}
+
+/* Titel CTA */
 .title {
   display: flex;
   flex-direction: column;
@@ -46,6 +59,21 @@ a:hover {
 }
 .title span {
   color: var(--accent);
+}
+
+/* Titles */
+.title2 {
+  text-align: center;
+  color: var(--text);
+  font-size: 2.3em;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+#workexperience .title2 {
+  margin-top: 0;
 }
 
 /* Button */
@@ -67,4 +95,8 @@ a:hover {
   border: 1px solid var(--accent);
   color: white;
   box-shadow: 0 0 8px 1px var(--accent);
+}
+
+#projects {
+  top: 100px;
 }

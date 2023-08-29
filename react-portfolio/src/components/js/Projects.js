@@ -10,8 +10,8 @@ import ReactIMG from "../images/reactIMG.png";
 
 function Projects() {
   return (
-    <div className="projects">
-      <h2>Projects</h2>
+    <div className="projects" id="projects">
+      <h2 className="title2">Projects</h2>
       <div className="projects-cards">
         <Card
           imageSrc={avatar}
