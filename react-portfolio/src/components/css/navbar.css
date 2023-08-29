@@ -14,7 +14,7 @@
   width: 100%;
   z-index: 3;
   height: auto;
-  padding: 10px;
+  padding: 0;
   background-color: var(--background);
 }
 .header ul {
@@ -124,6 +124,9 @@
   }
   .header .menu-icon {
     display: none;
+  }
+  .header {
+    padding: 10px;
   }
 }
 /* Aangepaste stijlregels voor onderstrepingseffect */
