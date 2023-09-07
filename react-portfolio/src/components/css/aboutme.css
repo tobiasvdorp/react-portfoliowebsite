@@ -53,7 +53,8 @@ body {
   min-height: 150px;
 }
 
-.cbp_tmtimeline > li .cbp_tmlabel h4 {
+.cbp_tmtimeline > li .cbp_tmlabel h4,
+.tobias h4 {
   opacity: 0.6;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
@@ -62,7 +63,8 @@ body {
   padding: 5px 0 10px 0;
 }
 
-.cbp_tmtimeline > li .cbp_tmlabel h4 i {
+.cbp_tmtimeline > li .cbp_tmlabel h4 i,
+.tobias i {
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -101,4 +103,16 @@ body {
 
 #carreer {
   margin-top: 100px;
+}
+
+.tobias {
+  animation-name: fadeInRight;
+  margin: 0 0 15px 15px;
+  background: var(--secondary);
+  color: var(--text);
+  padding: 25px;
+  border-radius: 5px;
+  min-height: 150px;
+  visibility: visible;
+  max-width: 885px;
 }

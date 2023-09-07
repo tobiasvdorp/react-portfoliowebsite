@@ -12,16 +12,41 @@ function Aboutme() {
         <div className="sectiontitle animate__animated animate__backInUp">
           <h2 className="title2">About myself.</h2>
           <h3 className="readmore"> Limited edition.</h3>
-        </div>
-
-        <ul className="cbp_tmtimeline animate__animated animate__backInLeft">
-          <AboutmeCard
+          {/* <AboutmeCard
             title="About Tobias van Dorp"
             date="February 7th 2003"
             location="Maarn, Utrecht"
             className="tobias"
             description="     Hi, I'm Tobias, a 20-year-old student at Hogeschool Utrecht, currently enrolled in the OpenICT program. I've always had an interest in computers, but it wasn't until I started my studies that I realized front-end development is where my passion lies. I love combining the technical aspects with creative design to make engaging and functional user interfaces. When I'm not coding, you can usually find me with my friends or deep into a Christopher Nolan movie marathon. I enjoy discussions that challenge my understanding of reality. I'm still exploring my interests, but I'm thrilled to have found a field I'm passionate about. I'm eager to see where this journey takes me."
-          ></AboutmeCard>
+          ></AboutmeCard> */}
+          <div className="cbp_tmlabel wow animate__fadeInRight animate__animated tobias">
+            <h3>About Tobias van Dorp</h3>
+            <div className="date">
+              <i className="fa fa-calendar"></i>
+              February 7th 2003
+            </div>
+            <h4>
+              <i className="fa fa-flag fa-sm"></i>
+              Maarn, Utrecht
+            </h4>
+            <p className="projectParagraph">
+              {" "}
+              Hi, I'm Tobias, a 20-year-old student at Hogeschool Utrecht,
+              currently enrolled in the OpenICT program. I've always had an
+              interest in computers, but it wasn't until I started my studies
+              that I realized front-end development is where my passion lies. I
+              love combining the technical aspects with creative design to make
+              engaging and functional user interfaces. When I'm not coding, you
+              can usually find me with my friends or deep into a Christopher
+              Nolan movie marathon. I enjoy discussions that challenge my
+              understanding of reality. I'm still exploring my interests, but
+              I'm thrilled to have found a field I'm passionate about. I'm eager
+              to see where this journey takes me.
+            </p>
+          </div>
+        </div>
+
+        <ul className="cbp_tmtimeline animate__animated animate__backInLeft">
           <h2 className="title2" id="carreer">
             My carreer.
           </h2>
