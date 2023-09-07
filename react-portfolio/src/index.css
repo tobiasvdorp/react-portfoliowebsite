@@ -15,6 +15,12 @@
   text-decoration: none;
   color: var(--tekst);
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -68,8 +74,6 @@ p {
   font-size: 2.3em;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
-  margin-top: 200px;
-  margin-bottom: 50px;
 }
 
 #workexperience .title2 {
@@ -101,11 +105,8 @@ p {
   top: 100px;
 }
 
-h2 {
-  margin-bottom: 10px !important;
-}
 .readmore {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   opacity: 0.6;
 }

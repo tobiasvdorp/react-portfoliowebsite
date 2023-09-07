@@ -10,34 +10,22 @@ function Aboutme() {
     <div id="aboutme" className="sectionClass">
       <div className="row">
         <div className="sectiontitle animate__animated animate__backInUp">
-          <h2 className="title2">About me</h2>
-          <h3 className="readmore">and my carreer.</h3>
+          <h2 className="title2">About myself.</h2>
+          <h3 className="readmore"> Limited edition.</h3>
         </div>
-        <div className="aboutmyself">
-          <h3 className="myself">About myself</h3>
-          <p className="aboutme">lorem</p>
-          Hey there, I'm Tobias, I'm 20 years old and I'm currently a student at
-          Hogeschool Utrecht. I've always been fascinated by computers but never
-          really dived deep into the world of coding, programming, or designing.
-          Then I enrolled in OpenICT, and it was like finding a missing puzzle
-          piece that I didn't even know was missing. I quickly realized that
-          front-end development was my jam. Not only could I tinker with the
-          logic and structure, but I could also unleash my creativity, making
-          sure everything looked just as good as it worked. Whether it's making
-          a responsive layout or adding a little animation to make the user
-          interface more engaging, I relish every part of it. When I'm not busy
-          coding, you'll likely find me hanging out with my friends or deep in a
-          film marathon—especially if it's anything by Christopher Nolan.
-          'Inception,' 'Interstellar,' you name it. If it's got complex
-          narratives and mind-bending twists, I'm all in. From pondering the
-          mysteries of black holes to exploring the realms of psychedelics, I
-          find joy in discussing the things that make you question reality and
-          your place in it. So, that's a little bit about me. I'm still on a
-          journey of discovery, but one thing's for sure: I've found something
-          that I'm passionate about, and I can't wait to see where this road
-          takes me!
-        </div>
+
         <ul className="cbp_tmtimeline animate__animated animate__backInLeft">
+          <AboutmeCard
+            title="About Tobias van Dorp"
+            date="February 7th 2003"
+            location="Maarn, Utrecht"
+            className="tobias"
+            description="     Hi, I'm Tobias, a 20-year-old student at Hogeschool Utrecht, currently enrolled in the OpenICT program. I've always had an interest in computers, but it wasn't until I started my studies that I realized front-end development is where my passion lies. I love combining the technical aspects with creative design to make engaging and functional user interfaces. When I'm not coding, you can usually find me with my friends or deep into a Christopher Nolan movie marathon. I enjoy discussions that challenge my understanding of reality. I'm still exploring my interests, but I'm thrilled to have found a field I'm passionate about. I'm eager to see where this journey takes me."
+          ></AboutmeCard>
+          <h2 className="title2" id="carreer">
+            My carreer.
+          </h2>
+          <h3 className="readmore">Experience Points accumulating...</h3>
           <AboutmeCard
             className="animate__fadeInRight animate__animated"
             title="HAVO-degree"

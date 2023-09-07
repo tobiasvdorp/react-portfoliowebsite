@@ -6,6 +6,7 @@ import CSS from "../images/CSSlogo.png";
 import ReactIMG from "../images/reactIMG.png";
 import TailwindCSS from "../images/TailwindCSS.png";
 import Elementor from "../images/Elementor.png";
+import WordPress from "../images/WordPress.png";
 
 function Skills() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -48,6 +49,10 @@ function Skills() {
           <Skillcard
             image={Elementor}
             skillDescr="Skilled, built a complete website."
+          />
+          <Skillcard
+            image={WordPress}
+            skillDescr="Built a complete website, comfortable with the basics."
           />
         </div>
       </div>

@@ -68,6 +68,7 @@
   max-height: 1000px;
   transition: 0.4s;
   padding: 35px 35px 25px 35px;
+  overflow: hidden;
 }
 
 .card.expanded .front-card {

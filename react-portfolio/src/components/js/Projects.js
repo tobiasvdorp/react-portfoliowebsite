@@ -81,10 +81,10 @@ function Projects() {
               opportunity at the HU Institute of ICT, I had the unique challenge
               of translating the organization's mission into a digital platform
               that could be easily accessed by everyone. <br></br>
-              <br></br>Over a series of MS Teams meetings, I learned the ins and
-              outs of client communication—how to effectively listen, condense
-              their requirements, and provide actionable feedback. These weren't
-              just skills that I applied; they were skills I acquired during the
+              <br></br>Over a series of MS Teams meetings, I learned a lot about
+              client communication—how to effectively listen, condense their
+              requirements, and provide actionable feedback. These weren't just
+              skills that I applied; they were skills I acquired during the
               course of this project. One key learning area for me was web
               accessibility. Given nUSPi's focus on inclusivity, I dove deep
               into understanding and implementing web standards that would make
