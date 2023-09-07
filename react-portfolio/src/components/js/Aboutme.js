@@ -72,7 +72,7 @@ function Aboutme() {
             title="Bachelor's degree at OpenICT"
             date="September 2022 - Current"
             location="Hogeschool Utrecht"
-            description="Currently, I'm enrolled in the OpenICT program at Hogeschool Utrecht. Here, I'm gaining hands-on experience in Agile methodologies, customer requirement mapping, knowledge acquisition, and determining essential skills needed to deliver a product. Unique to our program is its project-based approach: we don't have traditional exams or lectures, allowing us to jump right into real-world applications. This prepares me exceptionally well for a seamless transition into the corporate world upon graduation, as we're already mastering the skills needed in the industry."
+            description="Currently, I am enrolled in the OpenICT program at Hogeschool Utrecht. Here, I'm gaining hands-on experience in Agile methodologies, customer requirement mapping, knowledge acquisition, and determining essential skills needed to deliver a product. Unique to our program is its project-based approach: we don't have traditional exams or lectures, allowing us to jump right into real-world applications. This prepares me exceptionally well for a seamless transition into the corporate world upon graduation, as we're already mastering the skills needed in the industry."
           ></AboutmeCard>
         </ul>
       </div>
