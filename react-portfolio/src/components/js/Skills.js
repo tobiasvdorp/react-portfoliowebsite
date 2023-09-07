@@ -19,6 +19,7 @@ function Skills() {
       setIsTouchDevice(true);
     }
   }, []);
+
   return (
     <>
       <div className="skills">
@@ -33,26 +34,32 @@ function Skills() {
           <Skillcard
             image={HTML}
             skillDescr="Highly proficient, comfortable with the language."
+            delay="0.4s"
           />
           <Skillcard
             image={CSS}
             skillDescr="Strong in fundamentals; I built this site using plain CSS"
+            delay="0.8s"
           />
           <Skillcard
             image={ReactIMG}
             skillDescr="Beginner level, I know the basics"
+            delay="1.2s"
           />
           <Skillcard
             image={TailwindCSS}
             skillDescr="Intermediate; have some experience."
+            delay="1.6s"
           />
           <Skillcard
             image={Elementor}
             skillDescr="Skilled, built a complete website."
+            delay="2.0s"
           />
           <Skillcard
             image={WordPress}
             skillDescr="Built a complete website, comfortable with the basics."
+            delay="2.4s"
           />
         </div>
       </div>
