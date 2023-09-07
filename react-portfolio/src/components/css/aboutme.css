@@ -1,0 +1,116 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.sectionClass {
+  display: block;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/********************************/
+/*  SECTION WORK EXPERIENCE
+  ********************************/
+
+.cbp_tmtimeline {
+  max-width: 900px;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 10px 10px 10px;
+}
+
+.cbp_tmtimeline:before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  width: 8px;
+  background: var(--secondary);
+  left: 0;
+  height: 81.5%;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel {
+  margin: 0 0 15px 15px;
+  background: var(--secondary);
+  color: var(--text);
+  padding: 25px;
+  border-radius: 5px;
+  min-height: 150px;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel h4,
+.tobias h4 {
+  opacity: 0.6;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.2em;
+  font-weight: 600;
+  padding: 5px 0 10px 0;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel h4 i,
+.tobias i {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.cbp_tmtimeline li {
+  position: relative;
+}
+
+.date {
+  color: var(--text);
+  opacity: 0.6;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 5px;
+  top: 25px;
+  right: 20px;
+}
+
+.date i {
+  margin-right: 10px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .date {
+    position: absolute;
+    padding: 0;
+  }
+}
+
+.socrates {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.tobias {
+  animation-name: fadeInRight;
+  margin: 0 0 15px 15px;
+  background: var(--secondary);
+  color: var(--text);
+  padding: 25px;
+  margin-right: 12px;
+  border-radius: 5px;
+  min-height: 150px;
+  visibility: visible;
+  max-width: 885px;
+  position: relative;
+}
