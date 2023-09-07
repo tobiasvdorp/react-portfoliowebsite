@@ -16,7 +16,7 @@
   align-items: center;
   padding: 15px;
   gap: 15px;
-  transition: 0.2s;
+  transition: 0.5s;
   text-align: center;
   max-height: 550px;
 }
@@ -160,7 +160,7 @@
   left: 50%;
   margin-left: -60%;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
   font-weight: 500;
 }
 
