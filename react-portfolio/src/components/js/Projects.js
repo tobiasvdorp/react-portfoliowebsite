@@ -83,12 +83,11 @@ function Projects() {
               that could be easily accessed by everyone. <br></br>
               <br></br>Over a series of MS Teams meetings, I learned a lot about
               client communication—how to effectively listen, condense their
-              requirements, and provide actionable feedback. These weren't just
-              skills that I applied; they were skills I acquired during the
-              course of this project. One key learning area for me was web
-              accessibility. Given nUSPi's focus on inclusivity, I dove deep
-              into understanding and implementing web standards that would make
-              our digital platform accessible to as many people as possible.{" "}
+              requirements, and provide actionable feedback. One key learning
+              area for me was web accessibility. Given nUSPi's focus on
+              inclusivity, I learned about and implemented web standards that
+              would make our digital platform accessible to as many people as
+              possible.
               <br></br>
               <br></br>The project is now in its final stages, and I'm in the
               process of preparing a comprehensive handover document. This
