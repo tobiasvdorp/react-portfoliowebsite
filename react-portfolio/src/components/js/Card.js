@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import useWOW from "./useWOW";
+import WOW from "wowjs";
+
 function Card({
   title,
   imageSrc,
@@ -8,8 +10,8 @@ function Card({
   detailDescription,
   projectId,
   className,
+  wowDelay,
 }) {
-  useWOW();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleCardClick = () => {
@@ -35,14 +37,17 @@ function Card({
   ];
   return (
     <div
-      className={`card ${isExpanded ? "expanded" : ""} ${className} `}
+      className={`card ${isExpanded ? "expanded" : ""} ${className} wow`}
+      data-wow-delay={wowDelay}
       onClick={handleCardClick}
     >
       <div className="front-card">
         <img src={imageSrc} alt="Foto" />
         <h3>{title}</h3>
         <hr />
-        <p>{description}</p>
+        <div className="cardtekst">
+          <p>{description}</p>
+        </div>
         <hr />
       </div>
 

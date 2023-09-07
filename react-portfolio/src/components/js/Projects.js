@@ -7,11 +7,16 @@ import TailwindCSS from "../images/TailwindCSS.png";
 import Login from "../images/login.png";
 import Spark from "../images/spark.png";
 import ReactIMG from "../images/reactIMG.png";
-import useWOW from "./useWOW";
 import "animate.css/animate.min.css";
+import WOW from "wowjs";
+import WordPress from "../images/WordPress.png";
+import Elementor from "../images/Elementor.png";
+import NUSPI from "../images/NUSPI_Logo.png";
 
 function Projects() {
-  useWOW();
+  const wow = new WOW.WOW();
+  wow.init();
+
   return (
     <div className="projects " id="projects">
       <h2 className="title2">Projects.</h2>
@@ -27,7 +32,8 @@ function Projects() {
           ]}
           detailDescription="The first project I did at OpenICT was creating a portfoliowebsite. I had never written one line of code before so I had no experience at all. In about 6 weeks put this website together by means of YouTube tutorials and small lessons from classmates."
           projectId="portfolio-1"
-          className="animate__animated wow animate__fadeInUp"
+          className="animate__animated wow animate__bounceIn"
+          wowDelay="0.5s"
         />
         <Card
           imageSrc={Login}
@@ -40,7 +46,8 @@ function Projects() {
           ]}
           detailDescription="The second project I did at OpenICT was creating a website for a hairdresser. I created this website with a group of 5 people. I mainly focused on front-end of the website and I had a lot of fun designing the components for the website. I also learned a lot about working in a group and how to communicate, divide tasks and work in one project with Git. I also learned a lot about the process of turning a clients wishes into a working product."
           projectId="hairdresser-project"
-          className="animate__animated wow animate__fadeInUp"
+          className="animate__animated wow animate__bounceIn"
+          wowDelay="0.7s"
         />
         <Card
           imageSrc={Spark}
@@ -54,7 +61,48 @@ function Projects() {
           detailDescription="My third undertaking was 'Spark', an engaging game designed to teach users the fundamentals of programming in an entertaining manner. Initially, I was assigned to design the game's user interface. However, I soon realized that game development was not my preferred field. Thus, I pivoted and, alongside a team member, began focusing on the creation of the game's website. This venture led me to construct a forum and a chatbot, both implemented using React."
           projectId="portfolio-2"
           style={{ object_fit: "contain" }}
-          className="animate__animated wow animate__fadeInUp "
+          className="animate__animated wow animate__bounceIn spark "
+          wowDelay="0.9s"
+        />
+        <Card
+          imageSrc={NUSPI}
+          title="NetworkUSP Inclusive"
+          description="I built an accessible website for a network and gained important experience in client communication."
+          skills={[
+            { name: "CSS", image: CSS },
+            { name: "WordPress", image: WordPress },
+            { name: "Elementor", image: Elementor },
+          ]}
+          detailDescription={
+            <>
+              My most recent project was building an accessible website for
+              Netwerk USP Inclusief (nUSPi), an organization that champions
+              inclusivity. Initially brought on board through a student
+              opportunity at the HU Institute of ICT, I had the unique challenge
+              of translating the organization's mission into a digital platform
+              that could be easily accessed by everyone. <br></br>
+              <br></br>Over a series of MS Teams meetings, I learned the ins and
+              outs of client communication—how to effectively listen, condense
+              their requirements, and provide actionable feedback. These weren't
+              just skills that I applied; they were skills I acquired during the
+              course of this project. One key learning area for me was web
+              accessibility. Given nUSPi's focus on inclusivity, I dove deep
+              into understanding and implementing web standards that would make
+              our digital platform accessible to as many people as possible.{" "}
+              <br></br>
+              <br></br>The project is now in its final stages, and I'm in the
+              process of preparing a comprehensive handover document. This
+              experience has not only been a lesson in technical development but
+              also in teamwork, time management, and real-world problem-solving.
+              I've come to appreciate the value of clear communication,
+              especially when managing expectations and juggling various project
+              elements.
+            </>
+          }
+          projectId="nuspi-project"
+          style={{ object_fit: "contain" }}
+          className="animate__animated wow animate__bounceIn nuspi "
+          wowDelay="1.1s"
         />
       </div>
     </div>
