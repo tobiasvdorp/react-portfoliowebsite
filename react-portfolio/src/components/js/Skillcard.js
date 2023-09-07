@@ -25,7 +25,7 @@ function Skillcard({ image, skillName, skillDescr, delay }) {
       <img src={image} alt={skillName} />
       <div
         className={`tooltip ${
-          isHovered ? "animate__flipInY animate__animated" : ""
+          isHovered ? "animate__flipInX animate__animated" : ""
         }`}
       >
         <p>{skillDescr}</p>
