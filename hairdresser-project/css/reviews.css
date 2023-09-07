@@ -1,0 +1,13 @@
+@media screen and (prefers-color-scheme: light) {
+  // Header background
+  .fHOAKB {
+    background-color: rgb(31 41 55);
+  }
+  // Header text
+
+  // Review background
+  .ReviewBackground__Container-sc-1jrpbkc-0 {
+    background-color: rgb(31 41 55);
+    color: white;
+  }
+}

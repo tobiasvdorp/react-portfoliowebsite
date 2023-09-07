@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/tailwindOutput.css",
+    "watch": "npx tailwindcss -i ./css/input.css -o ./css/tailwindOutput.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "flowbite": "^1.5.4"
+  }
+}
