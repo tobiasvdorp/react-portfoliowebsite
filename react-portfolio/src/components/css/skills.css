@@ -10,8 +10,8 @@
 }
 
 .folder {
-  width: 100%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 800px;
   background: var(--secondary);
   border-radius: 10px;
   border: 1px solid var(--accent);
@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  margin: 0 10vw;
 }
 
 .skills-column {
@@ -64,10 +65,11 @@ li.skill.active {
   width: 1px;
   background-color: var(--accent);
   box-shadow: 0 0 8px 1px var(--accent);
+  margin: 10px 0;
 }
 
 .skills-description {
-  padding: 20px;
+  padding: 30px;
   width: 60%;
 }
 
@@ -97,7 +99,14 @@ li.skill.active {
 #whatisit {
   padding-bottom: 50px;
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 800px) {
+  .folder {
+    margin: 0 20px;
+  }
+}
+/* RESPONSIVE */
+@media screen and (max-width: 600px) {
   .folder {
     flex-direction: column;
     align-items: center;
@@ -118,6 +127,9 @@ li.skill.active {
   }
   .skills-description p {
     margin-bottom: 10px;
+  }
+  .skills-description {
+    padding: 5px 20px 15px 20px;
   }
   #select-skill {
     margin: 0;

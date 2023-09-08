@@ -26,7 +26,7 @@ function SkillFolder() {
         "CSS (Cascading Style Sheets) is a stylesheet language used for describing the look and formatting of a document written in HTML.",
       imageSrc: CSSlogo,
       skillLevel:
-        "I'm strong in fundamentals; I built this site using plain CSS",
+        "I'm strong in fundamentals; I built this site using plain CSS.",
     },
     {
       name: "React",
