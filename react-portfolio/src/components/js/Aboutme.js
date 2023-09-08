@@ -43,7 +43,7 @@ function Aboutme() {
           <h2 className="title2" id="carreer">
             My carreer.
           </h2>
-          <h3 className="readmore">Experience Points accumulating...</h3>
+          <h3 className="readmore">Experience Points accumulating..</h3>
           <AboutmeCard
             className="animate__fadeInRight animate__animated"
             title="HAVO-degree"
