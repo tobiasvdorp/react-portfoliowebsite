@@ -3,7 +3,7 @@ import useWOW from "./useWOW";
 import "../css/custom-animations.css";
 
 const menuItems = [
-  { text: "Home", link: "#", animation: "fadeInLeftBig" },
+  { text: "Home", link: "#home", animation: "fadeInLeftBig" },
   { text: "About me", link: "#aboutme", animation: "fadeInDownBig" },
   { text: "Projects", link: "#projects", animation: "fadeInDownBig" },
   { text: "Skills", link: "#skills", animation: "fadeInUpBig" },
