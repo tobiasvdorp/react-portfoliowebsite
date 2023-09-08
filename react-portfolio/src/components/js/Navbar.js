@@ -47,7 +47,10 @@ function Navbar() {
 
   return (
     <header className="header">
-      <a href="#" className="logo animate__animated animate__fadeInRightBig">
+      <a
+        href="#home"
+        className="logo animate__animated animate__fadeInRightBig"
+      >
         Tobias
       </a>
       <input className="menu-btn" type="checkbox" id="menu-btn" />

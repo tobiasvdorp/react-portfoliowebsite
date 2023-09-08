@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import useWOW from "./useWOW";
-import WOW from "wowjs";
 
 function Card({
   title,
@@ -29,12 +27,6 @@ function Card({
     window.open(`${projectId}.html`, "_blank");
   };
 
-  const projectSkills = [
-    { name: "HTML", image: "../images/HTMLlogo.png" },
-    { name: "CSS", image: "../images/CSSlogo.png" },
-    { name: "TailwindCSS", image: "../images/TailwindCSS.png" },
-    { name: "React", image: "../images/reactIMG.png" },
-  ];
   return (
     <div
       className={`card ${isExpanded ? "expanded" : ""} ${className} wow`}
@@ -68,9 +60,12 @@ function Card({
         </div>
         <h3>{title}</h3>
         <p>{detailDescription}</p>
-        <a className="button result" onClick={() => openProject(projectId)}>
+        <button
+          className="button result"
+          onClick={() => openProject(projectId)}
+        >
           See the result <i className="fa-solid fa-eye"></i>
-        </a>
+        </button>
       </div>
     </div>
   );

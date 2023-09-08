@@ -114,17 +114,7 @@
   right: -15px;
 }
 
-.close-button {
-  background: var(--primary);
-  border: none;
-  height: 30px;
-  width: 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 0;
-}
-
-.project-details a.button {
+.button.result {
   width: 180px;
   text-align: center;
   font-size: 1rem;
@@ -137,8 +127,18 @@
   text-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  border: none;
 }
 
+.close-button {
+  background: var(--primary);
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0;
+}
 .skill-tooltip {
   position: relative;
   display: inline-block;
