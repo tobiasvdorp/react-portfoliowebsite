@@ -3,6 +3,7 @@ import useWOW from "./useWOW";
 import { TypeAnimation } from "react-type-animation";
 import ModeSwitcher from "./ModeSwitcher";
 import AnimateSwitcher from "./AnimateSwitcher";
+
 function CallToAction() {
   useWOW();
   return (
@@ -22,10 +23,11 @@ function CallToAction() {
       >
         Explore
       </a>
-      <div className="switcher-container">
+
+      {/* <div className="switcher-container">
         <ModeSwitcher />
         <AnimateSwitcher />
-      </div>
+      </div> */}
     </div>
   );
 }

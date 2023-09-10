@@ -1,0 +1,106 @@
+.switcher-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.mode-switcher__box {
+  border: 2px solid black;
+  display: flex;
+  cursor: pointer;
+  width: 200px;
+}
+
+.mode-switcher__half {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.mode-switcher__half--dark {
+  background-color: darkgray;
+  color: white;
+}
+
+.mode-switcher__half--light {
+  background-color: lightgray;
+  color: black;
+}
+
+.mode-switcher__half--active {
+  background-color: blue;
+  color: white;
+}
+
+/* AnimateSwitcher CSS */
+.animate-switcher {
+  border: 2px solid black;
+  display: flex;
+  cursor: pointer;
+  width: 100px;
+}
+
+.animate-switcher__half {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.animate-switcher__half--active {
+  background-color: blue;
+  color: white;
+}
+
+/* Settings */
+.settings-menu {
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  z-index: 1000;
+  background-color: var(--accent);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  color: var(--background);
+  cursor: pointer;
+}
+
+.gear {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.settings .settings-button {
+  cursor: pointer;
+  font-size: 20px;
+}
+.settings-button.active {
+  color: var(--background);
+}
+.settings-content {
+  display: none;
+  flex-direction: column;
+  background-color: var(--accent);
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.settings-content.active {
+  display: flex;
+}
+
+.left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
