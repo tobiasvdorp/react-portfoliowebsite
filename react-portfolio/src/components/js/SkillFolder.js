@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Skill from "./Skill";
 import HTMLlogo from "../images/HTMLlogo.png";
 import CSSlogo from "../images/CSSlogo.png";
@@ -11,6 +11,12 @@ import "../css/skills.css";
 
 function SkillFolder() {
   const [selectedSkill, setSelectedSkill] = useState(null);
+  const [shouldReduceMotion, setShouldReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const savedMotionPref = localStorage.getItem("reduceMotion");
+    setShouldReduceMotion(savedMotionPref === "true");
+  }, []);
 
   const skills = [
     {
@@ -82,6 +88,7 @@ function SkillFolder() {
                   onClick={selectSkill}
                   imageSrc={skill.imageSrc}
                   isActive={selectedSkill && selectedSkill.name === skill.name}
+                  shouldReduceMotion={shouldReduceMotion}
                 />
               ))}
             </ul>
@@ -93,7 +100,7 @@ function SkillFolder() {
                 <div id="whatisit">
                   <h3>What is it?</h3>
                   <TypeAnimation
-                    key={`description-${selectedSkill.name}`} // unieke key
+                    key={`description-${selectedSkill.name}`}
                     sequence={[selectedSkill.description, 1000]}
                     speed={90}
                     style={{ color: "var(--text)" }}
@@ -101,7 +108,7 @@ function SkillFolder() {
                 </div>
                 <h3>How skilled am I?</h3>
                 <TypeAnimation
-                  key={`skill-level-${selectedSkill.name}`} // unieke key
+                  key={`skill-level-${selectedSkill.name}`}
                   sequence={[selectedSkill.skillLevel, 1000]}
                   speed={90}
                   style={{ color: "var(--text)" }}
@@ -110,7 +117,11 @@ function SkillFolder() {
             ) : (
               <p
                 id="select-skill"
-                className="animate__fadeInDown wow animate__animated animation-delay-1s"
+                className={`${
+                  !shouldReduceMotion
+                    ? "animate__fadeInDown wow animate__animated animation-delay-1s"
+                    : ""
+                }`}
               >
                 Select a skill to read more about it.
               </p>
