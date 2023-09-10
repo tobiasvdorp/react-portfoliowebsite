@@ -53,6 +53,7 @@ function Navbar() {
       >
         Tobias
       </a>
+
       <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>

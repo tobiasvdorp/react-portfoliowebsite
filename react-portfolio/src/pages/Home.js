@@ -5,6 +5,7 @@ import Projects from "../components/js/Projects.js";
 import Aboutme from "../components/js/Aboutme.js";
 
 import SkillFolder from "../components/js/SkillFolder";
+import "../App.css";
 
 function Home() {
   return (

@@ -129,11 +129,11 @@
     padding: 10px;
   }
 }
-/* Aangepaste stijlregels voor onderstrepingseffect */
+
 .header li a {
   position: relative;
   transition: color 0.2s;
-  overflow: hidden; /* Voeg deze regel toe */
+  overflow: hidden;
 }
 .header li a::before,
 .header li a::after {

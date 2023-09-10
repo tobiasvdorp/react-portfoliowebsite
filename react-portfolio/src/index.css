@@ -1,12 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600&family=Montserrat:wght@300;400;500;700;800&family=Open+Sans:wght@300;400;500;600&display=swap");
-:root {
+/* :root {
   --text: white;
   --background: #160024;
   --primary: #8d4eb1;
   --secondary: #043422;
   --accent: #21ca8c;
   --pointer: pointer;
-}
+} */
+/* :root {
+  --text: white;
+  --background: #000d2a;
+--background2: #020e12; 
+  --primary: #8fb4ff;
+  --secondary: #033f3f;
+  --accent: #8fb4ff;
+  --pointer: pointer;
+} */
+
 * {
   padding: 0;
   margin: 0;
@@ -24,7 +34,7 @@ main {
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: #160024;
+  background-color: var(--background);
   text-decoration: none;
   cursor: var(--cursor);
   scroll-behavior: smooth;
@@ -116,4 +126,11 @@ p {
 #skills,
 .projects-cards {
   margin-top: 50px !important;
+}
+
+.title .switcher-container {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 400px; /* optioneel, om ruimte tussen de knoppen te maken */
 }
