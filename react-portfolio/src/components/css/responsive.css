@@ -34,4 +34,9 @@
   .tooltip {
     top: 90px;
   }
+
+  .settings-menu {
+    top: 65px;
+    left: 20px;
+  }
 }

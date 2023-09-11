@@ -60,8 +60,8 @@
 /* Settings */
 .settings-menu {
   position: fixed;
-  top: 100px;
-  left: 10px;
+  top: 85px;
+  left: 28px;
 
   z-index: 1000;
   background-color: var(--accent);
