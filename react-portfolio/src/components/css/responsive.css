@@ -13,10 +13,8 @@
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .card.expanded {
-    max-width: 500px;
-    margin: 0 20px;
     justify-content: start;
-    height: 100%;
+    padding: 25px;
   }
 
   a.button.result {

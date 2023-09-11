@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ModeSwitcher from "./ModeSwitcher";
 import AnimateSwitcher from "./AnimateSwitcher";
-import "animate.css/animate.min.css"; // Importeer de animate.css bibliotheek
+import "animate.css/animate.min.css";
 
 const SettingsMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
