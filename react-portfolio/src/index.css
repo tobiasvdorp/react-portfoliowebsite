@@ -69,7 +69,7 @@ p {
   align-items: center;
   font-size: 2em;
   font-weight: 700;
-  color: var(--text);
+  color: var(--white-black);
   text-align: center;
   font-family: "Montserrat", sans-serif;
   gap: 20px;
@@ -106,12 +106,15 @@ p {
 .button:hover {
   background-color: var(--secundary); /* Accentkleur */
   transform: scale(1.05);
-  cursor: var(--pointer);
+  cursor: pointer;
   border: 1px solid var(--accent);
-  color: white;
+  color: var(--white-black);
   box-shadow: 0 0 8px 1px var(--accent);
 }
 
+.menu-icon {
+  cursor: pointer;
+}
 #projects,
 #skills {
   top: 100px;

@@ -19,6 +19,7 @@
   gap: 15px;
   transition: 0.5s;
   text-align: center;
+  color: white;
 }
 
 .card:hover {
@@ -129,6 +130,9 @@
   border: none;
 }
 
+.button.result:hover {
+  color: white;
+}
 .close-button {
   background: var(--primary);
   border: none;

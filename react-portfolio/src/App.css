@@ -8,7 +8,7 @@
 
   --text-light: black;
   --background-light: #ffffff;
-  --primary-light: #2c3e50;
+  --primary-light: #3498db;
   --secondary-light: #033f3f;
   --accent-light: #3498db;
 }
@@ -30,7 +30,6 @@ body[data-theme="light"] {
   --accent: var(--accent-light);
 }
 
-/* Toggle switch styles from Codepen */
 .theme-switch__input,
 .theme-switch__label {
   position: absolute;

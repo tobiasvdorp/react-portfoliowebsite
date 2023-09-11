@@ -1,6 +1,7 @@
 /* SKILLS folder */
 .skills {
   padding: 10px;
+  color: white;
 }
 .skill-folder-container {
   display: flex;
@@ -81,9 +82,10 @@ li.skill.active {
   font-weight: 600;
 }
 
-.skills-description p {
+.skills-description span {
   margin-bottom: 20px;
   font-size: 1em;
+  color: white !important;
 }
 
 #select-skill {

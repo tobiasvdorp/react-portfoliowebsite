@@ -14,7 +14,12 @@
 @media only screen and (max-width: 767px) {
   .card.expanded {
     justify-content: start;
-    padding: 25px;
+    padding: 20px;
+  }
+
+  .project-details .close-button {
+    margin-top: 10px;
+    margin-right: 10px;
   }
 
   a.button.result {
