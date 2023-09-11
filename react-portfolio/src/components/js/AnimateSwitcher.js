@@ -21,23 +21,20 @@ const AnimateSwitcher = () => {
   };
 
   return (
-    <div className="animate-switcher">
-      <div
-        className={`animate-switcher__half ${
-          reduceMotion ? "" : "animate-switcher__half--active"
-        }`}
-        onClick={toggleMotion}
+    <div className="toggleWrapper">
+      <input
+        type="checkbox"
+        id="animate"
+        className="animate-checkbox"
+        checked={reduceMotion}
+        onChange={toggleMotion}
+      />
+      <label
+        htmlFor="animate"
+        className={`toggle ${reduceMotion ? "checked" : ""}`}
       >
-        On
-      </div>
-      <div
-        className={`animate-switcher__half ${
-          reduceMotion ? "animate-switcher__half--active" : ""
-        }`}
-        onClick={toggleMotion}
-      >
-        Off
-      </div>
+        <span className="toggle__handler"></span>
+      </label>
     </div>
   );
 };

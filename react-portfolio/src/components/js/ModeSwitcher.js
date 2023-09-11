@@ -20,40 +20,23 @@ function ModeSwitcher() {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    const prefersLight = window.matchMedia(
-      "(prefers-color-scheme: light)"
-    ).matches;
-
     if (savedTheme) {
       setTheme(savedTheme);
-    } else if (prefersDark) {
-      setTheme("dark");
-    } else if (prefersLight) {
-      setTheme("light");
-    } else {
-      setTheme("dark");
     }
   }, []);
 
   return (
-    <div className="mode-switcher__box" onClick={handleThemeChange}>
-      <div
-        className={`mode-switcher__half ${
-          isChecked ? "" : "mode-switcher__half--active"
-        }`}
-      >
-        Light
-      </div>
-      <div
-        className={`mode-switcher__half ${
-          isChecked ? "mode-switcher__half--active" : ""
-        }`}
-      >
-        Dark
-      </div>
+    <div className="toggleWrapper">
+      <input
+        type="checkbox"
+        id="dn"
+        className="dn"
+        checked={isChecked}
+        onChange={handleThemeChange}
+      />
+      <label htmlFor="dn" className={`toggle ${isChecked ? "checked" : ""}`}>
+        <span className="toggle__handler"></span>
+      </label>
     </div>
   );
 }
