@@ -9,7 +9,7 @@ function Aboutme() {
   return (
     <div id="aboutme" className="sectionClass">
       <div className="row">
-        <div className=" animate__animated animate__backInUp">
+        <div className=" ">
           <h2 className="title2">About myself.</h2>
           <h3 className="readmore"> Limited edition.</h3>
           <div className="wow animate__fadeInRight animate__animated tobias">
@@ -44,7 +44,7 @@ function Aboutme() {
             My carreer.
           </h2>
           <h3 className="readmore">Experience Points accumulating..</h3>
-          <ul className="cbp_tmtimeline animate__animated animate__backInLeft">
+          <ul className="cbp_tmtimeline">
             <AboutmeCard
               className="animate__fadeInRight animate__animated"
               title="HAVO-degree"

@@ -1,6 +1,5 @@
 import React from "react";
 import "animate.css/animate.min.css";
-import useWOW from "./useWOW";
 
 function Skill({ name, onClick, imageSrc, isActive }) {
   const shouldReduceMotion = document.body.dataset.reduceMotion === "true";
