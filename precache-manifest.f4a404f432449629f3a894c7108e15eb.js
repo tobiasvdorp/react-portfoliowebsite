@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "a2390287c188f0bce06b",
-    "url": "/static/css/main.133053c7.chunk.css"
+    "revision": "8aaba08c83c51d98d9af",
+    "url": "/static/css/main.fbc5a3a5.chunk.css"
   },
   {
-    "revision": "a2390287c188f0bce06b",
-    "url": "/static/js/main.71721e1c.chunk.js"
+    "revision": "8aaba08c83c51d98d9af",
+    "url": "/static/js/main.1ccbbb9a.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "dba6376c4dfd05c754f8",
-    "url": "/static/css/2.6a33464e.chunk.css"
+    "revision": "8c9631f0dd80e3f03c45",
+    "url": "/static/css/2.116a2fe3.chunk.css"
   },
   {
-    "revision": "dba6376c4dfd05c754f8",
-    "url": "/static/js/2.b7870172.chunk.js"
+    "revision": "8c9631f0dd80e3f03c45",
+    "url": "/static/js/2.27aec167.chunk.js"
   },
   {
     "revision": "f417d1a325a802f4851630ea71f537d9",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/static/media/NUSPI_Logo.5d7d027c.png"
   },
   {
-    "revision": "65e62cb2ead3074a5de77835c7f106f7",
+    "revision": "8d2eceae256e2cf1515df87992f12191",
     "url": "/index.html"
   }
 ];
