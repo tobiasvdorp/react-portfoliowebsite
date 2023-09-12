@@ -103,7 +103,8 @@ p {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: var(--secundary); /* Accentkleur */
   transform: scale(1.05);
   cursor: pointer;
