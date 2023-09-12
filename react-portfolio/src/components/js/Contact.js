@@ -35,7 +35,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <h2 className="title2">Contact.</h2>
       <h3 className="readmore">"Hello?"</h3>
 
