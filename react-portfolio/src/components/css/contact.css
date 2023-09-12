@@ -48,4 +48,5 @@
 .contact form textarea {
   min-height: 120px;
   min-width: 100%;
+  padding: 10px;
 }
