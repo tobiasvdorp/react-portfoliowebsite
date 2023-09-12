@@ -21,11 +21,6 @@ function CallToAction() {
       >
         Explore
       </a>
-
-      {/* <div className="switcher-container">
-        <ModeSwitcher />
-        <AnimateSwitcher />
-      </div> */}
     </div>
   );
 }

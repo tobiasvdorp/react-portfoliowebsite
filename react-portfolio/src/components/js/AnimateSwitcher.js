@@ -25,12 +25,12 @@ const AnimateSwitcher = () => {
         type="checkbox"
         id="animate"
         className="animate-checkbox"
-        checked={!reduceMotion} // Hier veranderen we de checked staat
+        checked={!reduceMotion}
         onChange={toggleMotion}
       />
       <label
         htmlFor="animate"
-        className={`toggle ${!reduceMotion ? "checked" : ""}`} // Hier veranderen we de checked klasse
+        className={`toggle ${!reduceMotion ? "checked" : ""}`}
       >
         <span className="toggle__handler"></span>
       </label>

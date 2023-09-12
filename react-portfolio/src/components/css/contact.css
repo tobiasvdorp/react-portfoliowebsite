@@ -10,14 +10,14 @@
 .contact {
   margin: 0 20px;
 }
-/* Form elementen */
+/* Form elements */
 .contact form div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Verzenden */
+/*Send */
 .contact form button {
   font-size: 1.2rem;
   padding: 10px 25px;
@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
 }
-/* Velden */
+/* Fields */
 .contact form input,
 .contact form textarea {
   margin-top: 5px;

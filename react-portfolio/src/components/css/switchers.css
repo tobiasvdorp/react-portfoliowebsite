@@ -37,7 +37,6 @@
   color: white;
 }
 
-/* AnimateSwitcher CSS */
 .animate-switcher {
   border: 2px solid black;
   display: flex;
@@ -57,7 +56,6 @@
   color: white;
 }
 
-/* Settings */
 .settings-menu {
   position: fixed;
   top: 88px;
@@ -238,7 +236,6 @@ body[data-theme="dark"] .settings-content button {
   transform: translateX(60px);
 }
 
-/* Tekstlabels */
 .toggle:before,
 .toggle:after {
   position: absolute;

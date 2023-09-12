@@ -12,7 +12,7 @@ function Skillcard({ image, skillName, skillDescr, delay }) {
   };
 
   const delayStyle = {
-    animationDelay: delay, // zorg ervoor dat 'delay' in de juiste formaat wordt doorgegeven, bijvoorbeeld "0.5s"
+    animationDelay: delay,
   };
 
   return (
