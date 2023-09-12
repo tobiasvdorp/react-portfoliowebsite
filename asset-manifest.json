@@ -1,24 +1,22 @@
 {
-  "main.css": "/static/css/main.3a484c2d.chunk.css",
-  "main.js": "/static/js/main.6c2747c7.chunk.js",
-  "main.js.map": "/static/js/main.6c2747c7.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/css/2.116a2fe3.chunk.css": "/static/css/2.116a2fe3.chunk.css",
-  "static/js/2.9785eddf.chunk.js": "/static/js/2.9785eddf.chunk.js",
-  "static/js/2.9785eddf.chunk.js.map": "/static/js/2.9785eddf.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.fe2503b755b6e11764aad225648bc01d.js": "/precache-manifest.fe2503b755b6e11764aad225648bc01d.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/2.116a2fe3.chunk.css.map": "/static/css/2.116a2fe3.chunk.css.map",
-  "static/css/main.3a484c2d.chunk.css.map": "/static/css/main.3a484c2d.chunk.css.map",
-  "static/media/CSSlogo.png": "/static/media/CSSlogo.f417d1a3.png",
-  "static/media/HTMLlogo.png": "/static/media/HTMLlogo.25b694ba.png",
-  "static/media/NUSPI_Logo.png": "/static/media/NUSPI_Logo.5d7d027c.png",
-  "static/media/TailwindCSS.png": "/static/media/TailwindCSS.f7c20276.png",
-  "static/media/WordPress.png": "/static/media/WordPress.7b151c8a.png",
-  "static/media/avatar.png": "/static/media/avatar.b99f1612.png",
-  "static/media/login.png": "/static/media/login.b5d51df5.png",
-  "static/media/reactIMG.png": "/static/media/reactIMG.22808bae.png",
-  "static/media/spark.png": "/static/media/spark.b7659507.png"
+  "files": {
+    "main.css": "/static/css/main.5abb7972.css",
+    "main.js": "/static/js/main.d4482ca8.js",
+    "static/media/spark.png": "/static/media/spark.ad0e945cf13059a9c0d5.png",
+    "static/media/avatar.png": "/static/media/avatar.35400f8352b282bd8cc6.png",
+    "static/media/reactIMG.png": "/static/media/reactIMG.8a6fc0a24a800d1e0f4a.png",
+    "static/media/CSSlogo.png": "/static/media/CSSlogo.4ea6de69ce04b0ff8dc3.png",
+    "static/media/login.png": "/static/media/login.16f7cb0d7af1f5313654.png",
+    "static/media/NUSPI_Logo.png": "/static/media/NUSPI_Logo.a0330078810525444706.png",
+    "static/media/TailwindCSS.png": "/static/media/TailwindCSS.39138a421122620729a5.png",
+    "static/media/HTMLlogo.png": "/static/media/HTMLlogo.ff3cf75e3b7cbb4ea77c.png",
+    "static/media/WordPress.png": "/static/media/WordPress.7614628b41347abb4062.png",
+    "index.html": "/index.html",
+    "main.5abb7972.css.map": "/static/css/main.5abb7972.css.map",
+    "main.d4482ca8.js.map": "/static/js/main.d4482ca8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5abb7972.css",
+    "static/js/main.d4482ca8.js"
+  ]
 }
