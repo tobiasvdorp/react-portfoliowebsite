@@ -1,0 +1,51 @@
+/* Form container */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  max-width: 550px;
+  width: 100%;
+}
+
+/* Form elementen */
+.contact form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Verzenden */
+.contact form button {
+  height: 40px;
+  width: 200px;
+  font-size: 1.2rem;
+  padding: 0;
+  border: none;
+}
+
+.contact,
+#send {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Velden */
+.contact form input,
+.contact form textarea {
+  margin-top: 5px;
+  height: 40px;
+  background-color: var(--secondary);
+  border: 0px solid var(--secondary);
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 1.2rem;
+  color: var(--primary);
+
+  font-family: "Open Sans", sans-serif;
+}
+
+.contact form textarea {
+  min-height: 120px;
+  min-width: 100%;
+}
