@@ -3,29 +3,36 @@ import ModeSwitcher from "./ModeSwitcher";
 import AnimateSwitcher from "./AnimateSwitcher";
 import "animate.css/animate.min.css";
 import "../css/responsive.css";
-
 const SettingsMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [animationClass, setAnimationClass] = useState("animate__bounceInLeft");
 
   const openMenu = () => {
-    setIsOpen(!isOpen);
+    setAnimationClass("animate__bounceOutLeft");
+    setTimeout(() => {
+      setAnimationClass("animate__bounceInLeft");
+      setIsOpen(true);
+    }, 500);
   };
 
   const closeMenu = () => {
-    setIsOpen(false);
+    setAnimationClass("animate__bounceOutLeft");
+
+    setTimeout(() => {
+      setAnimationClass("animate__bounceInLeft");
+    }, 500);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 500);
   };
 
   return (
     <div
       className={`settings-menu ${
-        isOpen ? "active animate__animated animate__bounceInLeft" : ""
-      }`}
+        isOpen ? "active" : ""
+      } animate__animated ${animationClass}`}
     >
-      <div
-        className={`gear ${
-          isOpen ? "active animate__animated animate__backOutLeft" : ""
-        }`}
-      >
+      <div className={`gear ${isOpen ? "active" : ""}`}>
         <i
           className="fa-solid fa-gear fa-2xl settings-button"
           onClick={openMenu}
