@@ -12,7 +12,7 @@ const SettingsMenu = () => {
     setTimeout(() => {
       setAnimationClass("animate__bounceInLeft");
       setIsOpen(true);
-    }, 500);
+    }, 300);
   };
 
   const closeMenu = () => {
@@ -20,10 +20,10 @@ const SettingsMenu = () => {
 
     setTimeout(() => {
       setAnimationClass("animate__bounceInLeft");
-    }, 500);
+    }, 300);
     setTimeout(() => {
       setIsOpen(false);
-    }, 500);
+    }, 300);
   };
 
   return (
