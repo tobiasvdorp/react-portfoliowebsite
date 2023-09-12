@@ -36,7 +36,7 @@
   }
 
   .settings-menu {
-    top: 65px;
-    left: 20px;
+    top: 65px !important;
+    left: 10px !important;
   }
 }

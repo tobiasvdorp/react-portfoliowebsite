@@ -20,6 +20,7 @@
   transition: 0.5s;
   text-align: center;
   color: white;
+  max-height: 550px;
 }
 
 .card:hover {
@@ -154,7 +155,7 @@
   width: 200px;
   text-wrap: wrap;
   background-color: var(--secondary);
-  color: var(--text);
+  color: black;
   text-align: center;
   border-radius: 6px;
   padding: 10px;

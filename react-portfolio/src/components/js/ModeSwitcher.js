@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import "../css/switchers.css";
 
 function ModeSwitcher() {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(
+    document.body.getAttribute("data-theme") === "dark"
+  );
 
   const setTheme = (theme) => {
     document.body.setAttribute("data-theme", theme);
@@ -19,10 +21,8 @@ function ModeSwitcher() {
   };
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    setTheme(savedTheme);
   }, []);
 
   return (

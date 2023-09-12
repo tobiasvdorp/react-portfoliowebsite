@@ -92,6 +92,7 @@ li.skill.active {
   color: var(--primary);
   font-size: 1.2em;
   font-weight: 600;
+  font-family: "Montserrat", sans-serif;
 }
 
 .skills-column ul {

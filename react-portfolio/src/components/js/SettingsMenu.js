@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ModeSwitcher from "./ModeSwitcher";
 import AnimateSwitcher from "./AnimateSwitcher";
 import "animate.css/animate.min.css";
+import "../css/responsive.css";
 
 const SettingsMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
