@@ -76,7 +76,7 @@ function SkillFolder() {
   return (
     <div className="skills" id="skills">
       <h2 className="title2">My skills.</h2>
-      <h3 className="readmore">Click on a skill to read more.</h3>
+      <h3 className="readmore">Power-ups acquired.</h3>
       <div className="skill-folder-container">
         <div className="folder">
           <div className="skills-column">

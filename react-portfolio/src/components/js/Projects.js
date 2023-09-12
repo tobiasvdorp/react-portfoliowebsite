@@ -8,15 +8,11 @@ import Login from "../images/login.png";
 import Spark from "../images/spark.png";
 import ReactIMG from "../images/reactIMG.png";
 import "animate.css/animate.min.css";
-import WOW from "wowjs";
 import WordPress from "../images/WordPress.png";
 import Elementor from "../images/Elementor.png";
 import NUSPI from "../images/NUSPI_Logo.png";
 
 function Projects() {
-  const wow = new WOW.WOW();
-  wow.init();
-
   return (
     <div className="projects " id="projects">
       <h2 className="title2">Projects.</h2>
@@ -59,7 +55,7 @@ function Projects() {
             { name: "React", image: ReactIMG },
           ]}
           detailDescription="My third undertaking was 'Spark', an engaging game designed to teach users the fundamentals of programming in an entertaining manner. Initially, I was assigned to design the game's user interface. However, I soon realized that game development was not my preferred field. Thus, I pivoted and, alongside a team member, began focusing on the creation of the game's website. This venture led me to construct a forum and a chatbot, both implemented using React."
-          projectId="portfolio-2"
+          projectId="spark"
           style={{ object_fit: "contain" }}
           className="animate__animated wow animate__bounceIn spark "
           wowDelay="0.9s"

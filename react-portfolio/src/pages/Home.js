@@ -7,6 +7,7 @@ import Contact from "../components/js/Contact";
 import SkillFolder from "../components/js/SkillFolder";
 import "../App.css";
 import SettingsMenu from "../components/js/SettingsMenu";
+import Footer from "../components/js/Footer";
 function Home() {
   return (
     <>
@@ -23,6 +24,7 @@ function Home() {
         <SkillFolder />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }

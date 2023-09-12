@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../css/contact.css";
 import "../css/responsive.css";
 import WOW from "wowjs";
 import "animate.css";
+import Socials from "./Socials";
 
 const ContactForm = () => {
   const wow = new WOW.WOW();
@@ -36,8 +37,8 @@ const ContactForm = () => {
 
   return (
     <div className="contact" id="contact">
-      <h2 className="title2">Contact.</h2>
-      <h3 className="readmore">"Hello?"</h3>
+      <h2 className="title2">Get in touch.</h2>
+      <h3 className="readmore">Friend request accepted.</h3>
 
       <form onSubmit={handleSubmit} className="">
         <div className="wow animate__animated animate__flipInX">
@@ -74,6 +75,11 @@ const ContactForm = () => {
           )}
         </div>
       </form>
+
+      <h3 className="readmore" id="findme">
+        Or find me on:
+      </h3>
+      <Socials />
     </div>
   );
 };
