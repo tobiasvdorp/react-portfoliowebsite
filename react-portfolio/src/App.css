@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+/* Custom CSS Variables */
+:root {
+  --text-dark: white;
+  --background-dark: #000d2a;
+  --primary-dark: #8fb4ff;
+  --secondary-dark: #033f3f;
+  --accent-dark: #8fb4ff;
+
+  --text-light: black;
+  --background-light: #ffffff;
+  --primary-light: #3498db;
+  --secondary-light: #033f3f;
+  --accent-light: #3498db;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Theme Switching */
+body[data-theme="dark"] {
+  --text: var(--text-dark);
+  --background: var(--background-dark);
+  --primary: var(--primary-dark);
+  --secondary: var(--secondary-dark);
+  --accent: var(--accent-dark);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body[data-theme="light"] {
+  --text: var(--text-light);
+  --background: var(--background-light);
+  --primary: var(--primary-light);
+  --secondary: var(--secondary-light);
+  --accent: var(--accent-light);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Reduced motion preference */
+body[data-reduce-motion="true"] .animated {
+  animation: none !important;
+  transition: none !important;
 }

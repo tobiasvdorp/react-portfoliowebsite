@@ -3,7 +3,7 @@ import useWOW from "./useWOW";
 import "../css/custom-animations.css";
 
 const menuItems = [
-  { text: "Home", link: "#", animation: "fadeInLeftBig" },
+  { text: "Home", link: "#home", animation: "fadeInLeftBig" },
   { text: "About me", link: "#aboutme", animation: "fadeInDownBig" },
   { text: "Projects", link: "#projects", animation: "fadeInDownBig" },
   { text: "Skills", link: "#skills", animation: "fadeInUpBig" },
@@ -47,9 +47,13 @@ function Navbar() {
 
   return (
     <header className="header">
-      <a href="#" className="logo animate__animated animate__fadeInRightBig">
+      <a
+        href="#home"
+        className="logo animate__animated animate__fadeInRightBig"
+      >
         Tobias
       </a>
+
       <input className="menu-btn" type="checkbox" id="menu-btn" />
       <label className="menu-icon" htmlFor="menu-btn">
         <span className="navicon"></span>

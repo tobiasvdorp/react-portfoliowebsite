@@ -3,7 +3,8 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5vw;
+  gap: 30px;
+  padding: 0 20px;
 }
 
 .card {
@@ -18,12 +19,13 @@
   gap: 15px;
   transition: 0.5s;
   text-align: center;
+  color: white;
   max-height: 550px;
 }
 
 .card:hover {
   transform: scale(1.02);
-  cursor: var(--pointer);
+  cursor: pointer;
   box-shadow: 0px 0px 10px 0px var(--primary);
 }
 
@@ -113,17 +115,7 @@
   right: -15px;
 }
 
-.close-button {
-  background: var(--primary);
-  border: none;
-  height: 30px;
-  width: 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 0;
-}
-
-.project-details a.button {
+.button.result {
   width: 180px;
   text-align: center;
   font-size: 1rem;
@@ -136,8 +128,21 @@
   text-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  border: none;
 }
 
+.button.result:hover {
+  color: white;
+}
+.close-button {
+  background: var(--primary);
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0;
+}
 .skill-tooltip {
   position: relative;
   display: inline-block;
@@ -150,7 +155,7 @@
   width: 200px;
   text-wrap: wrap;
   background-color: var(--secondary);
-  color: var(--text);
+  color: black;
   text-align: center;
   border-radius: 6px;
   padding: 10px;

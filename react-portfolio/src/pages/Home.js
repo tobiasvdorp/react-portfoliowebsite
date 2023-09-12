@@ -3,22 +3,28 @@ import Navbar from "../components/js/Navbar";
 import CallToAction from "../components/js/CallToAction";
 import Projects from "../components/js/Projects.js";
 import Aboutme from "../components/js/Aboutme.js";
-import Skills from "../components/js/Skills";
+import Contact from "../components/js/Contact";
+import SkillFolder from "../components/js/SkillFolder";
+import "../App.css";
+import SettingsMenu from "../components/js/SettingsMenu";
+import Footer from "../components/js/Footer";
 function Home() {
   return (
     <>
-      {/* Header */}
       <Navbar />
-      <main>
-        {/* Title and call to action */}
+      <SettingsMenu />
+
+      <main id="home">
         <CallToAction />
 
-        {/* About me */}
         <Aboutme />
-        {/* Projects */}
+
         <Projects />
-        <Skills />
+
+        <SkillFolder />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }

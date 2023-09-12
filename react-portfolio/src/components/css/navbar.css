@@ -12,7 +12,7 @@
 .header {
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 9999;
   height: auto;
   padding: 0;
   background-color: var(--background);
@@ -32,8 +32,6 @@
 }
 .header li a:hover,
 .header .menu-btn:hover {
-  /* background-color: var(--primary);
-    cursor: pointer; */
   transition: 0.7s;
 
   font-weight: 800;
@@ -44,7 +42,6 @@
   font-size: 2em;
   padding: 10px 20px;
   text-decoration: none;
-  cursor: var(--pointer);
 }
 /* menu */
 
@@ -109,7 +106,7 @@
   top: 0;
 }
 /* 48em = 768px */
-@media (min-width: 48em) {
+@media (min-width: 768px) {
   .header li {
     float: left;
   }
@@ -125,15 +122,12 @@
   .header .menu-icon {
     display: none;
   }
-  .header {
-    padding: 10px;
-  }
 }
-/* Aangepaste stijlregels voor onderstrepingseffect */
+
 .header li a {
   position: relative;
   transition: color 0.2s;
-  overflow: hidden; /* Voeg deze regel toe */
+  overflow: hidden;
 }
 .header li a::before,
 .header li a::after {

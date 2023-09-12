@@ -30,30 +30,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 100px 10px 10px 10px;
-}
-
-.cbp_tmtimeline:before {
-  content: "";
-  position: absolute;
-  top: 100px;
-  bottom: 0;
-  width: 8px;
-  background: var(--secondary);
-  left: 0;
-  height: 81.5%;
+  gap: 15px;
+  margin: 10px 10px 10px 10px;
+  color: white;
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel {
-  margin: 0 0 15px 15px;
+  margin: 0 0 0 8px;
   background: var(--secondary);
-  color: var(--text);
   padding: 25px;
   border-radius: 5px;
   min-height: 150px;
 }
 
-.cbp_tmtimeline > li .cbp_tmlabel h4,
+.cbp_tmtimeline li .cbp_tmlabel h4,
 .tobias h4 {
   opacity: 0.6;
   font-family: "Open Sans", sans-serif;
@@ -74,7 +64,6 @@ body {
 }
 
 .date {
-  color: var(--text);
   opacity: 0.6;
   font-size: 14px;
   font-weight: 500;
@@ -113,4 +102,13 @@ body {
   visibility: visible;
   max-width: 885px;
   position: relative;
+  color: white;
+}
+
+.mycarreer ul {
+  border-left: 8px solid var(--secondary);
+}
+
+.mycarreer {
+  margin-top: 50px;
 }
