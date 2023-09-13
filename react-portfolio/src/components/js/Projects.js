@@ -27,7 +27,7 @@ function Projects() {
             { name: "CSS", image: CSS },
           ]}
           detailDescription="The first project I did at OpenICT was creating a portfoliowebsite. I had never written one line of code before so I had no experience at all. In about 6 weeks put this website together by means of YouTube tutorials and small lessons from classmates."
-          projectId="portfolio-1"
+          projectLocation="/portfolio-1.html"
           className="animate__animated wow animate__bounceIn"
           wowDelay="0.5s"
         />
@@ -41,7 +41,7 @@ function Projects() {
             { name: "TailwindCSS", image: TailwindCSS },
           ]}
           detailDescription="The second project I did at OpenICT was creating a website for a hairdresser. I created this website with a group of 5 people. I mainly focused on front-end of the website and I had a lot of fun designing the components for the website. I also learned a lot about working in a group and how to communicate, divide tasks and work in one project with Git. I also learned a lot about the process of turning a clients wishes into a working product."
-          projectId="hairdresser-project"
+          projectLocation="/hairdresser-project.html"
           className="animate__animated wow animate__bounceIn"
           wowDelay="0.7s"
         />
@@ -55,7 +55,6 @@ function Projects() {
             { name: "React", image: ReactIMG },
           ]}
           detailDescription="My third undertaking was 'Spark', an engaging game designed to teach users the fundamentals of programming in an entertaining manner. Initially, I was assigned to design the game's user interface. However, I soon realized that game development was not my preferred field. Thus, I pivoted and, alongside a team member, began focusing on the creation of the game's website. This venture led me to construct a forum and a chatbot, both implemented using React."
-          projectId="spark"
           style={{ object_fit: "contain" }}
           className="animate__animated wow animate__bounceIn spark "
           wowDelay="0.9s"
@@ -94,7 +93,6 @@ function Projects() {
               elements.
             </>
           }
-          projectId="nuspi-project"
           style={{ object_fit: "contain" }}
           className="animate__animated wow animate__bounceIn nuspi "
           wowDelay="1.1s"

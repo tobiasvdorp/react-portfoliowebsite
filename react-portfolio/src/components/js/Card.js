@@ -6,7 +6,7 @@ function Card({
   description,
   skills,
   detailDescription,
-  projectId,
+  projectLocation,
   className,
   wowDelay,
 }) {
@@ -23,8 +23,8 @@ function Card({
     setIsExpanded(false);
   };
 
-  const openProject = (projectId) => {
-    window.open(`${projectId}.html`, "_blank");
+  const openProject = (projectLocation) => {
+    window.open(projectLocation, "_blank");
   };
 
   return (
@@ -62,7 +62,7 @@ function Card({
         <p>{detailDescription}</p>
         <button
           className="button result"
-          onClick={() => openProject(projectId)}
+          onClick={() => openProject(projectLocation)}
         >
           See the result <i className="fa-solid fa-eye"></i>
         </button>
