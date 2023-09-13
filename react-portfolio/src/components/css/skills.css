@@ -103,6 +103,12 @@ li.skill.active {
   padding-bottom: 50px;
 }
 
+.skills .readmore {
+  color: black;
+}
+body[data-theme="dark"] .skills .readmore {
+  color: white !important;
+}
 @media screen and (max-width: 800px) {
   .folder {
     margin: 0 20px;
