@@ -58,6 +58,7 @@ function Projects() {
           style={{ object_fit: "contain" }}
           className="animate__animated wow animate__bounceIn spark "
           wowDelay="0.9s"
+          projectLocation={"/not-available.html"}
         />
         <Card
           imageSrc={NUSPI}
@@ -96,6 +97,7 @@ function Projects() {
           style={{ object_fit: "contain" }}
           className="animate__animated wow animate__bounceIn nuspi "
           wowDelay="1.1s"
+          projectLocation={"/nuspi-project.html"}
         />
       </div>
     </div>
