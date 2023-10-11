@@ -32,7 +32,7 @@ function SkillFolder() {
         "CSS (Cascading Style Sheets) is a stylesheet language used for describing the look and formatting of a document written in HTML.",
       imageSrc: CSSlogo,
       skillLevel:
-        "I'm strong in fundamentals; I built this site using plain CSS.",
+        "I have a strong foundation in CSS, which enabled me to build this site from the ground up. As I continue to learn, I'm also exploring advanced techniques to further enhance my skill set and bring more sophisticated features to my projects.",
     },
     {
       name: "React",
@@ -48,7 +48,7 @@ function SkillFolder() {
         "TailwindCSS is a utility-first CSS framework that allows for highly customizable designs without leaving your HTML.",
       imageSrc: TailwindCSS,
       skillLevel:
-        "I'm confident with Tailwind and can create a good layout with it.",
+        "I have a solid grasp of the fundamentals in Tailwind and am proficient in crafting well-designed layouts. As I continue to advance my skills, I'm also delving into more complex concepts to fully leverage the capabilities of the framework.",
     },
     {
       name: "Elementor",

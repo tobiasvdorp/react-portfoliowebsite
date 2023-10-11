@@ -10,7 +10,7 @@ import ReactIMG from "../images/reactIMG.png";
 import "animate.css/animate.min.css";
 import WordPress from "../images/WordPress.png";
 import Elementor from "../images/Elementor.png";
-import NUSPI from "../images/NUSPI_Logo.png";
+import NUSPI from "../images/nuspi.png";
 
 function Projects() {
   return (
@@ -26,7 +26,7 @@ function Projects() {
             { name: "HTML", image: HTML },
             { name: "CSS", image: CSS },
           ]}
-          detailDescription="The first project I did at OpenICT was creating a portfoliowebsite. I had never written one line of code before so I had no experience at all. In about 6 weeks put this website together by means of YouTube tutorials and small lessons from classmates."
+          detailDescription="In my first project at OpenICT, I was tasked with creating a portfolio website. Having never written a single line of code before, I was a complete novice. Over the course of six weeks, I managed to assemble the site through a combination of YouTube tutorials and mini-lessons from classmates. However, about a month into my studies, I found myself dissatisfied with the initial website. As my knowledge grew, I immediately saw opportunities for improvement and decided to take on the project of building my current website, reflecting my evolved skills and better understanding of web development."
           projectLocation="/portfolio-1.html"
           className="animate__animated wow animate__bounceIn"
           wowDelay="0.5s"
@@ -40,7 +40,7 @@ function Projects() {
             { name: "CSS", image: CSS },
             { name: "TailwindCSS", image: TailwindCSS },
           ]}
-          detailDescription="The second project I did at OpenICT was creating a website for a hairdresser. I created this website with a group of 5 people. I mainly focused on front-end of the website and I had a lot of fun designing the components for the website. I also learned a lot about working in a group and how to communicate, divide tasks and work in one project with Git. I also learned a lot about the process of turning a clients wishes into a working product."
+          detailDescription="In my second project at OpenICT, I collaborated with a team of five people to build a website for a hairdressing salon. While I focused primarily on the front-end, creating website components was an enjoyable experience. Although the end result may not reflect high technical finesse, the project was an invaluable learning journey for me, especially in the areas of teamwork and collaboration. Through this experience, I gained insights into effective communication, task delegation, and the utilization of Git for collective project management. Additionally, it deepened my understanding of translating a client's needs and expectations into a functional product."
           projectLocation="/hairdresser-project.html"
           className="animate__animated wow animate__bounceIn"
           wowDelay="0.7s"
@@ -71,12 +71,12 @@ function Projects() {
           ]}
           detailDescription={
             <>
-              My most recent project was building an accessible website for
-              Netwerk USP Inclusief (nUSPi), an organization that champions
-              inclusivity. Initially brought on board through a student
-              opportunity at the HU Institute of ICT, I had the unique challenge
-              of translating the organization's mission into a digital platform
-              that could be easily accessed by everyone. <br></br>
+              My first project for a real client was building an accessible
+              website for Netwerk USP Inclusief (nUSPi), an organization that
+              champions inclusivity. Initially brought on board through a
+              student opportunity at the HU Institute of ICT, I had the unique
+              challenge of translating the organization's mission into a digital
+              platform that could be easily accessed by everyone. <br></br>
               <br></br>Over a series of MS Teams meetings, I learned a lot about
               client communication—how to effectively listen, condense their
               requirements, and provide actionable feedback. One key learning
@@ -85,13 +85,16 @@ function Projects() {
               would make our digital platform accessible to as many people as
               possible.
               <br></br>
-              <br></br>The project is now in its final stages, and I'm in the
-              process of preparing a comprehensive handover document. This
-              experience has not only been a lesson in technical development but
-              also in teamwork, time management, and real-world problem-solving.
-              I've come to appreciate the value of clear communication,
-              especially when managing expectations and juggling various project
-              elements.
+              <br></br>After successfully building the website, I prepared a
+              comprehensive handover document containing specific instructions
+              for managing the platform. This empowered the client, nUSPi, to
+              take full ownership and maintain the site independently. <br></br>
+              <br></br>
+              This experience has not only been a lesson in technical
+              development but also in teamwork, time management, and real-world
+              problem-solving. I've come to appreciate the value of clear
+              communication, especially when managing expectations and juggling
+              various project elements.
             </>
           }
           style={{ object_fit: "contain" }}
