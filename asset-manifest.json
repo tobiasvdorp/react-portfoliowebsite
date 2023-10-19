@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.b622d093.css",
-    "main.js": "/static/js/main.9fed4b63.js",
+    "main.css": "/static/css/main.22087c94.css",
+    "main.js": "/static/js/main.a683a883.js",
     "static/media/spark.png": "/static/media/spark.ad0e945cf13059a9c0d5.png",
+    "static/media/nuspi.png": "/static/media/nuspi.cd4f3bbc601f6398c8ae.png",
     "static/media/avatar.png": "/static/media/avatar.35400f8352b282bd8cc6.png",
     "static/media/reactIMG.png": "/static/media/reactIMG.8a6fc0a24a800d1e0f4a.png",
     "static/media/CSSlogo.png": "/static/media/CSSlogo.4ea6de69ce04b0ff8dc3.png",
     "static/media/login.png": "/static/media/login.16f7cb0d7af1f5313654.png",
-    "static/media/NUSPI_Logo.png": "/static/media/NUSPI_Logo.a0330078810525444706.png",
     "static/media/TailwindCSS.png": "/static/media/TailwindCSS.39138a421122620729a5.png",
     "static/media/HTMLlogo.png": "/static/media/HTMLlogo.ff3cf75e3b7cbb4ea77c.png",
     "static/media/WordPress.png": "/static/media/WordPress.7614628b41347abb4062.png",
     "index.html": "/index.html",
-    "main.b622d093.css.map": "/static/css/main.b622d093.css.map",
-    "main.9fed4b63.js.map": "/static/js/main.9fed4b63.js.map"
+    "main.22087c94.css.map": "/static/css/main.22087c94.css.map",
+    "main.a683a883.js.map": "/static/js/main.a683a883.js.map"
   },
   "entrypoints": [
-    "static/css/main.b622d093.css",
-    "static/js/main.9fed4b63.js"
+    "static/css/main.22087c94.css",
+    "static/js/main.a683a883.js"
   ]
 }
