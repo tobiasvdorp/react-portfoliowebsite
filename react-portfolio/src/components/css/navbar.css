@@ -1,13 +1,21 @@
+.header .logo,
+.header li a {
+  text-decoration: none;
+  display: block;
+}
+.header .menu-icon,
+.header li a {
+  color: var(--text);
+  position: relative;
+}
 .logo {
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 800;
   color: var(--text);
 }
-
 .logo:hover {
   cursor: pointer;
 }
-
 .header {
   position: fixed;
   width: 100%;
@@ -23,40 +31,32 @@
   overflow: hidden;
 }
 .header li a {
-  display: block;
-  padding: 20px 20px;
-  text-decoration: none;
-  color: var(--text);
+  padding: 20px;
   font-weight: 400;
+  transition: color 0.2s;
+  overflow: hidden;
 }
-.header li a:hover,
-.header .menu-btn:hover {
+.header .menu-btn:hover,
+.header li a:hover {
   transition: 0.7s;
-
   font-weight: 800;
 }
 .header .logo {
-  display: block;
   float: left;
   font-size: 2em;
   padding: 10px 20px;
-  text-decoration: none;
 }
-
 .header .menu {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
-  box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0 12px 20px 0 #000;
 }
-
 .header .menu-icon {
   display: inline-block;
   float: right;
   padding: 28px 20px;
-  position: relative;
   user-select: none;
-  color: var(--text);
 }
 .header .menu-icon .navicon {
   background: var(--text);
@@ -66,15 +66,14 @@
   transition: 0.2s ease-out;
   width: 20px;
 }
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
+.header .menu-icon .navicon:after,
+.header .menu-icon .navicon:before {
   background: var(--text);
   content: "";
   display: block;
   height: 100%;
   position: absolute;
-  transition: all 0.2s ease-out;
-
+  transition: 0.2s ease-out;
   width: 100%;
 }
 .header .menu-icon .navicon:before {
@@ -83,7 +82,6 @@
 .header .menu-icon .navicon:after {
   top: -5px;
 }
-
 .header .menu-btn {
   display: none;
 }
@@ -91,7 +89,7 @@
   max-height: 380px;
 }
 .header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
+  background: 0 0;
 }
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
@@ -99,11 +97,10 @@
 .header .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
   top: 0;
 }
-
 @media (min-width: 900px) {
   .header li {
     float: left;
@@ -111,30 +108,21 @@
   .header li a {
     padding: 20px 30px;
   }
+  .header .menu-icon {
+    display: none;
+  }
   .header .menu {
     clear: none;
     float: right;
     max-height: none;
     box-shadow: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-
-  .header .menu {
     display: flex;
     align-items: center;
     margin-right: 5px;
   }
 }
-
-.header li a {
-  position: relative;
-  transition: color 0.2s;
-  overflow: hidden;
-}
-.header li a::before,
-.header li a::after {
+.header li a::after,
+.header li a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -144,23 +132,21 @@
   background-color: var(--accent);
   transform: scaleX(0);
   transform-origin: bottom right;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 .header li a::before {
   transform-origin: bottom left;
 }
-.header li a:hover::before,
-.header li a:hover::after {
+.header li a:hover::after,
+.header li a:hover::before {
   transform: scaleX(1);
 }
-
 .lang-switch-container select {
   border: 2px solid var(--primary);
   background-color: transparent;
   cursor: pointer;
   padding-right: 7px;
 }
-
 @media screen and (max-width: 900px) {
   .lang-switch-container {
     margin-left: 20px;

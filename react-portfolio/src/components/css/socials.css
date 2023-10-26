@@ -6,7 +6,6 @@
   align-items: center;
   margin-top: 75px;
 }
-
 .socials-container {
   display: flex;
   flex-direction: row;
@@ -16,25 +15,20 @@
   gap: 20px;
   margin: 0 20px;
 }
-
 .socials-container hr {
   width: 100%;
   opacity: 0.4;
 }
-
 .socials-container i {
   font-size: 45px;
 }
-
 .readmore#findme {
   margin-bottom: -50px;
   margin-top: 60px;
 }
-
 .addme {
   margin-top: 30px;
 }
-
 .socials-container .button {
   padding: 10px 8px;
 }
