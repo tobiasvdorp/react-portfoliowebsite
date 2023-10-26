@@ -8,8 +8,10 @@ import Elementor from "../images/Elementor.png";
 import WordPress from "../images/WordPress.png";
 import { TypeAnimation } from "react-type-animation";
 import "../css/skills.css";
+import { useTranslation } from "react-i18next";
 
 function SkillFolder() {
+  const { t } = useTranslation();
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [shouldReduceMotion, setShouldReduceMotion] = useState(false);
 
@@ -21,50 +23,39 @@ function SkillFolder() {
   const skills = [
     {
       name: "HTML",
-      description:
-        "HTML (HyperText Markup Language) is the standard markup language used to create web pages and web applications.",
+      description: t("HTML_description"),
       imageSrc: HTMLlogo,
-      skillLevel: "I'm very comfortable with HTML and use it almost daily.",
+      skillLevel: t("HTML_skillLevel"),
     },
     {
       name: "CSS",
-      description:
-        "CSS (Cascading Style Sheets) is a stylesheet language used for describing the look and formatting of a document written in HTML.",
+      description: t("CSS_description"),
       imageSrc: CSSlogo,
-      skillLevel:
-        "I have a strong foundation in CSS, which enabled me to build this site from the ground up. As I continue to learn, I'm also exploring advanced techniques to further enhance my skill set and bring more sophisticated features to my projects.",
+      skillLevel: t("CSS_skillLevel"),
     },
     {
       name: "React",
-      description:
-        "React is a JavaScript library for building user interfaces, especially single-page applications where you need a fast and interactive user experience.",
+      description: t("React_description"),
       imageSrc: ReactIMG,
-      skillLevel:
-        "I'm still getting the hang of React, but I know my way around the basics.",
+      skillLevel: t("React_skillLevel"),
     },
     {
       name: "TailwindCSS",
-      description:
-        "TailwindCSS is a utility-first CSS framework that allows for highly customizable designs without leaving your HTML.",
+      description: t("TailwindCSS_description"),
       imageSrc: TailwindCSS,
-      skillLevel:
-        "I have a solid grasp of the fundamentals in Tailwind and am proficient in crafting well-designed layouts. As I continue to advance my skills, I'm also delving into more complex concepts to fully leverage the capabilities of the framework.",
+      skillLevel: t("TailwindCSS_skillLevel"),
     },
     {
       name: "Elementor",
-      description:
-        "Elementor is a drag-and-drop page builder for WordPress, allowing you to create complex layouts without needing to write any code.",
+      description: t("Elementor_description"),
       imageSrc: Elementor,
-      skillLevel:
-        "I'm good with Elementor and have built a full website with it. You can see the result in my projects.",
+      skillLevel: t("Elementor_skillLevel"),
     },
     {
       name: "WordPress",
-      description:
-        "WordPress is a popular content management system (CMS) that allows you to create and manage websites and blogs without having to code from scratch.",
+      description: t("WordPress_description"),
       imageSrc: WordPress,
-      skillLevel:
-        "I've built a full website in WordPress and know the basics pretty well. You can see the result in my projects.",
+      skillLevel: t("WordPress_skillLevel"),
     },
   ];
 
@@ -75,8 +66,8 @@ function SkillFolder() {
 
   return (
     <div className="skills" id="skills">
-      <h2 className="title2">My skills.</h2>
-      <h3 className="readmore">Power-ups acquired.</h3>
+      <h2 className="title2">{t("skills_title")}</h2>
+      <h3 className="readmore">{t("skills_under")}</h3>
       <div className="skill-folder-container">
         <div className="folder">
           <div className="skills-column">
@@ -98,7 +89,7 @@ function SkillFolder() {
             {selectedSkill ? (
               <>
                 <div id="whatisit">
-                  <h3>What is it?</h3>
+                  <h3>{t("what_isit")}</h3>
                   <TypeAnimation
                     key={`description-${selectedSkill.name}`}
                     sequence={[selectedSkill.description, 1000]}
@@ -106,7 +97,7 @@ function SkillFolder() {
                     style={{ color: "var(--text)" }}
                   />
                 </div>
-                <h3>How skilled am I?</h3>
+                <h3>{t("how_skilled")}</h3>
                 <TypeAnimation
                   key={`skill-level-${selectedSkill.name}`}
                   sequence={[selectedSkill.skillLevel, 1000]}
@@ -123,7 +114,7 @@ function SkillFolder() {
                     : ""
                 }`}
               >
-                Select a skill to read more about it.
+                {t("skills_select")}{" "}
               </p>
             )}
           </div>

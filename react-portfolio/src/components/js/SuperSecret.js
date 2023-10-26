@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import NuclearButton from "./NuclearButton";
 import "../../index.css";
+import { useTranslation } from "react-i18next";
 
 export default function SuperSecret() {
+  const { t } = useTranslation();
   const [timer, setTimer] = useState(null);
 
   const [buttonClass, setButtonClass] = useState("destruct");
@@ -15,9 +17,8 @@ export default function SuperSecret() {
       return;
     }
 
-    const isConfirmed = window.confirm(
-      "Are you sure you want to destroy this website? (PLEASE DON'T!!!)"
-    );
+    const isConfirmed = window.confirm(t("destroyConfirm"));
+
     if (!isConfirmed) {
       return;
     }
@@ -63,7 +64,7 @@ export default function SuperSecret() {
     document.getElementById("glitch").classList.remove("glitch-animated");
 
     // Set timer text to 'Repairing...'
-    setTimer("Repairing...");
+    setTimer(t("repairing"));
 
     setTimeout(() => {
       // Add the 'glitch-animated' class back for 1 second

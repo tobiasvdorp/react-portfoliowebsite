@@ -6,8 +6,10 @@ import "animate.css";
 import Socials from "./Socials";
 import { FaGripLines } from "react-icons/fa";
 import { TbArrowsCross } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [isDisordered, setDisordered] = useState(false);
 
   const toggleDisordered = () => setDisordered(!isDisordered);
@@ -31,9 +33,8 @@ const ContactForm = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.ok) {
-          setStatus(
-            "Message sent! I will get back to you as soon as possible."
-          );
+          setStatus(t("messageSent"));
+
           form.reset();
         } else {
           setStatus("Something went wrong. Please try again.");
@@ -44,7 +45,7 @@ const ContactForm = () => {
   return (
     <div className="contact" id="contact">
       <div className="flex">
-        <h2 className="title2">Get in touch. </h2>
+        <h2 className="title2">{t("getInTouch")}</h2>
         <button className="filter-icon button">
           {isDisordered ? (
             <TbArrowsCross onClick={toggleDisordered} />
@@ -53,7 +54,7 @@ const ContactForm = () => {
           )}
         </button>
       </div>
-      <h3 className="readmore">Friend request accepted.</h3>
+      <h3 className="readmore">{t("friendRequestAccepted")}</h3>
       <form onSubmit={handleSubmit} className="">
         <div
           className={`name animate__animated  ${
@@ -62,7 +63,7 @@ const ContactForm = () => {
               : "wow  animate__flipInX "
           }`}
         >
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">{t("nameLabel")}</label>
           <input type="text" id="name" name="name" required />
         </div>
         <div
@@ -72,7 +73,7 @@ const ContactForm = () => {
               : "wow animate__flipInX "
           }`}
         >
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">{t("emailLabel")}</label>
           <input type="email" id="email" name="email" required />
         </div>
         <div
@@ -82,7 +83,7 @@ const ContactForm = () => {
               : "wow  animate__flipInX "
           }`}
         >
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">{t("messageLabel")}</label>
           <textarea
             id="message"
             name="message"
@@ -103,20 +104,23 @@ const ContactForm = () => {
           }`}
         >
           <button type="submit" className="button">
-            Send
+            {t("sendButton")}
           </button>
         </div>
         <div className="statusdiv">
           {status && (
             <p className="status animate__animated animate__fadeInLeft">
-              {status}
+              {status === "Something went wrong. Please try again."
+                ? t("somethingWentWrong")
+                : status}
             </p>
           )}
         </div>
       </form>
       <h3 className="readmore" id="findme">
-        Or find me on:
+        {t("orFindMeOn")}
       </h3>
+
       <Socials />
     </div>
   );

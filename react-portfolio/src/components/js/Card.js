@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useTranslation } from "react-i18next";
 function Card({
   title,
   imageSrc,
@@ -10,6 +10,7 @@ function Card({
   className,
   wowDelay,
 }) {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleCardClick = () => {
@@ -64,7 +65,7 @@ function Card({
           className="button result"
           onClick={() => openProject(projectLocation)}
         >
-          See the result <i className="fa-solid fa-eye"></i>
+          {t("See the result")} <i className="fa-solid fa-eye"></i>
         </button>
       </div>
     </div>

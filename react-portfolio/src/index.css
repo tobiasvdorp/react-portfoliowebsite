@@ -263,7 +263,7 @@ footer {
   position: fixed;
   top: 150px;
   left: 28px;
-  z-index: 1000;
+  z-index: 999;
   font-weight: 600;
   font-size: 35px;
 }

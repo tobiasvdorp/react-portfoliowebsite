@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function Filters({ setActiveFilters, activeFilters, open }) {
+  const { t } = useTranslation();
   // Handle checkbox changes
   const handleCheckboxChange = (e) => {
     const value = e.target.value;
@@ -30,8 +32,7 @@ function Filters({ setActiveFilters, activeFilters, open }) {
     setActiveFilters(newFilters);
   };
 
-  const filterOptions = ["all", "work", "school", "hobby"];
-
+  const filterOptions = [t("all"), t("work"), t("school"), t("hobby")];
   return (
     <div className="filters-container">
       {filterOptions.map((filterType) => (

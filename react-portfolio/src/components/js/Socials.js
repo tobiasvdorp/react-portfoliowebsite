@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "../css/socials.css";
 import "animate.css/animate.min.css";
+import { useTranslation } from "react-i18next";
+
 function Socials() {
+  const { t } = useTranslation();
+
   const [showAddMe, setShowAddMe] = useState(false);
 
   const toggleAddMe = () => {
@@ -38,7 +42,8 @@ function Socials() {
       {showAddMe && (
         <div className="animate__animated animate__fadeInLeft">
           <p className="status addme">
-            Add me on Discord! My username is <strong>tobiasvandorp</strong>
+            {t("addMeOnDiscord")}
+            <b> tobiasvandorp</b>
           </p>
         </div>
       )}
