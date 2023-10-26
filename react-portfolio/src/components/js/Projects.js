@@ -166,7 +166,21 @@ function Projects() {
           (project) =>
             !activeFilters.includes("all") &&
             !activeFilters.includes(project.tag)
-        ) && <h3>Oops! No projects found for the selected filters.</h3>}
+        ) && (
+          <>
+            <div className="no-results">
+              <h3>Oops! No projects found for the selected filters.</h3>
+
+              {/* Reset filters */}
+              <button
+                className="button reset"
+                onClick={() => setActiveFilters(["all"])}
+              >
+                Reset filters
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

@@ -206,7 +206,8 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
-  height: 70px;
+  margin-top: 15px;
+  margin-bottom: 11px;
 }
 
 .filters-container .button {
@@ -230,4 +231,17 @@
 }
 label input {
   display: none;
+}
+
+.reset {
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
