@@ -110,9 +110,7 @@ button {
   transition: all 0.2s ease-in-out;
 }
 .button:hover,
-.button:focus,
 .button-deselected {
-  padding: 10px 15px;
   border-radius: 5px;
   background-color: var(--secundary); /* Accentkleur */
   transform: scale(1.05);
@@ -122,6 +120,9 @@ button {
   box-shadow: 0 0 8px 1px var(--accent);
 }
 
+.button-deselected {
+  padding: 10px 15px;
+}
 .menu-icon {
   cursor: pointer;
 }
@@ -140,4 +141,11 @@ button {
 footer {
   height: 200px;
   background-color: var(--background);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }

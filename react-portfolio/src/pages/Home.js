@@ -8,6 +8,7 @@ import SkillFolder from "../components/js/SkillFolder";
 import "../App.css";
 import SettingsMenu from "../components/js/SettingsMenu";
 import Footer from "../components/js/Footer";
+import SuperSecret from "../components/js/SuperSecret";
 function Home() {
   return (
     <>
@@ -22,6 +23,7 @@ function Home() {
         <Projects />
 
         <SkillFolder />
+        <SuperSecret />
         <Contact />
       </main>
       <Footer />

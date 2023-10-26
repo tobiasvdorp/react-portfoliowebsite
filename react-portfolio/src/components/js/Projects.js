@@ -11,8 +11,9 @@ import "animate.css/animate.min.css";
 import WordPress from "../images/WordPress.png";
 import Elementor from "../images/Elementor.png";
 import NUSPI from "../images/nuspi.png";
-import Filters from "./Filters.js";
+import FilterButton from "./FilterButton.js";
 import { useState } from "react";
+import Filters from "./Filters.js";
 
 function Projects() {
   const [activeFilters, setActiveFilters] = useState(["all"]); // Initialize filter state as an array
@@ -117,14 +118,24 @@ function Projects() {
       tag: "work",
     },
   ];
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
 
   return (
     <div className="projects " id="projects">
-      <h2 className="title2">Projects.</h2>
-      <Filters
-        setActiveFilters={setActiveFilters}
-        activeFilters={activeFilters}
-      />
+      <div className="flex">
+        <h2 className="title2">Projects.</h2>
+        <FilterButton handleClick={handleClick} />
+      </div>
+      {open && (
+        <Filters
+          activeFilters={activeFilters}
+          setActiveFilters={setActiveFilters}
+        />
+      )}
       <h3 className="readmore">Click on a card to read more.</h3>
       <div className="projects-cards">
         {projects.map((project, index) => {

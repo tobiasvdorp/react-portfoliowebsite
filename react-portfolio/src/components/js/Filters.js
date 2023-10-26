@@ -1,6 +1,6 @@
 import React from "react";
 
-function Filters({ setActiveFilters, activeFilters }) {
+function Filters({ setActiveFilters, activeFilters, open }) {
   // Handle checkbox changes
   const handleCheckboxChange = (e) => {
     const value = e.target.value;
@@ -35,7 +35,7 @@ function Filters({ setActiveFilters, activeFilters }) {
   return (
     <div className="filters-container">
       {filterOptions.map((filterType) => (
-        <React.Fragment key={filterType}>
+        <React.Fragment key={filterType} className="filters">
           <label
             className={
               activeFilters.includes(filterType)

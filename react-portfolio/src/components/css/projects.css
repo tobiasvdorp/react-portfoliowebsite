@@ -206,28 +206,28 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin-top: 8px;
+  height: 70px;
 }
 
 .filters-container .button {
   font-size: 20px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .filter-icon {
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 5px !important;
+  font-size: 27px;
   color: black;
-  font-size: 30px;
-}
-
-.icon-container:hover .filter-icon {
-  color: white;
-}
-
-.icon-container {
   display: flex;
-  justify-content: center;
 }
 
+.filters {
+  display: flex;
+  gap: 20px;
+}
 label input {
   display: none;
 }
