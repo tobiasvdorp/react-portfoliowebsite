@@ -30,7 +30,7 @@ export default function SuperSecret() {
 
       if (counter <= 0) {
         clearInterval(intervalId);
-        setTimer("Activated");
+        setTimer(null);
         selfDestructor();
       }
     }, 1000);
@@ -54,13 +54,16 @@ export default function SuperSecret() {
       setButtonClass("repair");
     }, 1000);
     setTimeout(() => {
-      setShowRepairButton(true); // Toon de reparatieknop na 2 seconden
+      setShowRepairButton(true);
     }, 2000);
   };
 
   const repairWebsite = () => {
     // Remove the 'glitch-animated' class
     document.getElementById("glitch").classList.remove("glitch-animated");
+
+    // Set timer text to 'Repairing...'
+    setTimer("Repairing...");
 
     setTimeout(() => {
       // Add the 'glitch-animated' class back for 1 second
@@ -93,7 +96,7 @@ export default function SuperSecret() {
               repairWebsite={repairWebsite}
               buttonClass={isDestroyed ? "repair" : "destruct"}
             />
-            <div className="timer">{timer !== null ? `${timer}` : ""}</div>
+            <div className="timer">{timer !== null ? `${timer}...` : ""}</div>
           </div>
         </>
       )}
