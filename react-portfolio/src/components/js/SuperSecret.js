@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import NuclearButton from "./NuclearButton";
 import "../../index.css";
 import { useTranslation } from "react-i18next";
+import { useDisordered } from "./DisorderedContext";
 
 export default function SuperSecret() {
   const { t } = useTranslation();
   const [timer, setTimer] = useState(null);
+  const { setDisordered } = useDisordered();
 
   const [buttonClass, setButtonClass] = useState("destruct");
   const [isDestroyed, setIsDestroyed] = useState(false);
@@ -57,6 +59,7 @@ export default function SuperSecret() {
     setTimeout(() => {
       setShowRepairButton(true);
     }, 2000);
+    setDisordered(true);
   };
 
   const repairWebsite = () => {
@@ -85,6 +88,7 @@ export default function SuperSecret() {
       setButtonClass("destruct");
       setIsVisible(false);
     }, 2000);
+    setDisordered(false);
   };
 
   return (

@@ -7,10 +7,10 @@ import Socials from "./Socials";
 import { FaGripLines } from "react-icons/fa";
 import { TbArrowsCross } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
-
+import { useDisordered } from "./DisorderedContext";
 const ContactForm = () => {
   const { t } = useTranslation();
-  const [isDisordered, setDisordered] = useState(false);
+  const { isDisordered, setDisordered } = useDisordered();
 
   const toggleDisordered = () => setDisordered(!isDisordered);
 
