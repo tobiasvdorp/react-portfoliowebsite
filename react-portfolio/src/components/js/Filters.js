@@ -21,24 +21,36 @@ function Filters({ setActiveFilters, activeFilters }) {
       }
     }
 
+    const allButAllSelected = filterOptions
+      .filter((opt) => opt !== "all")
+      .every((opt) => newFilters.includes(opt));
+    if (allButAllSelected) {
+      newFilters = ["all"];
+    }
     setActiveFilters(newFilters);
   };
 
   const filterOptions = ["all", "work", "school", "hobby"];
 
   return (
-    <div>
-      {filterOptions.map((filter) => (
-        <React.Fragment key={filter}>
-          <label className="button">
+    <div className="filters-container">
+      {filterOptions.map((filterType) => (
+        <React.Fragment key={filterType}>
+          <label
+            className={
+              activeFilters.includes(filterType)
+                ? "button-selected"
+                : "button-deselected"
+            }
+          >
             <input
               type="checkbox"
-              value={filter}
-              checked={activeFilters.includes(filter)}
+              value={filterType}
+              checked={activeFilters.includes(filterType)}
               onChange={handleCheckboxChange}
-              className="button"
+              className="button "
             />
-            {filter.charAt(0).toUpperCase() + filter.slice(1)}{" "}
+            {filterType.charAt(0).toUpperCase() + filterType.slice(1)}{" "}
           </label>
         </React.Fragment>
       ))}

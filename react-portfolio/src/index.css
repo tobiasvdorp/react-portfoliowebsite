@@ -96,7 +96,8 @@ button {
 }
 
 /* Button */
-.button {
+.button,
+.button-selected {
   padding: 10px 15px;
   background-color: var(--accent); /* Primary kleur */
   color: black; /* Tekstkleur */
@@ -106,9 +107,13 @@ button {
   font-size: 1.4rem;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  transition: all 0.2s ease-in-out;
 }
 .button:hover,
-.button:focus {
+.button:focus,
+.button-deselected {
+  padding: 10px 15px;
+  border-radius: 5px;
   background-color: var(--secundary); /* Accentkleur */
   transform: scale(1.05);
   cursor: pointer;
