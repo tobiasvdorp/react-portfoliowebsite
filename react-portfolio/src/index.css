@@ -1,21 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600&family=Montserrat:wght@300;400;500;700;800&family=Open+Sans:wght@300;400;500;600&display=swap");
-/* :root {
-  --text: white;
-  --background: #160024;
-  --primary: #8d4eb1;
-  --secondary: #043422;
-  --accent: #21ca8c;
-  --pointer: pointer;
-} */
-/* :root {
-  --text: white;
-  --background: #000d2a;
---background2: #020e12; 
-  --primary: #8fb4ff;
-  --secondary: #033f3f;
-  --accent: #8fb4ff;
-  --pointer: pointer;
-} */
 
 * {
   padding: 0;
@@ -100,8 +83,8 @@ button {
 .button,
 .button-selected {
   padding: 10px 15px;
-  background-color: var(--accent); /* Primary kleur */
-  color: black; /* Tekstkleur */
+  background-color: var(--accent);
+  color: black;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.2s, transform 0.2s;
@@ -113,7 +96,7 @@ button {
 .button:hover,
 .button-deselected {
   border-radius: 5px;
-  background-color: var(--secundary); /* Accentkleur */
+  background-color: var(--secundary);
   transform: scale(1.05);
   cursor: pointer;
   border: 1px solid var(--accent);
