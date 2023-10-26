@@ -8,23 +8,28 @@ import SkillFolder from "../components/js/SkillFolder";
 import "../App.css";
 import SettingsMenu from "../components/js/SettingsMenu";
 import Footer from "../components/js/Footer";
-function Home() {
+import SuperSecret from "../components/js/SuperSecret";
+
+function Home(selfDestructor) {
   return (
     <>
-      <Navbar />
+      <Navbar className="" />
       <SettingsMenu />
+      <SuperSecret />
+      <div id="glitch">
+        <main id="home" className="">
+          <CallToAction />
 
-      <main id="home">
-        <CallToAction />
+          <Aboutme />
 
-        <Aboutme />
+          <Projects />
 
-        <Projects />
+          <SkillFolder />
 
-        <SkillFolder />
-        <Contact />
-      </main>
-      <Footer />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -3,7 +3,10 @@ import ModeSwitcher from "./ModeSwitcher";
 import AnimateSwitcher from "./AnimateSwitcher";
 import "animate.css/animate.min.css";
 import "../css/responsive.css";
+import { useTranslation } from "react-i18next";
+
 const SettingsMenu = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [animationClass, setAnimationClass] = useState("animate__bounceInLeft");
 
@@ -40,17 +43,17 @@ const SettingsMenu = () => {
       </div>
       <div className={`settings-content ${isOpen ? "active" : ""}`}>
         <div className="left">
-          <h4>Settings</h4>
+          <h4>{t("settings")}</h4>
           <button onClick={closeMenu} className="close-button button">
             X
           </button>
         </div>
         <div className="theme">
-          <p>Theme</p>
+          {t("theme")}
           <ModeSwitcher />
         </div>
         <div className="anima">
-          <p>Animations</p>
+          {t("animations")}
           <AnimateSwitcher />
         </div>
       </div>

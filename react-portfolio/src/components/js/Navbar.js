@@ -1,16 +1,19 @@
 import React, { useEffect } from "react";
 import useWOW from "./useWOW";
 import "../css/custom-animations.css";
-
-const menuItems = [
-  { text: "Home", link: "#home", animation: "fadeInLeftBig" },
-  { text: "About me", link: "#aboutme", animation: "fadeInDownBig" },
-  { text: "Projects", link: "#projects", animation: "fadeInDownBig" },
-  { text: "Skills", link: "#skills", animation: "fadeInUpBig" },
-  { text: "Contact", link: "#contact", animation: "fadeInRightBig" },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  const { t } = useTranslation();
+  const menuItems = [
+    { textKey: "home", link: "#home", animation: "fadeInLeftBig" },
+    { textKey: "aboutMe", link: "#aboutme", animation: "fadeInDownBig" },
+    { textKey: "projects", link: "#projects", animation: "fadeInDownBig" },
+    { textKey: "skills", link: "#skills", animation: "fadeInUpBig" },
+    { textKey: "contact", link: "#contact", animation: "fadeInRightBig" },
+  ];
+
   useWOW();
   useEffect(() => {
     const offset = 83;
@@ -44,7 +47,6 @@ function Navbar() {
       });
     };
   }, []);
-
   return (
     <header className="header">
       <a
@@ -65,10 +67,13 @@ function Navbar() {
               href={item.link}
               className={`item animate__animated animate__${item.animation}`}
             >
-              {item.text}
+              {t(item.textKey)}
             </a>
           </li>
         ))}
+        <li>
+          <LanguageSwitcher />
+        </li>
       </ul>
     </header>
   );

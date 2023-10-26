@@ -1,38 +1,34 @@
-/* Form container */
-.contact form {
-  display: flex;
+.contact form,
+.contact form div {
   flex-direction: column;
+  display: flex;
+}
+.contact form {
   justify-content: center;
   gap: 20px;
   max-width: 550px;
   width: 100%;
+  transition: 0.5s;
 }
 .contact {
   margin: 0 20px;
 }
-/* Form elements */
 .contact form div {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
-
-/*Send */
 .contact form button {
   font-size: 1.2rem;
   padding: 10px 25px;
   border: none;
 }
-
-.contact,
 #senddiv,
+.contact,
 .statusdiv {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-/* Fields */
 .contact form input,
 .contact form textarea {
   margin-top: 5px;
@@ -43,13 +39,11 @@
   font-size: 1rem;
   color: var(--primary);
   border: 2px solid var(--accent);
-
   font-family: "Hind Madurai", sans-serif;
 }
-
 .contact form input:focus,
 .contact form textarea:focus {
-  outline: none;
+  outline: 0;
   box-shadow: 0 0 10px 1px var(--accent);
 }
 .contact form textarea {
@@ -57,15 +51,34 @@
   min-width: 100%;
   padding: 10px;
 }
-
 .contact label {
   font-weight: 600;
 }
-
 .status {
   padding: 10px 20px;
   border-radius: 5px;
   font-weight: 500;
-  color: white;
+  color: #fff;
   background-color: var(--secondary);
+}
+.disordered.message label,
+.disordered.message textarea,
+.disordered.name input,
+.disordered.name label {
+  transform: skewX(14deg);
+  transform: skewy(14deg);
+}
+.disordered .button,
+.disordered.email input,
+.disordered.email label {
+  transform: skewX(-14deg);
+  transform: skewy(-14deg);
+}
+.disordered.message label,
+.disordered.message textarea {
+  transform: skewX(14deg);
+  transform: skewY(14deg);
+}
+.disordered.message {
+  margin-top: 120px;
 }

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-
+import { useTranslation } from "react-i18next";
 function Card({
   title,
   imageSrc,
   description,
   skills,
   detailDescription,
-  projectId,
+  projectLocation,
   className,
   wowDelay,
 }) {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleCardClick = () => {
@@ -23,8 +24,8 @@ function Card({
     setIsExpanded(false);
   };
 
-  const openProject = (projectId) => {
-    window.open(`${projectId}.html`, "_blank");
+  const openProject = (projectLocation) => {
+    window.open(projectLocation, "_blank");
   };
 
   return (
@@ -62,9 +63,9 @@ function Card({
         <p>{detailDescription}</p>
         <button
           className="button result"
-          onClick={() => openProject(projectId)}
+          onClick={() => openProject(projectLocation)}
         >
-          See the result <i className="fa-solid fa-eye"></i>
+          {t("See the result")} <i className="fa-solid fa-eye"></i>
         </button>
       </div>
     </div>

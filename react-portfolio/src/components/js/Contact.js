@@ -4,8 +4,16 @@ import "../css/responsive.css";
 import WOW from "wowjs";
 import "animate.css";
 import Socials from "./Socials";
-
+import { FaGripLines } from "react-icons/fa";
+import { TbArrowsCross } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
+import { useDisordered } from "./DisorderedContext";
 const ContactForm = () => {
+  const { t } = useTranslation();
+  const { isDisordered, setDisordered } = useDisordered();
+
+  const toggleDisordered = () => setDisordered(!isDisordered);
+
   const wow = new WOW.WOW();
   wow.init();
   const [status, setStatus] = useState("");
@@ -25,9 +33,8 @@ const ContactForm = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.ok) {
-          setStatus(
-            "Message sent! I will get back to you as soon as possible."
-          );
+          setStatus(t("messageSent"));
+
           form.reset();
         } else {
           setStatus("Something went wrong. Please try again.");
@@ -37,20 +44,46 @@ const ContactForm = () => {
 
   return (
     <div className="contact" id="contact">
-      <h2 className="title2">Get in touch.</h2>
-      <h3 className="readmore">Friend request accepted.</h3>
-
+      <div className="flex">
+        <h2 className="title2">{t("getInTouch")}</h2>
+        <button className="filter-icon button">
+          {isDisordered ? (
+            <TbArrowsCross onClick={toggleDisordered} />
+          ) : (
+            <FaGripLines onClick={toggleDisordered} />
+          )}
+        </button>
+      </div>
+      <h3 className="readmore">{t("friendRequestAccepted")}</h3>
       <form onSubmit={handleSubmit} className="">
-        <div className="wow animate__animated animate__flipInX">
-          <label htmlFor="name">Name</label>
+        <div
+          className={`name animate__animated  ${
+            isDisordered
+              ? "disordered animate__bounceInDown animate__slower"
+              : "wow  animate__flipInX "
+          }`}
+        >
+          <label htmlFor="name">{t("nameLabel")}</label>
           <input type="text" id="name" name="name" required />
         </div>
-        <div className="wow animate__animated animate__flipInX">
-          <label htmlFor="email">Email</label>
+        <div
+          className={`email animate__animated  ${
+            isDisordered
+              ? "disordered animate__bounceInDown animate__slow"
+              : "wow animate__flipInX "
+          }`}
+        >
+          <label htmlFor="email">{t("emailLabel")}</label>
           <input type="email" id="email" name="email" required />
         </div>
-        <div className="wow animate__animated animate__flipInX">
-          <label htmlFor="message">Message</label>
+        <div
+          className={`message animate__animated  ${
+            isDisordered
+              ? "disordered animate__bounceInDown animate__fast"
+              : "wow  animate__flipInX "
+          }`}
+        >
+          <label htmlFor="message">{t("messageLabel")}</label>
           <textarea
             id="message"
             name="message"
@@ -62,23 +95,32 @@ const ContactForm = () => {
             }}
           ></textarea>
         </div>
-        <div id="senddiv" className="wow animate__animated animate__flipInX">
+        <div
+          id="senddiv"
+          className={` animate__animated ${
+            isDisordered
+              ? "disordered animate__faster"
+              : "wow animate__bounceInDown animate__flipInX"
+          }`}
+        >
           <button type="submit" className="button">
-            Send
+            {t("sendButton")}
           </button>
         </div>
         <div className="statusdiv">
           {status && (
             <p className="status animate__animated animate__fadeInLeft">
-              {status}
+              {status === "Something went wrong. Please try again."
+                ? t("somethingWentWrong")
+                : status}
             </p>
           )}
         </div>
       </form>
-
       <h3 className="readmore" id="findme">
-        Or find me on:
+        {t("orFindMeOn")}
       </h3>
+
       <Socials />
     </div>
   );
