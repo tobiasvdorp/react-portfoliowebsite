@@ -198,3 +198,28 @@
 .spark img {
   object-fit: contain;
 }
+
+.filters-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.filters-container .button {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.filter-icon {
+  color: black;
+  font-size: 30px;
+}
+
+.icon-container:hover .filter-icon {
+  color: white;
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
