@@ -40,4 +40,8 @@
     top: 65px !important;
     left: 10px !important;
   }
+  .nuclear {
+    top: 120px;
+    left: 10px;
+  }
 }

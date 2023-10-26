@@ -120,7 +120,7 @@ function Projects() {
   ];
   const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
+  const openFilters = () => {
     setOpen(!open);
   };
 
@@ -128,7 +128,7 @@ function Projects() {
     <div className="projects " id="projects">
       <div className="flex">
         <h2 className="title2">Projects.</h2>
-        <FilterButton handleClick={handleClick} />
+        <FilterButton openFilters={openFilters} />
       </div>
       {open && (
         <Filters

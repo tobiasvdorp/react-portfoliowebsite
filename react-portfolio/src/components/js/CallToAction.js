@@ -15,12 +15,14 @@ function CallToAction() {
           style={{ color: "var(--text)" }}
         />
       </h1>
-      <a
-        className="button animate__animated animate__swing animate__delay-1s animate__flipInX"
-        href="#aboutme"
-      >
-        Explore
-      </a>
+      <div className="flex">
+        <a
+          className="button animate__animated animate__swing animate__delay-1s animate__flipInX"
+          href="#aboutme"
+        >
+          Explore
+        </a>
+      </div>
     </div>
   );
 }
