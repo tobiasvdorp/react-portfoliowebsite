@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import useWOW from "./useWOW";
 import "../css/custom-animations.css";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const menuItems = [
   { text: "Home", link: "#home", animation: "fadeInLeftBig" },
@@ -69,6 +70,9 @@ function Navbar() {
             </a>
           </li>
         ))}
+        <li>
+          <LanguageSwitcher />
+        </li>
       </ul>
     </header>
   );

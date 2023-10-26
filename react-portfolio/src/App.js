@@ -8,6 +8,7 @@ import "./components/css/custom-animations.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import "./i18n";
 
 function App() {
   return (
