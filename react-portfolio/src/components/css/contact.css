@@ -1,4 +1,3 @@
-/* Form container */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -11,14 +10,13 @@
 .contact {
   margin: 0 20px;
 }
-/* Form elements */
+
 .contact form div {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Send */
 .contact form button {
   font-size: 1.2rem;
   padding: 10px 25px;
@@ -33,7 +31,7 @@
   align-items: center;
   justify-content: center;
 }
-/* Fields */
+
 .contact form input,
 .contact form textarea {
   margin-top: 5px;

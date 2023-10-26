@@ -115,7 +115,7 @@ body[data-theme="dark"] .skills .readmore {
     margin: 0 20px;
   }
 }
-/* RESPONSIVE */
+
 @media screen and (max-width: 600px) {
   .folder {
     flex-direction: column;

@@ -1,17 +1,14 @@
-/* Desktop */
 @media only screen and (min-width: 1200px) {
   .container {
   }
 }
 
-/* Tablet */
 @media only screen and (min-width: 475px) {
   .contact {
     margin: 0 50px !important;
   }
 }
 
-/* Mobile */
 @media only screen and (max-width: 767px) {
   .card.expanded {
     justify-content: start;
