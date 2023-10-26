@@ -90,7 +90,7 @@
   display: none;
 }
 .header .menu-btn:checked ~ .menu {
-  max-height: 320px;
+  max-height: 380px;
 }
 .header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
@@ -107,7 +107,7 @@
 }
 
 /* 48em = 768px */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .header li {
     float: left;
   }
@@ -122,6 +122,12 @@
   }
   .header .menu-icon {
     display: none;
+  }
+
+  .header .menu {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
   }
 }
 
@@ -151,11 +157,16 @@
   transform: scaleX(1);
 }
 
-.lang-switch-container button {
-  background-color: var(--background);
-  border: none;
-  color: var(--text);
+/* Stijl voor het dropdown-menu */
+.lang-switch-container select {
+  border: 2px solid var(--primary);
+  background-color: transparent;
+  cursor: pointer;
+  padding-right: 7px;
+}
 
-  font-size: 1em;
-  font-weight: 400;
+@media screen and (max-width: 900px) {
+  .lang-switch-container {
+    margin-left: 20px;
+  }
 }

@@ -2,14 +2,31 @@ import React from "react";
 import i18n from "../../i18n";
 
 function LanguageSwitcher() {
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+  const currentLanguage = i18n.language;
+
+  const changeLanguage = (event) => {
+    const selectedLanguage = event.target.value;
+    i18n.changeLanguage(selectedLanguage);
   };
 
   return (
     <div className="lang-switch-container">
-      <button onClick={() => changeLanguage("en")}>EN</button> /
-      <button onClick={() => changeLanguage("nl")}> NL</button>
+      <select
+        value={currentLanguage}
+        onChange={changeLanguage}
+        style={{ fontSize: "35px" }}
+      >
+        <option value="en">
+          <span role="img" aria-label="English flag">
+            🇬🇧
+          </span>
+        </option>
+        <option value="nl">
+          <span role="img" aria-label="Dutch flag">
+            🇳🇱
+          </span>
+        </option>
+      </select>
     </div>
   );
 }
