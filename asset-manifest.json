@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.22087c94.css",
-    "main.js": "/static/js/main.a683a883.js",
+    "main.css": "/static/css/main.b569bd15.css",
+    "main.js": "/static/js/main.5efaea9e.js",
     "static/media/spark.png": "/static/media/spark.ad0e945cf13059a9c0d5.png",
     "static/media/nuspi.png": "/static/media/nuspi.cd4f3bbc601f6398c8ae.png",
     "static/media/avatar.png": "/static/media/avatar.35400f8352b282bd8cc6.png",
+    "static/media/glitch.jpeg": "/static/media/glitch.02ac53ddc69ee0ba260f.jpeg",
     "static/media/reactIMG.png": "/static/media/reactIMG.8a6fc0a24a800d1e0f4a.png",
     "static/media/CSSlogo.png": "/static/media/CSSlogo.4ea6de69ce04b0ff8dc3.png",
     "static/media/login.png": "/static/media/login.16f7cb0d7af1f5313654.png",
@@ -12,11 +13,11 @@
     "static/media/HTMLlogo.png": "/static/media/HTMLlogo.ff3cf75e3b7cbb4ea77c.png",
     "static/media/WordPress.png": "/static/media/WordPress.7614628b41347abb4062.png",
     "index.html": "/index.html",
-    "main.22087c94.css.map": "/static/css/main.22087c94.css.map",
-    "main.a683a883.js.map": "/static/js/main.a683a883.js.map"
+    "main.b569bd15.css.map": "/static/css/main.b569bd15.css.map",
+    "main.5efaea9e.js.map": "/static/js/main.5efaea9e.js.map"
   },
   "entrypoints": [
-    "static/css/main.22087c94.css",
-    "static/js/main.a683a883.js"
+    "static/css/main.b569bd15.css",
+    "static/js/main.5efaea9e.js"
   ]
 }
