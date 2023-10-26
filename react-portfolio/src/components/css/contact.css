@@ -6,6 +6,7 @@
   gap: 20px;
   max-width: 550px;
   width: 100%;
+  transition: all 0.5s ease;
 }
 .contact {
   margin: 0 20px;
@@ -68,4 +69,29 @@
   font-weight: 500;
   color: white;
   background-color: var(--secondary);
+}
+
+.disordered.name input,
+.disordered.name label,
+.disordered.message textarea,
+.disordered.message label {
+  transform: skewX(14deg);
+  transform: skewy(14deg);
+}
+
+.disordered.email input,
+.disordered.email label,
+.disordered .button {
+  transform: skewX(-14deg);
+  transform: skewy(-14deg);
+}
+
+.disordered.message textarea,
+.disordered.message label {
+  transform: skewX(14deg);
+  transform: skewy(14deg);
+}
+
+.disordered.message {
+  margin-top: 120px;
 }

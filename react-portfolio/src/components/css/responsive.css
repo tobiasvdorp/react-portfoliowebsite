@@ -40,7 +40,8 @@
     top: 65px !important;
     left: 10px !important;
   }
-  .nuclear {
+  .nuclear,
+  .destroy {
     top: 120px;
     left: 10px;
   }

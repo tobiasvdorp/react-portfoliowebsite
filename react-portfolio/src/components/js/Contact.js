@@ -4,8 +4,14 @@ import "../css/responsive.css";
 import WOW from "wowjs";
 import "animate.css";
 import Socials from "./Socials";
+import { FaGripLines } from "react-icons/fa";
+import { TbArrowsCross } from "react-icons/tb";
 
 const ContactForm = () => {
+  const [isDisordered, setDisordered] = useState(false);
+
+  const toggleDisordered = () => setDisordered(!isDisordered);
+
   const wow = new WOW.WOW();
   wow.init();
   const [status, setStatus] = useState("");
@@ -37,19 +43,45 @@ const ContactForm = () => {
 
   return (
     <div className="contact" id="contact">
-      <h2 className="title2">Get in touch.</h2>
+      <div className="flex">
+        <h2 className="title2">Get in touch. </h2>
+        <button className="filter-icon button">
+          {isDisordered ? (
+            <TbArrowsCross onClick={toggleDisordered} />
+          ) : (
+            <FaGripLines onClick={toggleDisordered} />
+          )}
+        </button>
+      </div>
       <h3 className="readmore">Friend request accepted.</h3>
-
       <form onSubmit={handleSubmit} className="">
-        <div className="wow animate__animated animate__flipInX">
+        <div
+          className={`name animate__animated  ${
+            isDisordered
+              ? "disordered animate__bounceInDown animate__slower"
+              : "wow  animate__flipInX "
+          }`}
+        >
           <label htmlFor="name">Name</label>
           <input type="text" id="name" name="name" required />
         </div>
-        <div className="wow animate__animated animate__flipInX">
+        <div
+          className={`email animate__animated  ${
+            isDisordered
+              ? "disordered animate__bounceInDown animate__slow"
+              : "wow animate__flipInX "
+          }`}
+        >
           <label htmlFor="email">Email</label>
           <input type="email" id="email" name="email" required />
         </div>
-        <div className="wow animate__animated animate__flipInX">
+        <div
+          className={`message animate__animated  ${
+            isDisordered
+              ? "disordered animate__bounceInDown animate__fast"
+              : "wow  animate__flipInX "
+          }`}
+        >
           <label htmlFor="message">Message</label>
           <textarea
             id="message"
@@ -62,7 +94,14 @@ const ContactForm = () => {
             }}
           ></textarea>
         </div>
-        <div id="senddiv" className="wow animate__animated animate__flipInX">
+        <div
+          id="senddiv"
+          className={` animate__animated ${
+            isDisordered
+              ? "disordered animate__faster"
+              : "wow animate__bounceInDown animate__flipInX"
+          }`}
+        >
           <button type="submit" className="button">
             Send
           </button>
@@ -75,7 +114,6 @@ const ContactForm = () => {
           )}
         </div>
       </form>
-
       <h3 className="readmore" id="findme">
         Or find me on:
       </h3>
