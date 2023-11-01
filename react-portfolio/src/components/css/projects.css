@@ -105,7 +105,7 @@ label input {
   right: -15px;
 }
 .button.result {
-  width: 180px;
+  width: fit-content;
   text-align: center;
   font-size: 1rem;
   padding: 5px 10px;
@@ -118,6 +118,7 @@ label input {
   justify-content: space-between;
   align-items: center;
   border: none;
+  gap: 16px;
 }
 .close-button {
   background: var(--primary);
