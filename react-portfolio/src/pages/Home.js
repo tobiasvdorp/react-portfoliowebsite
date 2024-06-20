@@ -9,6 +9,7 @@ import "../App.css";
 import SettingsMenu from "../components/js/SettingsMenu";
 import Footer from "../components/js/Footer";
 import SuperSecret from "../components/js/SuperSecret";
+import { Analytics } from "@vercel/analytics/react";
 
 function Home(selfDestructor) {
   return (
@@ -29,6 +30,7 @@ function Home(selfDestructor) {
           <Contact />
         </main>
         <Footer />
+        <Analytics />
       </div>
     </>
   );
