@@ -15,9 +15,17 @@ import FilterButton from "./FilterButton.js";
 import { useState } from "react";
 import Filters from "./Filters.js";
 import { useTranslation } from "react-i18next";
-
+import judith from "../images/judith.png";
+import next from "../images/next.png";
+import builder from "../images/builder.avif";
 function Projects() {
   const { t } = useTranslation();
+  console.log(
+    t("project5_title"),
+    t("project5_description"),
+    t("project5_detailDescription")
+  );
+
   const [activeFilters, setActiveFilters] = useState(["all"]); // Initialize filter state as an array
   const projects = [
     {
@@ -83,6 +91,24 @@ function Projects() {
       className: "animate__animated wow animate__bounceIn nuspi ",
       wowDelay: "1.1s",
       projectLocation: "/nuspi-project.html",
+      tag: "work",
+    },
+
+    {
+      id: 5,
+      imageSrc: judith,
+      title: t("project5_title"),
+      description: t("project5_description"),
+      skills: [
+        { name: "NextJS", image: next },
+        { name: "TailwindCSS", image: TailwindCSS },
+        { name: "BuilderIO", image: builder },
+      ],
+      detailDescription: t("project5_detailDescription"),
+      style: { object_fit: "contain" },
+      className: "animate__animated wow animate__bounceIn",
+      wowDelay: "1.2s",
+      projectLocation: "https://judith-website.vercel.app/",
       tag: "work",
     },
   ];

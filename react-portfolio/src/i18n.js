@@ -75,6 +75,13 @@ const resources = {
       project4_detailDescription:
         "My first project for a real client was building an accessible website for Netwerk USP Inclusief (nUSPi), an organization that champions inclusivity. Initially brought on board through a student opportunity at the HU Institute of ICT, I had the unique challenge of translating the organization's mission into a digital platform that could be easily accessed by everyone. Over a series of MS Teams meetings, I learned a lot about client communication—how to effectively listen, condense their requirements, and provide actionable feedback. One key learning area for me was web accessibility. Given nUSPi's focus on inclusivity, I learned about and implemented web standards that would make our digital platform accessible to as many people as possible. After successfully building the website, I prepared a comprehensive handover document containing specific instructions for managing the platform. This empowered the client, nUSPi, to take full ownership and maintain the site independently.",
 
+      // Project 5
+      project5_title: "Website Judith",
+      project5_description:
+        "A user-friendly, fast-performing website built with NextJS and Builder.io for easy content management.",
+      project5_detailDescription:
+        "For my mother, I developed a website using NextJS and Builder.io as the CMS. Lacking technical knowledge, she placed high value on a website that was easy to manage, loaded quickly, and was SEO-friendly. Throughout this project, I gained extensive knowledge on combining Builder.io with NextJS, creating and managing content models, and building reusable components. The result is a website that meets my mother's needs and that she can manage independently without my assistance. Additionally, the website scores very high in terms of loading time, performance, and accessibility. You can view the result by clicking the button below. At the moment my mother is still working on the content, so the website is not yet live.",
+
       // Skills
       skills_title: "Skills.",
       skills_under: "Power-ups acquired.",
@@ -100,6 +107,10 @@ const resources = {
       React_skillLevel:
         "I'm still getting the hang of React, but I know my way around the basics.",
 
+      // NextJS
+      NextJS_description:
+        "NextJS is a React framework known for its speed and SEO-friendliness. It allows you to use server-side rendering, static site generation, and API routes.",
+      NextJS_skillLevel: `I have a basic understanding of NextJS and have been working with it a lot lately. I find it super interesting to learn how to optimize a website for SEO and performance. I plan to learn more about server-side rendering and static site generation in the future.`,
       // Tailwind CSS
       TailwindCSS_description:
         "TailwindCSS is a utility-first CSS framework that allows for highly customizable designs without leaving your HTML.",
@@ -112,6 +123,11 @@ const resources = {
       Elementor_skillLevel:
         "I'm good with Elementor and have built a full website with it. You can see the result in my projects.",
 
+      // Builder.io
+      Builderio_description:
+        "Builder.io is a headless CMS that allows you to create and manage content for your website. It provides a visual editor that makes it easy to design and update your site without writing code.",
+      Builderio_skillLevel:
+        "I know the basics of Builder.io and have used it (with NextJS) to build a website. I find it to be a user-friendly tool that streamlines the content creation process and allows for quick updates to the site.",
       // WordPress
       WordPress_description:
         "WordPress is a popular content management system (CMS) that allows you to create and manage websites and blogs without having to code from scratch.",
@@ -209,7 +225,7 @@ const resources = {
       project2_title: "Kapperswebsite",
       project2_description:
         "In een team van vijf heb ik me gericht op front-end design om een website voor een kapsalon te bouwen.",
-      project2_detailDescription: `In mijn tweede project bij OpenICT heb ik samengewerkt met een team van vijf personen om een website te bouwen voor een kapsalon. Ik heb me tijdens dat project voornamelijk gericht op het leren van Git en TailwwindCSS. Hoewel het eindresultaat misschien niet getuigt van hoge technische finesse, was het project voor mij een onschatbare leerervaring, vooral op het gebied van teamwork en samenwerking. Door deze ervaring kreeg ik inzicht in effectieve communicatie en het gebruik van Git voor collectief projectbeheer. Daarnaast verdiepte het mijn begrip van het vertalen van de behoeften en verwachtingen van een klant in een functioneel product.`,
+      project2_detailDescription: `In mijn tweede project bij OpenICT heb ik samengewerkt met een team van vijf personen om een website te bouwen voor een kapsalon. Ik heb me tijdens dat project voornamelijk gericht op het leren van Git en TailwindCSS. Hoewel het eindresultaat misschien geen technisch wonder is, was het project voor mij een ontzettend waardevolle leerervaring, vooral op het gebied van teamwork en samenwerking. Door deze ervaring kreeg ik inzicht in effectieve communicatie en het gebruik van Git voor collectief projectbeheer. Daarnaast verdiepte het mijn begrip van het vertalen van de behoeften en verwachtingen van een klant in een functioneel product.`,
 
       // Project 3
       project3_title: "Spark",
@@ -222,6 +238,13 @@ const resources = {
       project4_description:
         "Ik heb een toegankelijke website gebouwd voor een netwerk en belangrijke ervaring opgedaan in klantcommunicatie.",
       project4_detailDescription: `Mijn eerste project voor een echte klant was het bouwen van een toegankelijke website voor Netwerk USP Inclusief (nUSPi), een organisatie die zich inzet voor inclusiviteit op het Utrecht Science Park. Ik ben met hen in contact gekomen via een oproep in het ICT-kanaal op Discord en ik had de unieke uitdaging om de missie van de organisatie te vertalen naar een digitaal platform dat door iedereen gemakkelijk kon worden gebruikt. In een reeks Teams-vergaderingen heb ik veel geleerd over klantcommunicatie - hoe ik effectief kan luisteren, hun vereisten kan samenvatten en bruikbare feedback kan geven. Een belangrijk leergebied voor mij was webtoegankelijkheid. Gezien de focus van nUSPi op inclusiviteit, heb ik webstandaarden geleerd en geïmplementeerd die ons digitale platform toegankelijk zouden maken voor zoveel mogelijk mensen. Nadat ik de website met succes had gebouwd, heb ik een uitgebreid overdrachtsdocument opgesteld met specifieke instructies voor het beheren van het platform. Dit stelde de klant, nUSPi, in staat om het platform volledig in eigen beheer te nemen en onafhankelijk te onderhouden.`,
+
+      // Project 5
+      project5_title: "Website Judith",
+      project5_description:
+        "Een gebruiksvriendelijke en snel presterende website gebouwd met NextJS en Builder.io voor eenvoudige contentbeheer.",
+      project5_detailDescription:
+        "Voor mijn moeder heb ik een website ontwikkeld met NextJS en Builder.io als CMS. Omdat ze zelf geen technische kennis heeft, hechtte ze veel waarde aan een website die eenvoudig te beheren is, snel laadt en SEO-vriendelijk is. Gedurende dit project heb ik uitgebreide kennis opgedaan over het combineren van Builder.io met NextJS, het creëren en beheren van contentmodellen, en het bouwen van herbruikbare componenten. Het resultaat is een website die voldoet aan de wensen van mijn moeder en die ze zelf kan beheren zonder mijn hulp. Ook scoort de website heel hoog wat betreft laadtijd, prestaties en toegankelijkheid. Je kunt het resultaat bekijken door op de knop hieronder te klikken. Op dit moment is mijn moeder nog bezig met de content, dus de website is nog niet live.",
 
       // SKILLS
       skills_title: "Vaardigheden.",
@@ -248,6 +271,11 @@ const resources = {
       React_skillLevel:
         "Ik ben nog steeds bezig met het onder de knie krijgen van React, maar ik ken de basisprincipes.",
 
+      // NextJS
+      NextJS_description:
+        "NextJS is een React-framework dat bekend staat om zijn snelheid en SEO-vriendelijkheid. Het maakt het mogelijk om server-side rendering, statische sitegeneratie en API-routes te gebruiken.",
+      NextJS_skillLevel:
+        "Ik heb basiskennis van NextJS en ben er de afgelopen tijd veel mee bezig geweest. Ik vind het super interessant om te leren hoe je een website kunt optimaliseren voor SEO en prestaties. Ik ben van plan om in de toekomst meer te leren over server-side rendering en statische sitegeneratie.",
       // Tailwind CSS
       TailwindCSS_description:
         "TailwindCSS is een utility-first CSS-framework waarmee je zeer aanpasbare ontwerpen kunt maken zonder je HTML te verlaten.",
@@ -260,6 +288,11 @@ const resources = {
       Elementor_skillLevel:
         "Ik kan goed overweg met Elementor en heb er een volledige website mee gebouwd. Je kunt het resultaat zien in mijn projecten.",
 
+      // Builder.io
+      Builderio_description:
+        "Builder.io is een headless CMS waarmee je content voor je website kunt maken en beheren. Het biedt een visuele editor waarmee je eenvoudig je site kunt ontwerpen en bijwerken zonder code te schrijven.",
+      Builderio_skillLevel:
+        "Ik ken de basisprincipes van Builder.io en heb het (met NextJS) gebruikt om een website te bouwen. Ik vind het een gebruiksvriendelijke tool die het contentcreatieproces stroomlijnt en snelle updates aan de site mogelijk maakt.",
       // WordPress
       WordPress_description:
         "WordPress is een populair contentmanagementsysteem (CMS) waarmee je websites en blogs kunt maken en beheren zonder vanaf nul te hoeven coderen.",

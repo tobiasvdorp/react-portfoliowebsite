@@ -3,6 +3,8 @@ import Skill from "./Skill";
 import HTMLlogo from "../images/HTMLlogo.png";
 import CSSlogo from "../images/CSSlogo.png";
 import ReactIMG from "../images/reactIMG.png";
+import next from "../images/next.png";
+import builder from "../images/builder.avif";
 import TailwindCSS from "../images/TailwindCSS.png";
 import Elementor from "../images/Elementor.png";
 import WordPress from "../images/WordPress.png";
@@ -40,6 +42,12 @@ function SkillFolder() {
       skillLevel: t("React_skillLevel"),
     },
     {
+      name: "NextJS",
+      description: t("NextJS_description"),
+      imageSrc: next,
+      skillLevel: t("NextJS_skillLevel"),
+    },
+    {
       name: "TailwindCSS",
       description: t("TailwindCSS_description"),
       imageSrc: TailwindCSS,
@@ -50,6 +58,12 @@ function SkillFolder() {
       description: t("Elementor_description"),
       imageSrc: Elementor,
       skillLevel: t("Elementor_skillLevel"),
+    },
+    {
+      name: "Builder.io",
+      description: t("Builderio_description"),
+      imageSrc: builder,
+      skillLevel: t("Builderio_skillLevel"),
     },
     {
       name: "WordPress",
