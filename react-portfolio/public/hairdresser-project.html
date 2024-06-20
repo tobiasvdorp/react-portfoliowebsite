@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,8 +30,7 @@
     class="w-screen m-0 p-0 dark bg-white dark:bg-gray-900 overflow-x-hidden"
   >
     <!-- Loader -->
-    <!-- Loader -->
-    <div
+    <!-- <div
       role="status"
       id="loader"
       class="text-center bg-white dark:bg-gray-900 loader w-screen fixed h-screen z-50 justify-center items-center"
@@ -54,7 +53,7 @@
         />
       </svg>
       <span class="sr-only">Loading...</span>
-    </div>
+    </div> -->
 
     <!-- Body container -->
     <div
@@ -166,9 +165,9 @@
       <!-- Call to action container -->
       <section
         id="call-to-action home"
-        class="h-[92.5vh] flex flex-col items-center justify-center relative"
+        class="h-screen flex flex-col items-center justify-center relative"
         style="
-          background-image: url('./hairdresser-project/src/kappersfoto.jpg');
+          background-image: url(&quot;./hairdresser-project/src/kappersfoto.jpg&quot;);
           background-repeat: no-repeat;
           background-size: cover;
         "
@@ -526,6 +525,9 @@
           Wat onze klanten zeggen
         </h2>
         <div class="elfsight-app-e0cadcb1-2d88-4adc-8dde-69035f9f5344"></div>
+        <p class="text-center flex justify-center items-center">
+          review widget niet meer beschikbaar
+        </p>
       </div>
     </div>
     <!-- Include contact component -->
@@ -535,10 +537,7 @@
       Contact opnemen
     </h2>
     <!-- Contactform Flexbox -->
-    <div
-      class="flex pt-2 m-2 sm:m-10 min-h-screen justify-center items-center"
-      id="contact"
-    >
+    <div class="flex pt-2 m-2 sm:m-3 justify-center items-center" id="contact">
       <div
         class="flex dark:bg-blue-900 bg-gray-300 flex-col space-y-6 bg-cyn-700 w-full max-w-4xl p-3 sm:p-8 rounded-xl shadow-lg text-black dark:text-white"
       >
