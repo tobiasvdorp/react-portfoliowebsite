@@ -24,7 +24,7 @@ const resources = {
       "February 7th 2003": "February 7th 2003",
       "Maarn, Utrecht, Netherlands": "Maarn, Utrecht, Netherlands",
       aboutme_description:
-        "Hi, I'm Tobias, a 22-year-old student at Hogeschool Utrecht, currently enrolled in the OpenICT program. I've always had an interest in computers, but it wasn't until I started my studies that I realized front-end development is where my passion lies. I love combining the technical aspects with creative design to make engaging and functional user interfaces. When I'm not coding, you can usually find me with my friends, deep into a Christopher Nolan movie marathon or in a documentary about time, gravity or 4th dimension. I enjoy discussions that challenge my understanding of reality. I'm still exploring my interests, but I'm thrilled to have found a field I'm passionate about. I'm eager to see where this journey takes me.",
+        "I'm 22 years old and I've always had an interest in computers, but it wasn't until I started my studies that I realized how much of a nerd I really am. I love combining the technical aspects with creativity to make engaging and functional user interfaces. When I'm not coding, you can usually find me playing with my dog, hanging out with friends or watching science and programming video’s. I'm still exploring my interests, but I'm thrilled to have found a field I'm passionate about.",
 
       // Carreer
       "My carreer": "My carreer",
@@ -179,7 +179,7 @@ const resources = {
       "February 7th 2003": "7 februari 2003",
       "Maarn, Utrecht, Netherlands": "Maarn, Utrecht",
       aboutme_description:
-        "Hoi, ik ben Tobias, een 22-jarige student aan de Hogeschool Utrecht, waar ik de opleiding OpenICT volg. Ik heb altijd al interesse gehad in computers, maar pas toen ik met mijn studie begon, besefte ik dat ik het geweldig vind om front-end applicaties te ontwerpen en te bouwen. Ik vind het geweldig om de technische aspecten te combineren met creatief ontwerp om boeiende en functionele gebruikersinterfaces te maken. Als ik niet aan het programmeren ben, kun je me meestal vinden bij mijn vrienden, diep verwikkeld in een Christopher Nolan film-marathon of in documentaires over tijd, zwaartekracht de 4e dimensie. Ik geniet van discussies die mijn begrip van de realiteit uitdagen. Ik ben nog steeds mijn interesses aan het verkennen, maar ik ben ontzettend blij dat ik een vakgebied heb gevonden waar ik gepassioneerd over ben. Ik ben benieuwd waar deze reis me naartoe zal leiden.",
+        "Ik heb altijd al interesse gehad in computers, maar pas toen ik aan mijn studie begon, besefte ik wat voor nerd ik eigenlijk ben. Ik vind het geweldig om de technische kant te combineren met creativiteit om boeiende en functionele websites te maken. Als ik niet aan het coderen ben, ben ik meestal met mijn hond aan het spelen, met vrienden aan het chillen of naar video’s over wetenschap en programmeren aan het kijken. Ik ben nog volop mijn interesses aan het verkennen, maar ik ben ontzettend blij dat ik een vakgebied heb gevonden waar ik gepassioneerd over ben.",
 
       // Carreer
       "My carreer": "Mijn carrière",
