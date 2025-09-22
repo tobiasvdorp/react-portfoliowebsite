@@ -82,7 +82,7 @@ const Projects = () => {
           { name: 'Elementor', image: elementorLogo },
         ],
         detailDescription: t('project4_detailDescription'),
-        projectLocation: '/nuspi-project.html',
+        projectLocation: 'https://www.netwerkuspinclusief.nl/',
         className: 'animate__animated animate__bounceIn nuspi',
         wowDelay: '1.1s',
         tag: 'work',
