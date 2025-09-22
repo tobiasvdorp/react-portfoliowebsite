@@ -13,8 +13,8 @@ const HomePage = () => (
   <>
     <Navbar />
     <SettingsMenu />
-    <div id="glitch">
-      <main id="home">
+    <div id="glitch" className="bg-background">
+      <main id="home" className="mt-[120px] flex flex-col gap-[200px]">
         <CallToAction />
         <AboutMe />
         <Projects />

@@ -33,19 +33,30 @@ const AnimateSwitcher = () => {
     setReduceMotion((prevState) => !prevState);
   };
 
+  const isEnabled = !reduceMotion;
+
   return (
-    <div className="toggleWrapper">
+    <label
+      htmlFor="animate-toggle"
+      className={`relative flex h-12 w-32 cursor-pointer items-center justify-between overflow-hidden rounded-md border border-background/20 px-3 text-xs font-bold uppercase tracking-wider transition-colors duration-200 ${
+        isEnabled ? 'bg-[#66b317] text-white' : 'bg-[#d21626] text-white'
+      }`}
+    >
       <input
         type="checkbox"
-        id="animate"
-        className="animate-checkbox"
-        checked={!reduceMotion}
+        id="animate-toggle"
+        className="sr-only"
+        checked={isEnabled}
         onChange={toggleMotion}
       />
-      <label htmlFor="animate" className={`toggle ${!reduceMotion ? 'checked' : ''}`}>
-        <span className="toggle__handler" />
-      </label>
-    </div>
+      <span
+        className={`absolute left-1 top-1 h-9 w-14 rounded-sm bg-white transition-transform duration-200 ${
+          isEnabled ? 'translate-x-[60px]' : ''
+        }`}
+      />
+      <span className={`relative z-10 text-sm ${isEnabled ? 'text-white' : 'text-[#d21626]'}`}>Off</span>
+      <span className={`relative z-10 ml-auto text-sm ${isEnabled ? 'text-[#2f6f15]' : 'text-white'}`}>On</span>
+    </label>
   );
 };
 

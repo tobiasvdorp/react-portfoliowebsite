@@ -14,6 +14,7 @@ import nuspiLogo from '../public/images/nuspi.png';
 import judithScreenshot from '../public/images/judith.png';
 import nextLogo from '../public/images/next.png';
 import builderLogo from '../public/images/builder.avif';
+import { primaryButtonClasses, sectionSubtitleClasses, sectionTitleClasses } from '@/lib/styles';
 import Card, { type ProjectSkill } from './Card';
 import FilterButton from './FilterButton';
 import Filters, { type ProjectCategory } from './Filters';
@@ -118,14 +119,18 @@ const Projects = () => {
   };
 
   return (
-    <div className="projects" id="projects">
-      <div className="flex">
-        <h2 className="title2">{t('Projects.')}</h2>
+    <section className="mx-auto flex w-full max-w-6xl flex-col items-center px-5" id="projects">
+      <div className="flex w-full items-center justify-center gap-4">
+        <h2 className={sectionTitleClasses}>{t('Projects.')}</h2>
         <FilterButton onToggle={toggleFilters} />
       </div>
-      {isFiltersOpen && <Filters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />}
-      <h3 className="readmore">{t('Click on a card to read more.')}</h3>
-      <div className="projects-cards">
+      {isFiltersOpen && (
+        <div className="mt-4 w-full">
+          <Filters activeFilters={activeFilters} setActiveFilters={setActiveFilters} />
+        </div>
+      )}
+      <h3 className={`${sectionSubtitleClasses} mt-4`}>{t('Click on a card to read more.')}</h3>
+      <div className="mt-8 flex w-full flex-wrap items-stretch justify-center gap-8">
         {filteredProjects.map((project) => (
           <Card
             key={project.id}
@@ -141,15 +146,15 @@ const Projects = () => {
         ))}
 
         {showNoResults && (
-          <div className="no-results">
-            <h3>{t('Oops! No projects found for the selected filters.')}</h3>
-            <button className="button reset" onClick={() => setActiveFilters(['all'])} type="button">
+          <div className="flex max-w-md flex-col items-center gap-3 text-center">
+            <h3 className="font-heading text-xl text-text">{t('Oops! No projects found for the selected filters.')}</h3>
+            <button className={primaryButtonClasses} onClick={() => setActiveFilters(['all'])} type="button">
               Reset filters
             </button>
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -47,19 +47,29 @@ const Filters = ({ activeFilters, setActiveFilters }: FiltersProps) => {
   };
 
   return (
-    <div className="filters-container">
-      {filterOptions.map(({ label, value }) => (
-        <label key={value} className={activeFilters.includes(value) ? 'button-selected' : 'button-deselected'}>
-          <input
-            type="checkbox"
-            value={value}
-            checked={activeFilters.includes(value)}
-            onChange={handleCheckboxChange}
-            className="button"
-          />
-          {label.charAt(0).toUpperCase() + label.slice(1)}
-        </label>
-      ))}
+    <div className="flex flex-wrap items-center justify-center gap-3">
+      {filterOptions.map(({ label, value }) => {
+        const isActive = activeFilters.includes(value);
+        return (
+          <label
+            key={value}
+            className={`inline-flex cursor-pointer items-center gap-3 rounded-md border-2 px-4 py-2 font-heading text-lg transition-all duration-200 ${
+              isActive
+                ? 'border-transparent bg-accent text-black shadow-[0_0_10px_1px_var(--accent)]'
+                : 'border-accent/60 bg-secondary text-white hover:border-accent hover:shadow-[0_0_10px_1px_var(--accent)]'
+            } ${isActive ? 'scale-[1.05]' : ''}`}
+          >
+            <input
+              type="checkbox"
+              value={value}
+              checked={isActive}
+              onChange={handleCheckboxChange}
+              className="sr-only"
+            />
+            {label.charAt(0).toUpperCase() + label.slice(1)}
+          </label>
+        );
+      })}
     </div>
   );
 };

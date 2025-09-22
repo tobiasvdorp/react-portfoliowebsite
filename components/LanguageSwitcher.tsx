@@ -13,8 +13,12 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="lang-switch-container">
-      <select value={currentLanguage} onChange={changeLanguage} style={{ fontSize: '35px' }}>
+    <div className="flex justify-center lg:justify-end">
+      <select
+        value={currentLanguage}
+        onChange={changeLanguage}
+        className="rounded-md border-2 border-primary bg-transparent px-3 py-1 text-2xl leading-none text-text transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      >
         <option value="en">🇬🇧</option>
         <option value="nl">🇳🇱</option>
       </select>
