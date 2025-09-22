@@ -1,13 +1,12 @@
-'use client';
+"use client";
 
-import AboutMe from './AboutMe';
-import CallToAction from './CallToAction';
-import Contact from './Contact';
-import Footer from './Footer';
-import Navbar from './Navbar';
-import Projects from './Projects';
-import SettingsMenu from './SettingsMenu';
-import SkillFolder from './SkillFolder';
+import AboutMe from "./AboutMe";
+import CallToAction from "./CallToAction";
+import Contact from "./Contact";
+import Navbar from "./Navbar";
+import Projects from "./Projects";
+import SettingsMenu from "./SettingsMenu";
+import SkillFolder from "./SkillFolder";
 
 const HomePage = () => (
   <>
@@ -21,7 +20,6 @@ const HomePage = () => (
         <SkillFolder />
         <Contact />
       </main>
-      <Footer />
     </div>
   </>
 );
