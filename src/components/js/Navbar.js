@@ -19,10 +19,17 @@ function Navbar() {
     const offset = 83;
     const anchors = document.querySelectorAll('a[href^="#"]');
 
-    const handleClick = (e) => {
-      e.preventDefault();
-      const href = e.target.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(href);
+    const handleClick = (event) => {
+      event.preventDefault();
+      const anchor = event.currentTarget;
+      const href = anchor.getAttribute("href");
+
+      if (!href) {
+        return;
+      }
+
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
         const top =
@@ -61,8 +68,8 @@ function Navbar() {
         <span className="navicon"></span>
       </label>
       <ul className="menu">
-        {menuItems.map((item, index) => (
-          <li key={index}>
+        {menuItems.map((item) => (
+          <li key={item.textKey}>
             <a
               href={item.link}
               className={`item animate__animated animate__${item.animation}`}

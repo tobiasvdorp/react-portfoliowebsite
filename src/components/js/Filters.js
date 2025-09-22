@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-function Filters({ setActiveFilters, activeFilters, open }) {
+function Filters({ setActiveFilters, activeFilters }) {
   const { t } = useTranslation();
   // Handle checkbox changes
   const handleCheckboxChange = (e) => {
@@ -41,26 +41,24 @@ function Filters({ setActiveFilters, activeFilters, open }) {
   ];
   return (
     <div className="filters-container">
-      {filterOptions.map((filterType) => (
-        <React.Fragment key={filterType} className="filters">
-          <label
-            className={
-              activeFilters.includes(filterType.value)
-                ? "button-selected"
-                : "button-deselected"
-            }
-          >
-            <input
-              type="checkbox"
-              value={filterType.value}
-              checked={activeFilters.includes(filterType.value)}
-              onChange={handleCheckboxChange}
-              className="button "
-            />
-            {filterType.label.charAt(0).toUpperCase() +
-              filterType.label.slice(1)}
-          </label>
-        </React.Fragment>
+      {filterOptions.map(({ label, value }) => (
+        <label
+          key={value}
+          className={
+            activeFilters.includes(value)
+              ? "button-selected"
+              : "button-deselected"
+          }
+        >
+          <input
+            type="checkbox"
+            value={value}
+            checked={activeFilters.includes(value)}
+            onChange={handleCheckboxChange}
+            className="button "
+          />
+          {label.charAt(0).toUpperCase() + label.slice(1)}
+        </label>
       ))}
     </div>
   );

@@ -86,9 +86,9 @@ function SkillFolder() {
         <div className="folder">
           <div className="skills-column">
             <ul>
-              {skills.map((skill, index) => (
+              {skills.map((skill) => (
                 <Skill
-                  key={index}
+                  key={skill.name}
                   name={skill.name}
                   onClick={selectSkill}
                   imageSrc={skill.imageSrc}

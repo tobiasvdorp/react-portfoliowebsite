@@ -1,8 +1,9 @@
 import React from "react";
-import i18n from "../../i18n";
+import { useTranslation } from "react-i18next";
 
 function LanguageSwitcher() {
-  const currentLanguage = i18n.language;
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.resolvedLanguage || i18n.language;
 
   const changeLanguage = (event) => {
     const selectedLanguage = event.target.value;
