@@ -719,6 +719,7 @@ body {
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
+  min-height: 200px;
   border-radius: 14px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.35);
@@ -805,6 +806,7 @@ body {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
+  min-height: 240px;
   border-radius: 16px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.35);
@@ -868,15 +870,6 @@ body {
   transform: scale(1.05);
 }
 
-@media (max-width: 640px) {
-  .projects-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card__modal-image {
-    aspect-ratio: 4 / 3;
-  }
-}
 .filters-container {
   display: flex;
   gap: 10px;
@@ -943,6 +936,27 @@ body {
   .nuclear {
     top: 120px;
     left: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card__modal {
+    align-items: flex-start;
+    padding: 24px 12px;
+  }
+
+  .project-card__modal-content {
+    padding: 28px 24px;
+    gap: 16px;
+  }
+
+  .project-card__modal-image {
+    aspect-ratio: 4 / 3;
+    min-height: 200px;
   }
 }
 .skill,
