@@ -50,7 +50,7 @@ const Projects = () => {
           { name: 'CSS', image: cssLogo },
         ],
         detailDescription: t('project1_detailDescription'),
-        projectLocation: '/portfolio-1.html',
+        projectLocation: '/Portfolio-1.html',
         className: 'animate__animated animate__bounceIn',
         wowDelay: '0.5s',
         tag: 'school',
