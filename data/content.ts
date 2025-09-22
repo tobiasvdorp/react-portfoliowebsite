@@ -118,6 +118,45 @@ export const projects: Project[] = [
   },
 ];
 
+export type Experiment = {
+  slug: string;
+  title: string;
+  summary: string;
+  description: string;
+  github: string;
+  stack: string[];
+};
+
+export const experiments: Experiment[] = [
+  {
+    slug: 'gradient-playground',
+    title: 'Gradient Playground',
+    summary: 'Speel met kleurcombinaties, pas de hoek aan en kopieer direct de CSS voor je eigen project.',
+    description:
+      'Een mini-tool voor visuele denkers: kies je kleuren, randomiseer een nieuwe mix of verfijn de hoek tot alles klopt. Perfect om snel een nieuw thema te voelen.',
+    github: 'https://github.com/tobiasvdorp/portfolio/blob/main/components/experiments/gradient-playground.tsx',
+    stack: ['React', 'Framer Motion', 'TailwindCSS'],
+  },
+  {
+    slug: 'lofi-focus-timer',
+    title: 'Lo-fi Focus Timer',
+    summary: 'Een pomodoro-timer met zachte gradients die automatisch tussen focus en pauze schakelt.',
+    description:
+      'Stel je ideale focus- en pauzetijden in, druk op start en laat de app je ritme bewaken. De timer schakelt automatisch door en geeft je flow visueel weer.',
+    github: 'https://github.com/tobiasvdorp/portfolio/blob/main/components/experiments/lofi-focus-timer.tsx',
+    stack: ['React Hooks', 'State Machines Light', 'TailwindCSS'],
+  },
+  {
+    slug: 'moodboard-mixer',
+    title: 'Moodboard Mixer',
+    summary: 'Kies een vibe, ontdek palettes en laat je inspireren door kleine opdrachten met emoji-verhalen.',
+    description:
+      'Met één klik wissel je tussen chill, energy of adventure moods. Elke selectie geeft je nieuwe kleurpaletten, prompts en mini-brieven voor je volgende design.',
+    github: 'https://github.com/tobiasvdorp/portfolio/blob/main/components/experiments/moodboard-mixer.tsx',
+    stack: ['React', 'Framer Motion', 'Design Systems'],
+  },
+];
+
 export type Skill = {
   name: string;
   description: string;
