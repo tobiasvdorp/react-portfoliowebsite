@@ -1,7 +1,13 @@
-import type { SVGProps } from 'react';
+import type { SVGProps } from "react";
 
 const DiscordIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" {...props}>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    {...props}
+  >
     <path
       d="M8.75 9.5c-.69 0-1.25.6-1.25 1.34 0 .74.56 1.34 1.25 1.34.69 0 1.25-.6 1.25-1.34 0-.74-.56-1.34-1.25-1.34ZM15.25 9.5c-.69 0-1.25.6-1.25 1.34 0 .74.56 1.34 1.25 1.34.69 0 1.25-.6 1.25-1.34 0-.74-.56-1.34-1.25-1.34Z"
       fill="currentColor"

@@ -1,13 +1,16 @@
-import Link from 'next/link';
-import { socials } from '@/data/content';
+import Link from "next/link";
+import { socials } from "@/data/content";
 
 const SiteFooter = () => (
   <footer className="border-t border-white/5 bg-background/80">
     <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:px-8 md:flex-row md:items-center md:justify-between">
       <div>
-        <p className="font-display text-base font-semibold text-foreground">Laten we samenwerken</p>
+        <p className="font-display text-base font-semibold text-foreground">
+          Laten we samenwerken
+        </p>
         <p className="text-sm text-muted-foreground">
-          Op zoek naar een betrouwbare front-end developer? Stuur een berichtje, ik reageer meestal binnen 24 uur.
+          Op zoek naar een betrouwbare front-end developer? Stuur een berichtje,
+          ik reageer meestal binnen 24 uur.
         </p>
       </div>
       <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
@@ -25,7 +28,8 @@ const SiteFooter = () => (
       </div>
     </div>
     <div className="border-t border-white/5 py-4 text-center text-xs text-muted-foreground">
-      © {new Date().getFullYear()} Tobias van Dorp. Gebouwd met Next.js en TailwindCSS.
+      © {new Date().getFullYear()} Tobias van Dorp. Gebouwd met Next.js en
+      TailwindCSS.
     </div>
   </footer>
 );

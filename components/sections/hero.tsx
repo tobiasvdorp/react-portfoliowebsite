@@ -1,19 +1,28 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import ShinyButton from '@/components/ui/shiny-button';
-import FadeIn from '@/components/motion/fade-in';
-import { heroContent } from '@/data/content';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import ShinyButton from "@/components/ui/shiny-button";
+import FadeIn from "@/components/motion/fade-in";
+import { heroContent } from "@/data/content";
 
 const Hero = () => (
   <section
     id="home"
     className="relative overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-br from-white/10 via-white/5 to-transparent px-6 py-14 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:px-10 sm:py-20"
   >
-    <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(132,94,247,0.45),transparent_55%)]" aria-hidden />
-    <div className="absolute -left-32 top-10 h-40 w-40 rounded-full bg-highlight/50 blur-[90px] sm:h-48 sm:w-48" aria-hidden />
-    <div className="absolute bottom-10 right-0 h-44 w-44 rounded-full bg-accent/40 blur-[80px]" aria-hidden />
+    <div
+      className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(132,94,247,0.45),transparent_55%)]"
+      aria-hidden
+    />
+    <div
+      className="absolute -left-32 top-10 h-40 w-40 rounded-full bg-highlight/50 blur-[90px] sm:h-48 sm:w-48"
+      aria-hidden
+    />
+    <div
+      className="absolute bottom-10 right-0 h-44 w-44 rounded-full bg-accent/40 blur-[80px]"
+      aria-hidden
+    />
     <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
       <div className="space-y-8">
         <FadeIn className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-background/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-highlight">
@@ -22,7 +31,7 @@ const Hero = () => (
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="font-display text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl"
         >
           {heroContent.role}
@@ -35,12 +44,20 @@ const Hero = () => (
         <FadeIn delay={0.3}>
           <div className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-background/60 p-4">
-              <p className="text-xs uppercase tracking-[0.25em] text-highlight">Locatie</p>
-              <p className="mt-1 font-medium text-foreground">{heroContent.location}</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-highlight">
+                Locatie
+              </p>
+              <p className="mt-1 font-medium text-foreground">
+                {heroContent.location}
+              </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-background/60 p-4">
-              <p className="text-xs uppercase tracking-[0.25em] text-highlight">Beschikbaarheid</p>
-              <p className="mt-1 font-medium text-foreground">{heroContent.availability}</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-highlight">
+                Beschikbaarheid
+              </p>
+              <p className="mt-1 font-medium text-foreground">
+                {heroContent.availability}
+              </p>
             </div>
           </div>
         </FadeIn>

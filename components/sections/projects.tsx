@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import FadeIn from '@/components/motion/fade-in';
-import SectionHeading from '@/components/ui/section-heading';
-import ShinyButton from '@/components/ui/shiny-button';
-import { projects } from '@/data/content';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import FadeIn from "@/components/motion/fade-in";
+import SectionHeading from "@/components/ui/section-heading";
+import ShinyButton from "@/components/ui/shiny-button";
+import { projects } from "@/data/content";
 
 const ProjectCard = ({ project }: { project: (typeof projects)[number] }) => (
   <motion.article
@@ -30,17 +30,28 @@ const ProjectCard = ({ project }: { project: (typeof projects)[number] }) => (
         <span>{project.type}</span>
         <span>{project.year}</span>
       </div>
-      <h3 className="font-display text-xl font-semibold text-foreground">{project.title}</h3>
-      <p className="flex-1 text-sm text-muted-foreground">{project.description}</p>
+      <h3 className="font-display text-xl font-semibold text-foreground">
+        {project.title}
+      </h3>
+      <p className="flex-1 text-sm text-muted-foreground">
+        {project.description}
+      </p>
       <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
         {project.stack.map((item) => (
-          <span key={item} className="rounded-full border border-white/10 px-3 py-1">
+          <span
+            key={item}
+            className="rounded-full border border-white/10 px-3 py-1"
+          >
             {item}
           </span>
         ))}
       </div>
       {project.href ? (
-        <ShinyButton href={project.href} className="w-full justify-center" variant="ghost">
+        <ShinyButton
+          href={project.href}
+          className="w-full justify-center"
+          variant="ghost"
+        >
           Bekijk project
         </ShinyButton>
       ) : null}

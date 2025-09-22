@@ -1,15 +1,17 @@
-'use client';
+"use client";
 
-import { useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
-import FadeIn from '@/components/motion/fade-in';
-import SectionHeading from '@/components/ui/section-heading';
-import { skills } from '@/data/content';
+import { useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import FadeIn from "@/components/motion/fade-in";
+import SectionHeading from "@/components/ui/section-heading";
+import { skills } from "@/data/content";
 
 const Skills = () => {
   const groupedSkills = useMemo(() => {
     return skills.reduce<Record<string, typeof skills>>((acc, skill) => {
-      acc[skill.category] = acc[skill.category] ? [...acc[skill.category], skill] : [skill];
+      acc[skill.category] = acc[skill.category]
+        ? [...acc[skill.category], skill]
+        : [skill];
       return acc;
     }, {});
   }, []);
@@ -28,7 +30,9 @@ const Skills = () => {
           <div className="grid gap-6">
             {Object.entries(groupedSkills).map(([category, categorySkills]) => (
               <div key={category} className="space-y-3">
-                <p className="text-xs uppercase tracking-[0.3em] text-highlight">{category}</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-highlight">
+                  {category}
+                </p>
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {categorySkills.map((skill) => {
                     const isActive = activeSkill.name === skill.name;
@@ -43,7 +47,11 @@ const Skills = () => {
                           <motion.span
                             layoutId="skill-highlight"
                             className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-highlight/30 via-accent/30 to-transparent"
-                            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                            transition={{
+                              type: "spring",
+                              stiffness: 300,
+                              damping: 30,
+                            }}
                           />
                         ) : null}
                         {skill.name}
@@ -61,7 +69,7 @@ const Skills = () => {
               key={activeSkill.name}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: 'easeOut' }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-highlight"
             >
               {activeSkill.category}
@@ -70,7 +78,7 @@ const Skills = () => {
               key={`${activeSkill.name}-title`}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: 'easeOut', delay: 0.05 }}
+              transition={{ duration: 0.4, ease: "easeOut", delay: 0.05 }}
               className="font-display text-2xl font-semibold text-foreground"
             >
               {activeSkill.name}
@@ -79,7 +87,7 @@ const Skills = () => {
               key={`${activeSkill.name}-description`}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, ease: 'easeOut', delay: 0.08 }}
+              transition={{ duration: 0.45, ease: "easeOut", delay: 0.08 }}
               className="text-base text-muted-foreground"
             >
               {activeSkill.description}
@@ -88,7 +96,7 @@ const Skills = () => {
               key={`${activeSkill.name}-proficiency`}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, ease: 'easeOut', delay: 0.12 }}
+              transition={{ duration: 0.45, ease: "easeOut", delay: 0.12 }}
               className="rounded-2xl border border-white/10 bg-background/60 p-4 text-sm text-foreground"
             >
               {activeSkill.proficiency}

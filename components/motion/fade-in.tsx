@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion, type Variants } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import { motion, type Variants } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 type FadeInProps = {
   className?: string;
@@ -16,14 +16,20 @@ const fadeInVariants: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const FadeIn = ({ className, children, delay = 0, duration = 0.6, once = true }: FadeInProps) => (
+const FadeIn = ({
+  className,
+  children,
+  delay = 0,
+  duration = 0.6,
+  once = true,
+}: FadeInProps) => (
   <motion.div
     initial="hidden"
     whileInView="visible"
     viewport={{ once, amount: 0.3 }}
-    transition={{ delay, duration, ease: 'easeOut' }}
+    transition={{ delay, duration, ease: "easeOut" }}
     variants={fadeInVariants}
-    className={cn('will-change-transform', className)}
+    className={cn("will-change-transform", className)}
   >
     {children}
   </motion.div>

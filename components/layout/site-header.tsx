@@ -1,28 +1,44 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { AnimatePresence, motion, useMotionTemplate, useScroll, useTransform } from 'framer-motion';
+import { useState } from "react";
+import Link from "next/link";
+import {
+  AnimatePresence,
+  motion,
+  useMotionTemplate,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 const navLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#about', label: 'Over mij' },
-  { href: '#experience', label: 'Ervaring' },
-  { href: '#projects', label: 'Projecten' },
-  { href: '#skills', label: 'Vaardigheden' },
-  { href: '#contact', label: 'Contact' },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "Over mij" },
+  { href: "#experience", label: "Ervaring" },
+  { href: "#projects", label: "Projecten" },
+  { href: "#skills", label: "Vaardigheden" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const SiteHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollYProgress } = useScroll();
-  const backgroundOpacity = useTransform(scrollYProgress, [0, 0.1], [0.1, 0.92]);
+  const backgroundOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.1],
+    [0.1, 0.92],
+  );
   const backgroundColor = useMotionTemplate`rgba(10, 12, 20, ${backgroundOpacity})`;
 
   return (
-    <motion.header style={{ backgroundColor }} className="fixed inset-x-0 top-0 z-50 border-b border-white/10 backdrop-blur-lg">
+    <motion.header
+      style={{ backgroundColor }}
+      className="fixed inset-x-0 top-0 z-50 border-b border-white/10 backdrop-blur-lg"
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-8">
-        <Link href="#home" className="font-display text-lg font-semibold tracking-tight">
+        <Link
+          href="#home"
+          className="font-display text-lg font-semibold tracking-tight"
+        >
           Tobias van Dorp
         </Link>
         <nav className="hidden items-center gap-1 text-sm font-medium text-muted-foreground md:flex">
@@ -43,14 +59,23 @@ const SiteHeader = () => {
           aria-label="Toggle navigatie"
         >
           <span className="sr-only">Menu</span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            aria-hidden="true"
+          >
             <motion.path
               stroke="currentColor"
               strokeWidth="1.8"
               strokeLinecap="round"
               initial={false}
-              animate={isOpen ? 'open' : 'closed'}
-              variants={{ closed: { d: 'M3 6h14M3 14h14' }, open: { d: 'M4.5 4.5 15.5 15.5M15.5 4.5 4.5 15.5' } }}
+              animate={isOpen ? "open" : "closed"}
+              variants={{
+                closed: { d: "M3 6h14M3 14h14" },
+                open: { d: "M4.5 4.5 15.5 15.5M15.5 4.5 4.5 15.5" },
+              }}
             />
           </svg>
         </button>
