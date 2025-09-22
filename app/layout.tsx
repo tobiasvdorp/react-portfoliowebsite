@@ -1,30 +1,16 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import Script from 'next/script';
-import { Analytics } from '@vercel/analytics/react';
-import TranslationProvider from '@/components/TranslationProvider';
 import './globals.css';
-import 'animate.css/animate.min.css';
-
-type RootLayoutProps = {
-  children: ReactNode;
-};
 
 export const metadata: Metadata = {
-  title: 'Tobias van Dorp',
+  title: 'Tobias van Dorp · Portfolio',
   description:
-    'Portfolio website showcasing projects, skills, and contact information for Tobias van Dorp.',
+    'Portfolio van Tobias van Dorp: derdejaars OpenICT-student met focus op toegankelijke en performante front-end ervaringen.',
 };
 
-const RootLayout = ({ children }: RootLayoutProps) => (
-  <html lang="en">
-    <head>
-      <Script src="https://kit.fontawesome.com/bfbf5f508f.js" crossOrigin="anonymous" strategy="afterInteractive" />
-    </head>
-    <body>
-      <TranslationProvider>{children}</TranslationProvider>
-      <Analytics />
-    </body>
+const RootLayout = ({ children }: { children: ReactNode }) => (
+  <html lang="nl">
+    <body className="bg-slate-950 font-sans text-slate-100 antialiased">{children}</body>
   </html>
 );
 
