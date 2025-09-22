@@ -9,6 +9,7 @@ const navLinks = [
   { href: '#about', label: 'Over mij' },
   { href: '#experience', label: 'Ervaring' },
   { href: '#projects', label: 'Projecten' },
+  { href: '#playground', label: 'Speeltuin' },
   { href: '#skills', label: 'Vaardigheden' },
   { href: '#contact', label: 'Contact' },
 ];

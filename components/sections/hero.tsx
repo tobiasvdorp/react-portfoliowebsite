@@ -47,6 +47,9 @@ const Hero = () => (
         <FadeIn delay={0.4}>
           <div className="flex flex-wrap gap-3">
             <ShinyButton href="#projects">Bekijk projecten</ShinyButton>
+            <ShinyButton href="#playground" variant="ghost">
+              Speel mee
+            </ShinyButton>
             <ShinyButton href="#contact" variant="ghost">
               Laten we praten
             </ShinyButton>

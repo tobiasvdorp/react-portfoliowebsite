@@ -118,6 +118,47 @@ export const projects: Project[] = [
   },
 ];
 
+export type ExperimentSlug = 'gradient-groove' | 'pixel-palette' | 'lofi-haiku';
+
+export type Experiment = {
+  slug: ExperimentSlug;
+  title: string;
+  tagline: string;
+  description: string;
+  github: string;
+  stack: string[];
+};
+
+export const experiments: Experiment[] = [
+  {
+    slug: 'gradient-groove',
+    title: 'Gradient Groove',
+    tagline: 'Mix je eigen gloed',
+    description:
+      'Stem de vibe van je interface af met realtime gradients. Kies een kleurenpalet, draai aan de hoek en zie direct hoe de sfeer verandert.',
+    github: 'https://github.com/tobiasvdorp/portfolio/blob/main/components/playground/gradient-groove.tsx',
+    stack: ['React state', 'CSS gradients', 'Creative coding'],
+  },
+  {
+    slug: 'pixel-palette',
+    title: 'Pixel Palette',
+    tagline: 'Klik, kleur, reset',
+    description:
+      'Teken je eigen mini-pattern met een 6×6 grid. Selecteer een kleur, klik (of sleep) over de tegels en creëer iets speels in een paar seconden.',
+    github: 'https://github.com/tobiasvdorp/portfolio/blob/main/components/playground/pixel-palette.tsx',
+    stack: ['Interactieve UI', 'Tailwind compositie', 'Stateful fun'],
+  },
+  {
+    slug: 'lofi-haiku',
+    title: 'Lo-fi Haiku Bot',
+    tagline: 'Ambient tekstgenerator',
+    description:
+      'Geef een mood mee en laat de bot een korte haiku schrijven voor tijdens het coden. Perfect voor een korte ademhaling tussen commits door.',
+    github: 'https://github.com/tobiasvdorp/portfolio/blob/main/components/playground/lofi-haiku.tsx',
+    stack: ['Tekst randomisatie', 'React hooks', 'Microcopy'],
+  },
+];
+
 export type Skill = {
   name: string;
   description: string;
