@@ -666,181 +666,216 @@ body {
     margin-left: 20px;
   }
 }
-.button.result:hover,
-.card {
+.button.result:hover {
   color: #fff;
 }
 .projects-cards {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   gap: 30px;
   padding: 0 20px;
   min-height: 300px;
 }
-.card {
-  width: 300px;
-  background-color: var(--secondary);
-  border-radius: 10px;
-  box-shadow: 0 1px 10px 1px #000;
+.project-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 15px;
-  gap: 15px;
-  transition: 0.5s;
-  text-align: center;
-  max-height: 550px;
-}
-.card:hover {
-  transform: scale(1.02);
+  gap: 18px;
+  padding: 24px;
+  background: var(--secondary);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100%;
   cursor: pointer;
-  box-shadow: 0 0 10px 0 var(--primary);
 }
-.card img {
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0));
+  opacity: 0.65;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--accent);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.project-card:hover::before {
+  opacity: 0.85;
+}
+.project-card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.project-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.35);
+}
+.project-card__image {
   object-fit: cover;
-  width: 270px;
-  height: 270px;
-  border-radius: 20px;
 }
-#spark,
-.nuspi img,
-.spark img {
+.project-card.nuspi .project-card__image,
+.project-card.spark .project-card__image {
   object-fit: contain;
+  padding: 10px;
 }
-.card hr {
-  width: 95%;
-  opacity: 0.5;
-}
-.card .project-skills {
+.project-card__content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 25px;
+  flex-direction: column;
+  gap: 14px;
 }
-.card .project-skills img {
-  width: 40px;
-  height: 40px;
-  border-radius: 0;
-  object-fit: contain;
+.project-card__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
-.card p {
-  font-family: "Hind Madurai", sans-serif;
-  font-weight: 00px;
-  opacity: 0.8;
-}
-.card.expanded {
-  width: 500px;
-  height: 100%;
-  max-height: 1000px;
-  transition: 0.4s;
-  padding: 35px 35px 25px;
+.project-card__description {
+  font-family: 'Hind Madurai', sans-serif;
+  line-height: 1.6;
+  opacity: 0.85;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
-.card.expanded .front-card,
-.card.expanded .project-skills,
-.project-details,
-label input {
-  display: none;
-}
-.card.expanded .project-details {
+.project-card__skills {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  width: 100%;
-  height: 100%;
+  flex-wrap: wrap;
   gap: 10px;
-  position: relative;
 }
-.card.expanded:hover {
-  transform: scale(1);
-}
-.front-card {
-  gap: 15px;
-  display: flex;
-  flex-direction: column;
+.project-card__skill {
+  display: inline-flex;
   align-items: center;
-}
-.project-details .close {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  position: absolute;
-  top: -15px;
-  right: -15px;
-}
-.button.result {
-  width: fit-content;
-  text-align: center;
-  font-size: 1rem;
-  padding: 5px 10px;
-  margin-top: 10px;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
   font-weight: 600;
-  justify-self: flex-start;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.project-card__skill-image {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.project-card__modal {
+  position: fixed;
+  inset: 0;
   display: flex;
-  flex-wrap: nowrap;
-  text-wrap: nowrap;
-  justify-content: space-between;
   align-items: center;
-  border: none;
-  gap: 16px;
-}
-.close-button {
-  background: var(--primary);
-  border: none;
-  height: 30px;
-  width: 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 0;
-}
-.skill-tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-.tooltip,
-.tooltip-text {
-  visibility: hidden;
-  width: 200px;
-  text-wrap: wrap;
-  background-color: var(--secondary);
-  color: #000;
-  text-align: center;
-  border-radius: 6px;
-  padding: 10px;
-  position: absolute;
-  z-index: 1;
-  top: 90px;
-  left: 50%;
-  margin-left: -60%;
-  opacity: 0;
-  transition: opacity 0.5s;
-  font-weight: 500;
-}
-.filter-icon,
-.tooltip-text {
-  background-color: var(--primary);
-}
-.tooltip-text {
-  padding: 10px;
-  width: auto;
-  top: 55px;
-}
-.skill-card:hover .tooltip,
-.skill-tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-.cardtekst {
-  display: flex;
   justify-content: center;
+  padding: 32px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 40;
+  backdrop-filter: blur(3px);
+}
+.project-card__modal-content {
+  position: relative;
+  width: min(640px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--secondary);
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.project-card__modal-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.35);
+}
+.project-card__modal-image-content {
+  object-fit: cover;
+}
+.project-card.nuspi .project-card__modal-image-content,
+.project-card.spark .project-card__modal-image-content {
+  object-fit: contain;
+  padding: 10px;
+}
+.project-card__modal-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.project-card__modal-description {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+.project-card__modal-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.project-card__modal-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+.project-card__modal .button.result {
+  font-size: 1rem;
+  padding: 8px 18px;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  min-height: 95px;
+  gap: 12px;
+  border-radius: 10px;
+}
+.project-card__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 1.4rem;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.project-card__close:hover,
+.project-card__close:focus-visible {
+  background: var(--accent);
+  color: #000;
+  transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+  .projects-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card__modal-image {
+    aspect-ratio: 4 / 3;
+  }
 }
 .filters-container {
   display: flex;
@@ -883,23 +918,22 @@ label input {
   }
 }
 @media only screen and (max-width: 767px) {
-  .card.expanded {
-    justify-content: start;
+  .project-card {
     padding: 20px;
   }
-  .project-details .close-button {
-    margin-top: 10px;
-    margin-right: 10px;
+  .project-card__modal {
+    padding: 24px 16px;
   }
-  a.button.result {
+  .project-card__modal-content {
+    padding: 24px;
+  }
+  .project-card__modal .button.result {
     width: 100%;
-    max-width: 200px;
+    max-width: 240px;
+    justify-content: center;
   }
   .skills {
     padding: 0 80px;
-  }
-  .tooltip {
-    top: 90px;
   }
   .settings-menu {
     top: 65px !important;
