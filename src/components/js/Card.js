@@ -30,7 +30,7 @@ function Card({
 
   return (
     <div
-      className={`card ${isExpanded ? "expanded" : ""} ${className} wow`}
+      className={`card ${isExpanded ? "expanded" : ""} wow ${className}`}
       data-wow-delay={wowDelay}
       onClick={handleCardClick}
     >
@@ -45,8 +45,8 @@ function Card({
       </div>
 
       <div className="project-skills">
-        {skills.map((skill, index) => (
-          <div className="skill-tooltip" key={index}>
+        {skills.map((skill) => (
+          <div className="skill-tooltip" key={skill.name}>
             <img src={skill.image} alt="" />
             <span className="tooltip-text">{skill.name}</span>
           </div>

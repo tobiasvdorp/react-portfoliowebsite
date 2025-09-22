@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import "../css/contact.css";
 import "../css/responsive.css";
-import WOW from "wowjs";
 import "animate.css";
 import Socials from "./Socials";
 import { FaGripLines } from "react-icons/fa";
 import { TbArrowsCross } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 import { useDisordered } from "./DisorderedContext";
+import useWOW from "./useWOW";
 const ContactForm = () => {
   const { t } = useTranslation();
   const { isDisordered, setDisordered } = useDisordered();
 
-  const toggleDisordered = () => setDisordered(!isDisordered);
+  const toggleDisordered = () => setDisordered((prev) => !prev);
 
-  const wow = new WOW.WOW();
-  wow.init();
+  useWOW();
   const [status, setStatus] = useState("");
 
   const handleSubmit = (e) => {
@@ -37,8 +36,11 @@ const ContactForm = () => {
 
           form.reset();
         } else {
-          setStatus("Something went wrong. Please try again.");
+          setStatus(t("somethingWentWrong"));
         }
+      })
+      .catch(() => {
+        setStatus(t("somethingWentWrong"));
       });
   };
 
@@ -110,9 +112,7 @@ const ContactForm = () => {
         <div className="statusdiv">
           {status && (
             <p className="status animate__animated animate__fadeInLeft">
-              {status === "Something went wrong. Please try again."
-                ? t("somethingWentWrong")
-                : status}
+              {status}
             </p>
           )}
         </div>

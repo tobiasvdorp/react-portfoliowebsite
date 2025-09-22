@@ -5,8 +5,6 @@ import HTML from "../images/HTMLlogo.png";
 import CSS from "../images/CSSlogo.png";
 import TailwindCSS from "../images/TailwindCSS.png";
 import Login from "../images/login.png";
-import Spark from "../images/spark.png";
-import ReactIMG from "../images/reactIMG.png";
 import "animate.css/animate.min.css";
 import WordPress from "../images/WordPress.png";
 import Elementor from "../images/Elementor.png";
@@ -20,12 +18,6 @@ import next from "../images/next.png";
 import builder from "../images/builder.avif";
 function Projects() {
   const { t } = useTranslation();
-  console.log(
-    t("project5_title"),
-    t("project5_description"),
-    t("project5_detailDescription")
-  );
-
   const [activeFilters, setActiveFilters] = useState(["all"]); // Initialize filter state as an array
   const projects = [
     {
@@ -39,7 +31,7 @@ function Projects() {
       ],
       detailDescription: t("project1_detailDescription"),
       projectLocation: "/portfolio-1.html",
-      className: "animate__animated wow animate__bounceIn",
+      className: "animate__animated animate__bounceIn",
       wowDelay: "0.5s",
       tag: "school",
     },
@@ -55,7 +47,7 @@ function Projects() {
       ],
       detailDescription: t("project2_detailDescription"),
       projectLocation: "/hairdresser-project.html",
-      className: "animate__animated wow animate__bounceIn",
+      className: "animate__animated animate__bounceIn",
       wowDelay: "0.7s",
       tag: "school",
     },
@@ -88,7 +80,7 @@ function Projects() {
       ],
       detailDescription: t("project4_detailDescription"),
       style: { object_fit: "contain" },
-      className: "animate__animated wow animate__bounceIn nuspi ",
+      className: "animate__animated animate__bounceIn nuspi ",
       wowDelay: "1.1s",
       projectLocation: "/nuspi-project.html",
       tag: "work",
@@ -106,7 +98,7 @@ function Projects() {
       ],
       detailDescription: t("project5_detailDescription"),
       style: { object_fit: "contain" },
-      className: "animate__animated wow animate__bounceIn",
+      className: "animate__animated animate__bounceIn",
       wowDelay: "1.2s",
       projectLocation: "https://judith-website.vercel.app/",
       tag: "work",
@@ -117,6 +109,14 @@ function Projects() {
   const openFilters = () => {
     setOpen(!open);
   };
+
+  const filteredProjects = projects.filter(
+    (project) =>
+      activeFilters.includes("all") || activeFilters.includes(project.tag)
+  );
+
+  const showNoResults =
+    !activeFilters.includes("all") && filteredProjects.length === 0;
 
   return (
     <div className="projects " id="projects">
@@ -132,35 +132,23 @@ function Projects() {
       )}
       <h3 className="readmore">{t("Click on a card to read more.")}</h3>
       <div className="projects-cards">
-        {projects.map((project, index) => {
-          // Check if 'all' is active or if the project tag is in active filters
-          if (
-            activeFilters.includes("all") ||
-            activeFilters.includes(project.tag)
-          ) {
-            return (
-              <Card
-                key={index}
-                imageSrc={project.imageSrc}
-                title={project.title}
-                description={project.description}
-                detailDescription={project.detailDescription}
-                skills={project.skills}
-                projectLocation={project.projectLocation}
-                className={project.className}
-                tag={project.tag}
-              />
-            );
-          }
-          return null;
-        })}
+        {filteredProjects.map((project) => (
+          <Card
+            key={project.id}
+            imageSrc={project.imageSrc}
+            title={project.title}
+            description={project.description}
+            detailDescription={project.detailDescription}
+            skills={project.skills}
+            projectLocation={project.projectLocation}
+            className={project.className}
+            wowDelay={project.wowDelay}
+            tag={project.tag}
+          />
+        ))}
 
         {/* If there are no projects to render with the current filter settings, render "No projects" */}
-        {projects.every(
-          (project) =>
-            !activeFilters.includes("all") &&
-            !activeFilters.includes(project.tag)
-        ) && (
+        {showNoResults && (
           <>
             <div className="no-results">
               <h3>{t("Oops! No projects found for the selected filters.")}</h3>
