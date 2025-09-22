@@ -1,7 +1,7 @@
 'use client';
 
 import Image, { type StaticImageData } from 'next/image';
-import { useState } from 'react';
+import { useState, type KeyboardEvent, type MouseEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export type ProjectSkill = {
@@ -39,7 +39,20 @@ const Card = ({
     }
   };
 
-  const handleCloseClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Escape' && isExpanded) {
+      event.preventDefault();
+      setIsExpanded(false);
+      return;
+    }
+
+    if (!isExpanded && (event.key === 'Enter' || event.key === ' ')) {
+      event.preventDefault();
+      setIsExpanded(true);
+    }
+  };
+
+  const handleCloseClick = (event: MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     setIsExpanded(false);
   };
@@ -52,30 +65,49 @@ const Card = ({
   };
 
   return (
-    <div className={`card ${isExpanded ? 'expanded' : ''} wow ${className}`} data-wow-delay={wowDelay} onClick={handleCardClick}>
+    <div
+      aria-expanded={isExpanded}
+      className={`card ${isExpanded ? 'expanded' : ''} wow ${className}`}
+      data-wow-delay={wowDelay}
+      onClick={handleCardClick}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+    >
       <div className="front-card">
-        <Image src={imageSrc} alt={title} sizes="(max-width: 768px) 100vw, 33vw" />
-        <h3>{title}</h3>
-        <hr />
-        <div className="cardtekst">
+        <div className="card-media">
+          <Image
+            alt={title}
+            className="project-image"
+            sizes="(max-width: 768px) 90vw, 320px"
+            src={imageSrc}
+          />
+        </div>
+
+        <div className="card-body">
+          <h3>{title}</h3>
           <p>{description}</p>
         </div>
-        <hr />
-      </div>
 
-      <div className="project-skills">
-        {skills.map((skill) => (
-          <div className="skill-tooltip" key={skill.name}>
-            <Image src={skill.image} alt={skill.name} width={48} height={48} />
-            <span className="tooltip-text">{skill.name}</span>
-          </div>
-        ))}
+        <ul className="project-skills">
+          {skills.map((skill) => (
+            <li className="skill-pill" key={skill.name}>
+              <Image alt={skill.name} height={28} src={skill.image} width={28} />
+              <span>{skill.name}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="project-details">
         <div className="close">
-          <button className="close-button button" onClick={handleCloseClick} type="button">
-            X
+          <button
+            aria-label="Close project card"
+            className="close-button button"
+            onClick={handleCloseClick}
+            type="button"
+          >
+            ×
           </button>
         </div>
         <h3>{title}</h3>
