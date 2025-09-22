@@ -1,13 +1,14 @@
 'use client';
 
 import { GiSettingsKnobs } from 'react-icons/gi';
+import { iconButtonClasses } from '@/lib/styles';
 
 type FilterButtonProps = {
   onToggle: () => void;
 };
 
 const FilterButton = ({ onToggle }: FilterButtonProps) => (
-  <button className="filter-icon button" onClick={onToggle} type="button">
+  <button className={`${iconButtonClasses} text-3xl`} onClick={onToggle} type="button" aria-label="Toggle project filters">
     <GiSettingsKnobs />
   </button>
 );

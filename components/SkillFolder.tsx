@@ -11,6 +11,7 @@ import builderLogo from '../public/images/builder.avif';
 import tailwindLogo from '../public/images/TailwindCSS.png';
 import elementorLogo from '../public/images/Elementor.png';
 import wordpressLogo from '../public/images/WordPress.png';
+import { sectionSubtitleClasses, sectionTitleClasses } from '@/lib/styles';
 import Skill from './Skill';
 import TypeAnimation from './TypeAnimationClient';
 
@@ -97,13 +98,13 @@ const SkillFolder = () => {
   };
 
   return (
-    <div className="skills" id="skills">
-      <h2 className="title2">{t('skills_title')}</h2>
-      <h3 className="readmore">{t('skills_under')}</h3>
-      <div className="skill-folder-container">
-        <div className="folder">
-          <div className="skills-column">
-            <ul>
+    <section className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 px-5 text-text" id="skills">
+      <h2 className={sectionTitleClasses}>{t('skills_title')}</h2>
+      <h3 className={sectionSubtitleClasses}>{t('skills_under')}</h3>
+      <div className="flex w-full justify-center">
+        <div className="flex w-full max-w-4xl flex-col overflow-hidden rounded-lg border border-accent/60 bg-secondary text-white shadow-[0_0_10px_1px_var(--accent)] md:flex-row">
+          <div className="w-full border-b border-accent/40 md:w-2/5 md:border-b-0 md:border-r">
+            <ul className="flex flex-col gap-3 p-4">
               {skills.map((skill) => (
                 <Skill
                   key={skill.name}
@@ -116,12 +117,11 @@ const SkillFolder = () => {
               ))}
             </ul>
           </div>
-          <div className="skills-divider" />
-          <div className="skills-description">
+          <div className="flex w-full flex-col gap-4 p-6 text-left md:w-3/5">
             {selectedSkill ? (
               <>
-                <div id="whatisit">
-                  <h3>{t('what_isit')}</h3>
+                <div className="space-y-3">
+                  <h3 className="font-heading text-xl font-semibold text-primary">{t('what_isit')}</h3>
                   <TypeAnimation
                     key={`description-${selectedSkill.name}`}
                     sequence={[selectedSkill.description, 1000]}
@@ -129,21 +129,23 @@ const SkillFolder = () => {
                     style={{ color: 'var(--text)' }}
                   />
                 </div>
-                <h3>{t('how_skilled')}</h3>
-                <TypeAnimation
-                  key={`skill-level-${selectedSkill.name}`}
-                  sequence={[selectedSkill.skillLevel, 1000]}
-                  speed={90}
-                  style={{ color: 'var(--text)' }}
-                />
+                <div className="space-y-3">
+                  <h3 className="font-heading text-xl font-semibold text-primary">{t('how_skilled')}</h3>
+                  <TypeAnimation
+                    key={`skill-level-${selectedSkill.name}`}
+                    sequence={[selectedSkill.skillLevel, 1000]}
+                    speed={90}
+                    style={{ color: 'var(--text)' }}
+                  />
+                </div>
               </>
             ) : (
               <p
                 id="select-skill"
                 className={
                   !shouldReduceMotion
-                    ? 'animate__fadeInDown wow animate__animated animation-delay-1s'
-                    : ''
+                    ? 'animate__fadeInDown wow animate__animated animate__delay-1s text-primary'
+                    : 'text-primary'
                 }
               >
                 {t('skills_select')}
@@ -152,7 +154,7 @@ const SkillFolder = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -21,7 +21,7 @@ const RootLayout = ({ children }: RootLayoutProps) => (
     <head>
       <Script src="https://kit.fontawesome.com/bfbf5f508f.js" crossOrigin="anonymous" strategy="afterInteractive" />
     </head>
-    <body>
+    <body className="bg-background text-text transition-colors duration-300">
       <TranslationProvider>{children}</TranslationProvider>
       <Analytics />
     </body>
